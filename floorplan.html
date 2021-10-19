@@ -1,0 +1,412 @@
+<html lang=en  content= "width=device-width, user-scalable=no"> 
+    <head>
+
+        <style>
+        h1 { 
+            text-align:center;
+        }
+        table {
+            margin:auto; 
+            width:400px;
+        } 
+        td {
+            width:50%;
+        }
+        .back{
+            background-color: rgb(223, 219, 219);
+            zoom:unset;
+            z-index: -2;
+        }
+        .pic1{
+            width: 400px;
+            height: 400px;
+            top : 120px;
+            right: 470px;
+            position: absolute;
+            z-index: 0;
+            align-content: center;
+            
+        }
+        .butt1 {
+            height:15px;
+        width: 70px;
+        border: .5px outset yellow;
+        background-color: red;
+        font-size: 35px;
+        padding: 20px;
+        color: white;
+        cursor:pointer;
+        text-align:center;
+        border-radius: 5px;
+        top : 90px;
+        right : 1165px;
+        position: absolute;
+        zoom: normal;
+        z-index: 2;
+        line-height:20px;
+        }
+        
+        .butt1:hover {
+            background-color: rgb(226, 96, 96);
+            color:white;
+        }
+
+        .butt2 {
+            height:15px;
+        width: 70px;
+        border: .5px outset yellow;
+        background-color: red;
+        font-size: 35px;
+        padding: 20px;
+        color: white;
+        cursor:pointer;
+        text-align:center;
+        border-radius: 5px;
+        top : 155px;
+        right : 1165px;
+        position: absolute;
+        zoom: normal;
+        z-index: 2;
+        line-height:20px;
+        }
+        
+        .butt2:hover {
+            background-color: rgb(226, 96, 96);
+            color:white;
+        }
+
+        .butt3 {
+            height:15px;
+        width: 70px;
+        border: .5px outset yellow;
+        background-color: red;
+        font-size: 35px;
+        padding: 20px;
+        color: white;
+        cursor:pointer;
+        text-align:center;
+        border-radius: 5px;
+        top : 220px;
+        right : 1165px;
+        position: absolute;
+        zoom: normal;
+        z-index: 2;
+        line-height:20px;
+        }
+        
+        .butt3:hover {
+            background-color: rgb(226, 96, 96);
+            color:white;
+        }
+
+        .butt4 {
+            height:15px;
+        width: 70px;
+        border: .5px outset yellow;
+        background-color: red;
+        font-size: 35px;
+        padding: 20px;
+        color: white;
+        cursor:pointer;
+        text-align:center;
+        border-radius: 5px;
+        top : 285px;
+        right : 1165px;
+        position: absolute;
+        zoom: normal;
+        z-index: 2;
+        line-height:20px;
+        }
+        
+        .butt4:hover {
+            background-color: rgb(226, 96, 96);
+            color:white;
+        }
+
+        .butt5 {
+            height:15px;
+        width: 70px;
+        border: .5px outset yellow;
+        background-color: red;
+        font-size: 35px;
+        padding: 20px;
+        color: white;
+        cursor:pointer;
+        text-align:center;
+        border-radius: 5px;
+        top : 350px;
+        right : 1165px;
+        position: absolute;
+        zoom: normal;
+        z-index: 2;
+        line-height:20px;
+        }
+        
+        .butt5:hover {
+            background-color: rgb(226, 96, 96);
+            color:white;
+        }
+
+        .butt6 {
+            height:15px;
+        width: 70px;
+        border: .5px outset yellow;
+        background-color: red;
+        font-size: 35px;
+        padding: 20px;
+        color: white;
+        cursor:pointer;
+        text-align:center;
+        border-radius: 5px;
+        top : 415px;
+        right : 1165px;
+        position: absolute;
+        zoom: normal;
+        z-index: 2;
+        line-height:20px;
+        }
+        
+        .butt6:hover {
+            background-color: rgb(226, 96, 96);
+            color:white;
+        }
+
+        .butt7 {
+            height:15px;
+        width: 70px;
+        border: .5px outset yellow;
+        background-color: red;
+        font-size: 35px;
+        padding: 20px;
+        color: white;
+        cursor:pointer;
+        text-align:center;
+        border-radius: 5px;
+        top : 480px;
+        right : 1165px;
+        position: absolute;
+        zoom: normal;
+        z-index: 2;
+        line-height:20px;
+        }
+        
+        .butt7:hover {
+            background-color: rgb(226, 96, 96);
+            color:white;
+        }
+
+        .butt8 {
+        height:15px;
+        width: 70px;
+        border: .5px outset yellow;
+        background-color: red;
+        font-size: 35px;
+        padding: 20px;
+        color: white;
+        cursor:pointer;
+        text-align:center;
+        border-radius: 5px;
+        top : 545px;
+        right : 1165px;
+        position: absolute;
+        zoom: normal;
+        z-index: 2;
+        line-height:20px;
+        }
+        
+        .butt8:hover {
+            background-color: rgb(226, 96, 96);
+            color:white;
+        }
+
+        .home {
+        height:10px;
+        width: 60px;
+        border: .5px outset yellow;
+        background-color: red;
+        font-size: 35px;
+        padding: 20px;
+        color: white;
+        cursor:pointer;
+        text-align:center;
+        border-radius: 5px;
+        top : 0px;
+        right : 0px;
+        position: absolute;
+        zoom: normal;
+        z-index: 0;
+        line-height:20px;
+        }
+
+        .home:hover {
+            background-color: rgb(226, 96, 96);
+            color:white;
+        }
+
+        .move{
+            top:10px;
+            position: absolute;
+            right: 23px;
+        }
+
+        .img{
+            top : 100px;
+            right : 135px;
+            position: absolute;
+        }
+        
+        
+        
+        .tit{    
+            color: black;
+            font-size: 60px;
+            top : 20px;
+            right : 250px;
+            height:50px;
+            width: 700px;
+            position: absolute;
+            text-align:right;
+        }
+
+        .backButton {
+            height:10px;
+        width: 60px;
+        border: .5px outset yellow;
+        background-color: red;
+        font-size: 35px;
+        padding: 20px;
+        color: white;
+        cursor:pointer;
+        text-align:center;
+        border-radius: 5px;
+        top : 0px;
+        right : 1180px;
+        position: absolute;
+        zoom: normal;
+        z-index: 0;
+        line-height:20px;
+        }
+        
+        .backButton:hover {
+            background-color: rgb(226, 96, 96);
+            color:white;
+        }
+
+        .move2{
+            top:10px;
+            position: absolute;
+            right: 28px;
+        }
+        
+        </style>
+        
+        <script>
+            function guess7(){
+                document.getElementById('p1image').src = "Upper floor_0.png"
+                document.getElementById('text1').innerHTML = "Now Displaying: Floor 7";
+            }
+            function guess6(){
+                document.getElementById('p1image').src = "Upper floor_0.png"
+                document.getElementById('text1').innerHTML = "Now Displaying: Floor 6";
+            }
+            function guess5(){
+                document.getElementById('p1image').src = "Upper floor_0.png"
+                document.getElementById('text1').innerHTML = "Now Displaying: Floor 5";
+            }
+            function guess4(){
+                document.getElementById('p1image').src = "Upper floor_0.png"
+                document.getElementById('text1').innerHTML = "Now Displaying: Floor 4";
+            }
+            function guess3(){
+                document.getElementById('p1image').src = "Upper floor_0.png"
+                document.getElementById('text1').innerHTML = "Now Displaying: Floor 3";
+            }       
+            function guess2(){
+                document.getElementById('p1image').src = "Upper floor_0.png"
+                document.getElementById('text1').innerHTML = "Now Displaying: Floor 2";
+            }
+            function guess1(){
+                document.getElementById('p1image').src = "Floor one.png"
+                document.getElementById('text1').innerHTML = "Now Displaying: Floor 1";
+            }
+            function guessB(){
+                document.getElementById('p1image').src = "Ground floor.png"
+                document.getElementById('text1').innerHTML = "Now Displaying: Floor B";
+            }
+        </script>
+    </head>
+
+  <body class = "back">
+    <button1 >
+       <butt1 class="butt1" type="button" value="test" onclick="guess7();">
+          7
+       </butt1>
+    </button1>
+
+    <button2 >
+        <butt2 class="butt2" type="button" value="test" onclick="guess6();" >
+           6
+        </butt2>
+    </button2>
+
+    <button3 >
+        <butt3 class="butt3" type="button" value="test" onclick="guess5();">
+           5
+        </butt3>
+    </button3>
+
+    <button4 >
+        <butt4 class="butt4" type="button" value="test" onclick="guess4();">
+           4
+        </butt4>
+     </button4>
+ 
+     <button5 >
+         <butt5 class="butt5" type="button" value="test" onclick="guess3();">
+            3
+         </butt5>
+     </button5>
+ 
+     <button6 >
+         <butt6 class="butt6" type="button" value="test" onclick="guess2();">
+            2
+         </butt6>
+     </button6>
+
+     <button7 >
+        <butt7 class="butt7" type="button" value="test" onclick="guess1();">
+           1
+        </butt7>
+    </button7>
+
+    <button8 >
+        <butt8 class="butt8" type="button" value="test" onclick="guessB();">
+           B
+        </butt8>
+    </button8>
+    <td >
+        <div class ="img" type="image">
+           <img src="Floor one.png" alt="second" id = "p1image" width="900" height="500" >
+           
+        </div>
+    </td>
+    <td >
+        <div class ="tit" type="title" id = "text1">
+           Now Displaying: Floor 1
+           
+        </div>
+    </td>
+
+    <homeButton class = "home" type="button" action = "homepage.html" onclick="location.href = 'file:///C:/Users/ginma/Desktop/cmsc434%20project/homepage.html';">
+        <img class = "move" src="hoooo.png" alt="second" id = "p1image" width="50" height="33">
+    </homeButton>
+
+    <backButton class = "backButton" type="button">
+        <img  class = "move2" src="arrow2.png" alt="second" id = "p2image" width="50" height="33">
+    </backButton>
+
+ 
+    
+    
+ </body>
+</html>
