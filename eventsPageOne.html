@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"></link>
+</head>
+
+<body>
+<button onclick="backFunction()">Back Button</button>
+<button style="position:absolute; right: 10px;" onclick="homeFunction()">Home Button</button>
+<h1 style="text-align: center;">IRB Events - Next 4 Weeks</h1>
+
+
+<div id="popupWindow" class="modal">
+
+  <div class="modal-content">
+    <span class="close" onclick="closeFunction()">&times;</span>
+    <p>Descriptions of events go here.</p>
+  </div>
+</div>
+
+<ul class="weekdays">
+  <li>Su</li>
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+</ul>
+
+<ul class="days">  
+  
+  <li><span class="passed">October 8</span></li>
+  <li><span class="passed">9</span></li>
+  <li onclick="myFunction()"><span class="active">10</span></li>
+  <li onclick="location.href = 'http://www.google.com';">11</li>
+  <li onclick="myFunction()">12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+  <li>November 1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+</ul>
+
+<script>
+  var modal = document.getElementById("popupWindow");
+
+  function myFunction() {
+    modal.style.display = "block";
+  }
+
+  function closeFunction() {
+
+    modal.style.display = "none";
+
+  }
+
+  window.addEventListener("click", function(event) {
+
+    if (event.target == popupWindow) {
+      modal.style.display = "none";
+
+    }
+  })
+
+
+
+
+</script>
+</body>
+</html>
+
