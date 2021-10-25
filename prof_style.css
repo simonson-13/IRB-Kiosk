@@ -4,6 +4,68 @@
     'Open Sans', sans-serif;
 }
 
+
+/*home button*/
+.home {
+    height:15px;
+width: 72px;
+border: .5px outset yellow;
+background-color: red;
+font-size: 35px;
+padding: 20px;
+color: white;
+cursor:pointer;
+text-align:center;
+border-radius: 5px;
+top : 0px;
+right : 0px;
+position: absolute;
+zoom: normal;
+z-index: 0;
+line-height:20px;
+}
+
+.home:hover {
+    background-color: rgb(226, 96, 96);
+    color:white;
+}
+
+.backButton {
+    height:15px;
+    width: 72px;
+    border: .5px outset yellow;
+    background-color: red;
+    font-size: 35px;
+    padding: 20px;
+    color: white;
+    cursor:pointer;
+    text-align:center;
+    border-radius: 5px;
+    top : 0px;
+    right : 911px;
+    position: absolute;
+    zoom: normal;
+    z-index: 0;
+    line-height:20px;
+}
+
+.backButton:hover {
+    background-color: rgb(226, 96, 96);
+    color:white;
+}
+
+/* center home and back icons in button*/
+.move{
+    top:12px;
+    position: absolute;
+    right: 33px;
+}
+.move2{
+    top:12px;
+    position: absolute;
+    right: 33px;
+}
+
 h1 {
     font-weight: bold;
     font-size: 72px;
