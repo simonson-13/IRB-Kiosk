@@ -4,6 +4,7 @@ const suggBox = document.getElementById("suggestions");
 const searchIcon = searchWrapper.querySelector(".icon");
 
 const keyBoard = document.getElementById("keyboard");
+const background = document.getElementById("bg");
 
 const keys = document.querySelectorAll(".keys");
 const space = document.querySelector('.space')
@@ -19,19 +20,27 @@ inputBox.onclick = () => {
     keyBoard.style.display = 'block';
 }
 
-inputBox.onblur = (e) => {
-    console.log("user tapped somewhere else")
-    //make keyboard go away
-    //actually not good if user is typing keyboardlol
+background.onclick=() => {
+    //make keyboard disapear
+    keyBoard.style.display = 'none';
 }
+
 
 searchIcon.onclick = () => {
     console.log("search pressed!")
     keyBoard.style.display = 'none';
-    //make keyboard go away
-    //make suggestions box go away
-    //display appropriate office number
-}
+    if (inputBox.value.toLowerCase() in officeMap) {
+        result = officeMap[inputBox.value.toLowerCase()]
+        showSuggestions('');
+        result = inputBox.value + "'s Office is: " + result;
+        document.getElementById('result').innerHTML = result;
+    } else {
+        result = "Professor Not Found"
+        document.getElementById('result').innerHTML = result;
+    }
+    
+    }
+
 
 for (let i = 0; i < keys.length; i++)
  {
@@ -53,8 +62,18 @@ for (let i = 0; i < keys.length; i++)
 
 for (let i = 0; i < keys.length; i ++) {
     keys[i].addEventListener("click", (e) => {
+        enterPressed = false;
         if (e.target.getAttribute("lcname") === "enter") {
+            enterPressed = true;
             keyBoard.style.display = 'none';
+            if (inputBox.value.toLowerCase() in officeMap) {
+                result = officeMap[inputBox.value.toLowerCase()]
+                showSuggestions([]);
+                result = inputBox.value + "'s Office is: " + result;
+            } else {
+                result = "Professor Not Found"
+            }
+            document.getElementById('result').innerHTML = result;
             //search
             //hide keyboard
             //hide suggestions
@@ -84,7 +103,7 @@ for (let i = 0; i < keys.length; i ++) {
 
         }
         // start filtering array
-        if (inputBox.value != "") {
+        if (inputBox.value != "" && enterPressed == false) {
             let regex = new RegExp("\\b" + inputBox.value.toLowerCase())
             filtered = suggestions.filter((data) => {
                 if (data.toLowerCase().match(regex)) {
@@ -114,7 +133,6 @@ function showSuggestions(list) {
     } else {
         suggBox.innerHTML = '';
     }
-    console.log('called');
 
 }
 
