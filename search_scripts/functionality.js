@@ -2,6 +2,11 @@ const searchWrapper = document.querySelector(".search-input");
 const inputBox = searchWrapper.querySelector("input");
 const suggBox = document.getElementById("suggestions");
 const searchIcon = searchWrapper.querySelector(".icon");
+const viewFP = document.getElementById("floorplanbutton");
+var modal = document.getElementById("myModal");
+var img = document.getElementById("floorimg");
+var captionText = document.getElementById("caption");
+var close = document.getElementsByClassName("close")[0];
 
 const keyBoard = document.getElementById("keyboard");
 const background = document.getElementById("bg");
@@ -17,6 +22,7 @@ let filtered = [];
 
 inputBox.onclick = () => {
         //make keyboard popup
+    viewFP.style.zIndex=0;
     keyBoard.style.display = 'block';
 }
 
@@ -33,6 +39,8 @@ searchIcon.onclick = () => {
         result = officeMap[inputBox.value.toLowerCase()]
         showSuggestions('');
         result = inputBox.value + "'s Office is: " + result;
+        viewFP.style.zIndex=5;
+        viewFP.style.display = 'block';
         document.getElementById('result').innerHTML = result;
     } else {
         result = "Professor Not Found"
@@ -56,9 +64,27 @@ for (let i = 0; i < keys.length; i++)
     result = officeMap[e.target.innerHTML.toLowerCase()]
     showSuggestions('');
     result = inputBox.value + "'s Office is: " + result;
+    viewFP.style.zIndex=5;
+    viewFP.style.display = 'block';
     document.getElementById('result').innerHTML = result;
 
 })
+
+/* floor plan pop up */
+viewFP.addEventListener("click", (e) => {
+    console.log('viewFP clicked!')
+    let floor = document.getElementById("result").innerHTML.slice(-4,-3)
+    let res_string = document.getElementById("result").innerHTML
+    let floorimg= `./floor_${floor}.png`
+    modal.style.display = 'block'
+    img.src = floorimg;
+    captionText.innerHTML = `Floor ${floor}, Office: ${res_string.slice(-8,res_string.length)}`
+})
+/*close floor plan pop up*/
+
+close.onclick = function() {
+    modal.style.display='none';
+}
 
 for (let i = 0; i < keys.length; i ++) {
     keys[i].addEventListener("click", (e) => {
@@ -70,6 +96,8 @@ for (let i = 0; i < keys.length; i ++) {
                 result = officeMap[inputBox.value.toLowerCase()]
                 showSuggestions([]);
                 result = inputBox.value + "'s Office is: " + result;
+                viewFP.style.zIndex=5;
+                viewFP.style.display = 'block';
             } else {
                 result = "Professor Not Found"
             }
