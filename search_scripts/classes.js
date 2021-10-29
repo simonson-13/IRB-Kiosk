@@ -1,0 +1,20 @@
+let classes = [
+    "CMSC131",
+    "CMSC132",
+    "CMSC216",
+    "CMSC351",
+    "CMSC320",
+    "CMSC451",
+    "CMSC330",
+    "CMSC420",
+    "CMSC422",
+    "CMSC421",
+    "CMSC411",
+    "CMSC412",
+    "CMSC414",
+    "CMSC414",
+    "CMSC416",
+    "CMSC417",
+    "CMSC434",
+    "CMSC423"
+]

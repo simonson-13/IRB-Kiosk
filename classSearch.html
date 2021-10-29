@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search For a Professor</title>
-    <link rel="stylesheet" href="prof_style.css">
+    <title>Search For a Class</title>
+    <link rel="stylesheet" href="class_style.css">
     <script src="https://kit.fontawesome.com/09b41211e9.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
     
-    <homeButton class = "home" type="button" action="homepage.html" onclick="location.href='./homepage.html';">
+    <homeButton class = "home" type="button" action = "homepage.html" onclick="location.href = './homepage.html';">
         <img class = "move" src="hoooo.png" alt="second" id = "p1image" width="50" height="33">
     </homeButton>
 
@@ -19,12 +19,12 @@
         <img  class = "move2" src="arrow2.png" alt="second" id = "p2image" width="50" height="33">
     </backButton>
 
-    </div>
-    <h1>Find a Professor's Office <!--<img src="glasses.png" alt="Glasses Icon" width="10%">--></h1>
+
+    <h1>Find Your Classroom <!--<img src="glasses.png" alt="Glasses Icon" width="10%">--></h1>
     </div>
         <div class="wrapper">
             <div class="search-input">
-            <input type="text" placeholder="Search for professor by name...">
+            <input type="text" placeholder="CMSC131...">
                 <div id="suggestions" class="suggestions-box">
                 </div>
             <div class="icon"><i class="fas fa-search"></i></div>
@@ -32,22 +32,34 @@
 
         <br></br>
 
+        <table id="classes">
+            <tr>
+                <th>Time:</th>
+                <th>Professor:</th>
+                <th>Room Number:</th>
+                <th>Floor Plan:</th>
+            </tr>
+           <!-- <tr>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+            </tr>
+            <tr>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+            </tr>-->
 
-        <h1 id="result"></h1>
+        </table>
 
-        <div id='floorplanbutton'>View Floor Plan</div>
-        <!--modal floor plan image-->
-        <div id='myModal' class="modal">
-              <!-- The Close Button -->
-            <span class="close">&times;</span>
+        <br></br>
+        <br></br>
 
-            <!-- Modal Content (The Image) -->
-            <img class="modal-content" id="floorimg">
+        <h1 id=result>
+        </h1>
 
-            <!-- Modal Caption (Image Text) -->
-            <div id="caption"></div>
-            
-        </div>
 
 <!-- Virtual Keyboard for ipad -->
         <div class="container">
@@ -130,9 +142,9 @@
             <img src="IRBrooms.jpg" alt = 'iribe background picture'>
         </div>
 
-        <script src="search_scripts/suggestions.js"></script>
-        <script src="search_scripts/officeMap.js"></script>
-        <script src="search_scripts/functionality.js"></script>
+        <script src="search_scripts/classes.js"></script>
+        <script src="search_scripts/classMap.js"></script>
+        <script src="search_scripts/class_func.js"></script>
         
     
 </body>

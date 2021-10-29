@@ -4,6 +4,69 @@
     'Open Sans', sans-serif;
 }
 
+
+
+/*home button*/
+.home {
+    height:15px;
+width: 72px;
+border: .5px outset yellow;
+background-color: red;
+font-size: 35px;
+padding: 20px;
+color: white;
+cursor:pointer;
+text-align:center;
+border-radius: 5px;
+top : 0px;
+right : 0px;
+position: absolute;
+zoom: normal;
+z-index: 0;
+line-height:20px;
+}
+
+.home:hover {
+    background-color: rgb(226, 96, 96);
+    color:white;
+}
+
+.backButton {
+    height:15px;
+    width: 72px;
+    border: .5px outset yellow;
+    background-color: red;
+    font-size: 35px;
+    padding: 20px;
+    color: white;
+    cursor:pointer;
+    text-align:center;
+    border-radius: 5px;
+    top : 0px;
+    right : 911px;
+    position: absolute;
+    zoom: normal;
+    z-index: 0;
+    line-height:20px;
+}
+
+.backButton:hover {
+    background-color: rgb(226, 96, 96);
+    color:white;
+}
+
+/* center home and back icons in button*/
+.move{
+    top:12px;
+    position: absolute;
+    right: 33px;
+}
+.move2{
+    top:12px;
+    position: absolute;
+    right: 33px;
+}
+
 h1 {
     font-weight: bold;
     font-size: 72px;
@@ -27,7 +90,9 @@ h1 {
 }
 
 #result {
-    background-color: black;
+    background-color: red;
+    display: inline-block !important;
+    z-index: 2;
 }
 
 .nav {
@@ -40,6 +105,7 @@ h1 {
 
 body {
     background-color: rgb(206, 77, 77);
+    zoom: 100%
 }
 
 /*html, body {
@@ -201,3 +267,102 @@ body {
 .space {
     width: 80%
 }
+
+
+/* floor plan button*/
+#floorplanbutton {
+    position: relative;
+    background-color: red;
+    width: 50%;
+    margin-left: 25%;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    outline: 2px solid white;
+    display: none;
+}
+
+#floorplanbutton:hover {
+    background-color: rgb(226, 96, 96);
+    color:white;
+}
+
+/*floorplan popup*/
+
+/*background of popup*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 6;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
