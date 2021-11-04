@@ -1,5 +1,6 @@
 * {box-sizing: border-box;}
 
+
 ul {list-style-type: none;}
 
 h1 {
@@ -33,6 +34,7 @@ body {
   padding: 10px 0px 10px 19px;
   background: #eee;
   margin: 0;
+  /* padding: 0; */
   /* height: 50px; */
 }
 
@@ -41,7 +43,9 @@ body {
   list-style-type: none;
   display: inline-block;
   width: 13.6%;
+  max-width: 13.6%;
   height: 117px;
+  max-height: 117px;
   text-align: left;
   margin-bottom: 5px;
   font-size:20px;
