@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search For a Professor</title>
+    <link rel="stylesheet" href="prof_style.css">
+    <script src="https://kit.fontawesome.com/09b41211e9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    
+    <homeButton class = "home" type="button" action="homepage.html" onclick="location.href='./homepage.html';">
+        <img class = "move" src="hoooo.png" alt="second" id = "p1image" width="50" height="33">
+    </homeButton>
+
+    <backButton class = "backButton" type="button">
+        <img  class = "move2" src="arrow2.png" alt="second" id = "p2image" width="50" height="33">
+    </backButton>
+
+    </div>
+    <h1>Find a Professor's Office <!--<img src="glasses.png" alt="Glasses Icon" width="10%">--></h1>
+    </div>
+        <div class="wrapper">
+            <div class="search-input">
+            <input type="text" placeholder="Search for professor by name...">
+                <div id="suggestions" class="suggestions-box">
+                </div>
+            <div class="icon"><i class="fas fa-search"></i></div>
+        </div>
+
+        <br></br>
+
+
+        <h1 id="result"></h1>
+
+        <div id='floorplanbutton'>View Floor Plan</div>
+        <!--modal floor plan image-->
+        <div id='myModal' class="modal">
+              <!-- The Close Button -->
+            <span class="close">&times;</span>
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="floorimg">
+
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+            
+        </div>
+
+<!-- Virtual Keyboard for ipad -->
+        <div class="container">
+            <div class="keyboardwrapper" id="keyboard">
+                <div class="keyboard_lights"></div>
+                <div class="keyboard_keys">
+                    <div class="keyrow">
+                        <div class="keys">`</div>
+                        <div class="keys">1</div>
+                        <div class="keys">2</div>
+                        <div class="keys">3</div>
+                        <div class="keys">4</div>
+                        <div class="keys">5</div>
+                        <div class="keys">6</div>
+                        <div class="keys">7</div>
+                        <div class="keys">8</div>
+                        <div class="keys">9</div>
+                        <div class="keys">0</div>
+                        <div class="keys">-</div>
+                        <div class="keys">=</div>
+                        <div class="keys backspace">DELETE</div>
+                    </div>
+                    <div class="keyrow">
+                        <div class="keys tab">Tab</div>
+                        <div class="keys">Q</div>
+                        <div class="keys">W</div>
+                        <div class="keys">E</div>
+                        <div class="keys">R</div>
+                        <div class="keys">T</div>
+                        <div class="keys">Y</div>
+                        <div class="keys">U</div>
+                        <div class="keys">I</div>
+                        <div class="keys">O</div>
+                        <div class="keys">P</div>
+                        <div class="keys">[</div>
+                        <div class="keys">]</div>
+                        <div class="keys slash">\</div>
+                    </div>
+                    <div class="keyrow">
+                        <div class="keys capslock">Caps Lock</div>
+                        <div class="keys">A</div>
+                        <div class="keys">S</div>
+                        <div class="keys">F</div>
+                        <div class="keys">G</div>
+                        <div class="keys">H</div>
+                        <div class="keys">J</div>
+                        <div class="keys">K</div>
+                        <div class="keys">L</div>
+                        <div class="keys">;</div>
+                        <div class="keys">"</div>
+                        <div class="keys enter">ENTER</div>
+                    </div>
+                    <div class="keyrow">
+                        <div class="keys shift">Shift</div>
+                        <div class="keys">Z</div>
+                        <div class="keys">X</div>
+                        <div class="keys">C</div>
+                        <div class="keys">V</div>
+                        <div class="keys">B</div>
+                        <div class="keys">N</div>
+                        <div class="keys">M</div>
+                        <div class="keys">,</div>
+                        <div class="keys">.</div>
+                        <div class="keys">/</div>
+                        <div class="keys">?</div>
+                        <div class="keys"><i class="fas fa-sort-up"></i></div>
+                    </div>
+                    <div class="keyrow">
+                        <div class="keys filler"></div>
+                        <div class="keys space"> </div>
+                        <div class="keys"><i class="fas fa-caret-left"></i></div>
+                        <div class="keys"><i class="fas fa-caret-down"></i></div>
+                        <div class="keys"><i class="fas fa-caret-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="bg">
+            <img src="IRBrooms.jpg" alt = 'iribe background picture'>
+        </div>
+
+        <script src="search_scripts/suggestions.js"></script>
+        <script src="search_scripts/officeMap.js"></script>
+        <script src="search_scripts/functionality.js"></script>
+        
+    
+</body>
+</html>

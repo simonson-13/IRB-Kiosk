@@ -442,6 +442,166 @@
             border-radius: 100px;
             
         }
+        .tableDesign {
+            padding: 0px;
+            color: red;
+            font-size: 20;
+        }
+
+
+
+
+
+
+
+
+        /* doria code */
+
+
+        /* controls positions of search and suggests*/
+.wrapper {
+  margin: auto;
+  width: 50rem;
+}
+
+/* creates nice box arround suggestions list*/
+.wrapper .search-input {
+  position: relative;
+  background: white;
+  width: 50rem;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+
+/*controls search bar outline and input box size*/
+.search-input input {
+  height: 4rem;
+  width: 45rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  /* outlines search box */
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* positions and sizes search icon*/
+.search-input .icon {
+  height: 55px;
+  width: 55px;
+  line-height: 55px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 30px;
+}
+
+.search-input .suggestions-box {
+  /*height of contained suggestions*/
+  max-height: 120px;
+  overflow-y: auto;
+  /*hide suggestions*/
+  opacity: 0;
+  pointer-events: none;
+}
+
+.search-input.active .suggestions-box {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*styles list so that it no longer has bullet points and suggestions are scrollable*/
+.suggestions-box li {
+  list-style: none;
+  padding: 8px 12px;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+  /*temporarily hide*/
+  display: none;
+}
+
+.suggestions-box li:hover {
+  background: #efefef;
+}
+
+.search-input.active .suggestions-box li {
+  display: block;
+}
+
+/* KEYBOARD */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  flex-direction: column;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -55%;
+}
+
+.keyboardwrapper {
+  max-width: 100%;
+  width: 100%;
+  background-color: #e7e7e7;
+  overflow: hidden;
+  position: relative;
+  order: 2;
+  display: none;
+}
+
+.keyrow {
+  display: flex;
+}
+
+.keys {
+  width: 60px;
+  height: 60px;
+  background-color: white; /*rgb(68, 75, 87);*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  transition: 0.2s;
+}
+
+.keys:active {
+  background-color: rgb(181, 236, 242);
+}
+
+.backspace {
+  width: 130px;
+}
+
+.tab {
+  width: 90px;
+}
+
+.shift {
+  width: 140px;
+}
+
+.capslock {
+  width: 128px;
+}
+
+.enter {
+  width: 200px;
+}
+
+.slash {
+  width: 100px;
+}
+
+.space {
+  width: 80%;
+}
 
         
 
@@ -455,7 +615,10 @@
             map1.set("1222", [660,144]);
             
             function search(){
+                console.log("enter")
                 result = document.getElementById("texttext").value;
+                console.log("something")
+                console.log(result)
                 floor = result[0];
                 document.getElementById("texttext").value = "";
                 
@@ -743,13 +906,57 @@
     <div class = "popup" id = "popup-1">
         <div class = "overlay">
             <div class = "content">
-                <div class = "close-btn" onclick="togglePopup()">&times;</div>
+                    <div class = "close-btn" onclick="togglePopup()">&times;</div>
                     
-                    <div >
+                    <!-- <div >
                         <input type = "text" id = "texttext" class = "input" placeholder="search for a room number">
                         <button onclick="search()">Search</button>
+                    </div> -->
+                    <div class="wrapper">
+                        <div class="search-input">
+                        <input type="text" id = "texttext" class = "input" placeholder="search for a room number">
+                            <div id="suggestions" class="suggestions-box">
+                            </div>
+                        <div class="icon"><i class="fas fa-search"></i></div>
                     </div>
-                    <space>
+                    <br><br><br><br>
+                    <body>
+                        <form name="calculator">
+                           <table style="width: 260px; height: 48px;">
+                              <!-- <tr>
+                                 <td colspan="4">
+                                    <input type="text" name="display" id="display" disabled>
+                                 </td>
+                              </tr> -->
+                              <tr >
+                                 <td><input type="button"  class="keys" name="one" value="1" onclick="texttext.value += '1'"></td>
+                                 <td><input type="button"  class="keys" name="two" value="2" onclick="texttext.value += '2'"></td>
+                                 <td><input type="button"  class="keys" name="three" value="3" onclick="texttext.display.value += '3'"></td>
+                              </tr>
+                              <tr >
+                                 <td><input type="button"  class="keys" name="four" value="4" onclick="texttext.value += '4'" ></td>
+                                 <td><input type="button"  class="keys" name="five" value="5" onclick="texttext.value += '5'"></td>
+                                 <td><input type="button"  class="keys" name="six" value="6" onclick="texttext.display.value += '6'"></td>
+                              </tr>
+                              <tr>
+                                 <td><input type="button"  class="keys" name="seven" value="7" onclick="texttext.value += '7'"></td>
+                                 <td><input type="button"  class="keys" name="eight" value="8" onclick="texttext.value += '8'"></td>
+                                 <td><input type="button"  class="keys" name="nine" value="9" onclick="texttext.value += '9'"></td>
+                              </tr>
+                              <tr>
+                                 <td><input type="button"  class="keys" name="delete" value="&times" onclick="texttext.value = texttext.value.slice(0,-1)"></td>
+                                 <td><input type="button"  class="keys" name="zero" value="0" onclick="texttext.value += '0'"></td>
+                                 <td><input type="button"  class="keys" name="B" value="B" onclick="texttext.value += 'B'"></td>
+                              </tr>
+                              <tr>
+                                <td><input class="keys" type="button" name="clear" value="clear" onclick="texttext.value = ''"></td>
+                                <td><input style="top:447px; right:372px; position:absolute;"class="keys" type="button" name="' '" value=""></td>
+                           </table>
+                        </form>
+                        <button style="top:447px;right:466px;position:absolute;" class="keys" onclick="search()">Search</button>
+                     </body>
+
+                     <space>
                         <br>
                         <br>
                         <br>
