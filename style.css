@@ -43,7 +43,7 @@ body {
 .days li {
   font-weight: bold;
   list-style-type: none;
-  display: inline-block;
+  display: block;
   width: 13.6%;
   max-width: 13.6%;
   height: 117px;
