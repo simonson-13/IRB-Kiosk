@@ -67,6 +67,12 @@ body {
   color: white !important
 }
 
+.days li .social {
+  font-size: 15px;
+  border-radius: 50px;
+  background: green;
+}
+
 .days li .passed {	
   /* border-style: dotted; */
   /* padding-right: 3px;
