@@ -10,8 +10,7 @@
 .home {
     height:15px;
 width: 72px;
-border: .5px outset yellow;
-background-color: red;
+background-color: rgb(204, 0, 0);
 font-size: 35px;
 padding: 20px;
 color: white;
@@ -24,6 +23,7 @@ position: absolute;
 zoom: normal;
 z-index: 0;
 line-height:20px;
+outline: 2px solid white;
 }
 
 .home:hover {
@@ -34,8 +34,7 @@ line-height:20px;
 .backButton {
     height:15px;
     width: 72px;
-    border: .5px outset yellow;
-    background-color: red;
+    background-color: rgb(204, 0, 0);
     font-size: 35px;
     padding: 20px;
     color: white;
@@ -48,6 +47,7 @@ line-height:20px;
     zoom: normal;
     z-index: 0;
     line-height:20px;
+    outline: 2px solid white;
 }
 
 .backButton:hover {
@@ -90,13 +90,14 @@ h1 {
 }
 
 #result {
-    background-color: red;
+    background-color: rgb(204, 0, 0, 0.8);
     display: inline-block !important;
     z-index: 2;
+    border-radius: 5px;
 }
 
 .nav {
-    background-color: red;
+    background-color: rgb(204, 0, 0);
     border-radius:5px;
     width:80px;
     height: 60px;
@@ -104,7 +105,7 @@ h1 {
 }
 
 body {
-    background-color: rgb(206, 77, 77);
+    background-color: rgb(204, 0, 0);
     zoom: 100%
 }
 
@@ -145,7 +146,7 @@ body {
     padding: 0 60px 0 20px;
     font-size: 18px;
     /* outlines search box */
-    box-shadow: 0px 1px 5px rgba(0,0,0,0.2)
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.5)
 }
 
 /* positions and sizes search icon*/
@@ -272,7 +273,7 @@ body {
 /* floor plan button*/
 #floorplanbutton {
     position: relative;
-    background-color: red;
+    background-color: rgb(204, 0, 0);
     width: 50%;
     margin-left: 25%;
     color: white;
@@ -280,6 +281,7 @@ body {
     text-align: center;
     outline: 2px solid white;
     display: none;
+    border-radius: 5px;
 }
 
 #floorplanbutton:hover {
@@ -301,7 +303,7 @@ body {
     height: 100%;
     overflow: auto;
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
