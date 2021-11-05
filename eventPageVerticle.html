@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<Title>Events</Title>  
+ 
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"></link>
+</head>
+
+<body>
+
+<!-- <button onclick="backFunction()" class = "backButton">
+  <img  class = "move2" src="arrow2.png" alt="second" id = "p2image" width="50" height="33">
+</button> -->
+
+<button onclick="homeFunction()" class = "home">
+  <ul>
+    <li>
+      <img class = "move" src="hoooo.png" alt="second" id = "p1image" width="50" height="33">
+    </li>
+    
+    <li class="homeText">
+      Home
+    </li>
+  </ul>  
+</button>
+<h1 style="text-align: center;">IRB Events</h1>
+
+
+<div id="popupWindow" class="modal">
+
+  <div class="modal-content">
+    <span class="close" onclick="closeFunction()">&times;</span>
+    <p>Descriptions of events go here.</p>
+  </div>
+</div>
+
+<ul class="weekdays">
+  <li>Su</li>
+  <br>
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+</ul>
+
+<ul class="days">  
+  
+  <li onclick="myFunction()"><span class="passed">Nov 7</span></li>
+  <li onclick="myFunction()"><span class="passed">8</span></li>
+  <li onclick="myFunction()"><span class="active">9</span></li>
+  <li onclick="myFunction()">10</li>
+  <li onclick="myFunction()">11</li>
+  <li onclick="myFunction()">12</li>
+  <li onclick="myFunction()">13
+    <br><span class="social">Computer Science Ice Cr... </span>
+    <br>event 4
+    <br>event 6
+    <br> ...
+  </li>
+
+</ul>
+
+<script>
+  var modal = document.getElementById("popupWindow");
+
+  function myFunction() {
+    modal.style.display = "block";
+  }
+
+  function closeFunction() {
+
+    modal.style.display = "none";
+
+  }
+
+  window.addEventListener("click", function(event) {
+
+    if (event.target == popupWindow) {
+      modal.style.display = "none";
+
+    }
+  })
+
+
+
+
+</script>
+</body>
+</html>
+

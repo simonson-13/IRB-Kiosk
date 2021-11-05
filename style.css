@@ -46,8 +46,8 @@ body {
   display: block;
   width: 13.6%;
   max-width: 13.6%;
-  height: 117px;
-  max-height: 117px;
+  height: 500px;
+  max-height: 1000px;
   text-align: left;
   margin-bottom: 5px;
   margin-left: 5px;
@@ -69,8 +69,11 @@ body {
 
 .days li .social {
   font-size: 15px;
-  border-radius: 50px;
-  background: green;
+  border-radius: 5px;
+  background: pink;
+  /* border: black;
+  border-style: solid;
+  border-width: 5px; */
 }
 
 .days li .passed {	
