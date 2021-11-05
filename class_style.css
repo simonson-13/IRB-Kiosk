@@ -207,15 +207,9 @@ body {
 }
 
 #classes th {
-<<<<<<< HEAD
     background-color: rgb(204, 0, 0);
     color: white;
     font-size: 30px;
-=======
-  background-color: red;
-  color: white;
-  font-size: 30px;
->>>>>>> 28912789e17e8ee1dfb05a04dfee1c95ff4b8722
 }
 
 #classes td {
@@ -230,7 +224,6 @@ body {
 
 /*home button*/
 .home {
-<<<<<<< HEAD
     height:15px;
 width: 72px;
 outline: 2px solid white;
@@ -247,24 +240,6 @@ position: absolute;
 zoom: normal;
 z-index: 0;
 line-height:20px;
-=======
-  height: 15px;
-  width: 72px;
-  border: 0.5px outset yellow;
-  background-color: red;
-  font-size: 35px;
-  padding: 20px;
-  color: white;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 5px;
-  top: 0px;
-  right: 0px;
-  position: absolute;
-  zoom: normal;
-  z-index: 0;
-  line-height: 20px;
->>>>>>> 28912789e17e8ee1dfb05a04dfee1c95ff4b8722
 }
 
 .home:hover {
@@ -273,7 +248,6 @@ line-height:20px;
 }
 
 .backButton {
-<<<<<<< HEAD
     height:15px;
 width: 72px;
 outline: 2px solid white;
@@ -290,24 +264,6 @@ position: absolute;
 zoom: normal;
 z-index: 0;
 line-height:20px;
-=======
-  height: 15px;
-  width: 72px;
-  border: 0.5px outset yellow;
-  background-color: red;
-  font-size: 35px;
-  padding: 20px;
-  color: white;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 5px;
-  top: 0px;
-  right: 911px;
-  position: absolute;
-  zoom: normal;
-  z-index: 0;
-  line-height: 20px;
->>>>>>> 28912789e17e8ee1dfb05a04dfee1c95ff4b8722
 }
 
 .backButton:hover {
@@ -316,7 +272,6 @@ line-height:20px;
 }
 
 /* center home and back icons in button*/
-<<<<<<< HEAD
 .move{
     top:12px;
     position: absolute;
@@ -426,15 +381,3 @@ line-height:20px;
       width: 100%;
     }
   }
-=======
-.move {
-  top: 12px;
-  position: absolute;
-  right: 33px;
-}
-.move2 {
-  top: 12px;
-  position: absolute;
-  right: 33px;
-}
->>>>>>> 28912789e17e8ee1dfb05a04dfee1c95ff4b8722
