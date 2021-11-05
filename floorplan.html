@@ -50,14 +50,14 @@
         outline: 2px solid white;
         opacity: .9;
         }
-        
+/*         
         .butt1:hover {
             background-color: gold;
             width: 90px;
             right : 885px;
             color:white;
             opacity: .9;
-        }
+        } */
 
         .butt2 {
             height:20px;
@@ -79,14 +79,14 @@
         outline: 2px solid white;
         opacity: .9;
         }
-        
+/*         
         .butt2:hover {
             background-color: gold;
             width: 90px;
             right : 885px;
             color:white;
             opacity: .9;
-        }
+        } */
 
         .butt3 {
             height:20px;
@@ -109,13 +109,13 @@
         opacity: .9;
         }
         
-        .butt3:hover {
+        /* .butt3:hover {
             background-color: gold;
             width: 90px;
             right : 885px;
             color:white;
             opacity: .9;
-        }
+        } */
 
         .butt4 {
             height:20px;
@@ -138,13 +138,13 @@
         opacity: .9;
         }
         
-        .butt4:hover {
+        /* .butt4:hover {
             background-color: gold;
             width: 90px;
             right : 885px;
             color:white;
             opacity: .9;
-        }
+        } */
 
         .butt5 {
             height:20px;
@@ -167,13 +167,13 @@
         opacity: .9;
         }
         
-        .butt5:hover {
+        /* .butt5:hover {
             background-color: gold;
             width: 90px;
             right : 885px;
             color:white;
             opacity: .9;
-        }
+        } */
 
         .butt6 {
             height:20px;
@@ -196,13 +196,13 @@
         opacity: .9;
         }
         
-        .butt6:hover {
+        /* .butt6:hover {
             background-color: gold;
             width: 90px;
             right : 885px;
             color:white;
             opacity: .9;
-        }
+        } */
 
         .butt7 {
             height:20px;
@@ -225,13 +225,13 @@
         opacity: .9;
         }
         
-        .butt7:hover {
+        /* .butt7:hover {
             background-color: gold;
             width: 90px;
             right : 885px;
             color:white;
             opacity: .9;
-        }
+        } */
 
         .butt8 {
         height:20px;
@@ -254,13 +254,13 @@
         opacity: .9;
         }
         
-        .butt8:hover {
+        /* .butt8:hover {
             background-color: gold;
             width: 90px;
             right : 885px;
             color:white;
             opacity: .9;
-        }
+        } */
 
         .home {
             height:15px;
@@ -458,9 +458,7 @@
                 result = document.getElementById("texttext").value;
                 floor = result[0];
                 document.getElementById("texttext").value = "";
-                if(floor=="B"||floor=="1"||floor=="2"||floor=="3"||floor=="4"||floor=="5"||floor=="6"||floor=="7"){
-                    set(floor)
-                }
+                
                 if (map1.has(result) && floor=="B"){
                     guessB();
                     togglePopup();
@@ -507,93 +505,53 @@
                 }
                 
             }
-            function set(floor){
-                set_red()
-                id = ""
-                b = -1 
-                if(floor == "B"){
-                    id = "button8";
-                } else{
-                    a = parseInt(floor)
-                    b = 8-a;
-                    id = "button" + b;
-                }
-                if(floor == "7"){
-                    guess7();
-                }
-                if(floor == "6"){
-                    guess6();
-                }
-                if(floor == "5"){
-                    guess5();
-                }
-                if(floor == "4"){
-                    guess4();
-                }
-                if(floor == "3"){
-                    guess3();
-                }
-                if(floor == "3"){
-                    guess2();
-                }
-                if(floor == "2"){
-                    guess1();
-                }
-                if(floor == "1"){
-                    guess1()
-                }
-                if(floor == "B"){
-                    guessB()
-                }
-                console.log(id)
-                console.log(id)
-
-                document.getElementById(id).style.background = 'gold';
-                document.getElementById(id).style.right = 885
-                document.getElementById(id).style.width = 90
-                
-            }
+            
             function set_red(){
                 if(document.getElementById("button8").style.background == 'gold'){
                     document.getElementById("button8").style.background = 'rgb(204,0,0)';
                     document.getElementById("button8").style.right = 905
                     document.getElementById("button8").style.width = 70
+                    return
                 }
                 if(document.getElementById("button7").style.background == 'gold'){
+                    
                     document.getElementById("button7").style.background = 'rgb(204,0,0)';
                     document.getElementById("button7").style.right = 905
                     document.getElementById("button7").style.width = 70
+                    return
                 }
                 if(document.getElementById("button6").style.background == 'gold'){
                     document.getElementById("button6").style.background = 'rgb(204,0,0)';
                     document.getElementById("button6").style.right = 905
                     document.getElementById("button6").style.width = 70
-                }
+                    return                }
                 if(document.getElementById("button5").style.background == 'gold'){
                     document.getElementById("button5").style.background = 'rgb(204,0,0)';
                     document.getElementById("button5").style.right = 905
                     document.getElementById("button5").style.width = 70
-                }
+                    return          
+                 }
                 if(document.getElementById("button4").style.background == 'gold'){
                     document.getElementById("button4").style.background = 'rgb(204,0,0)';
                     document.getElementById("button4").style.right = 905
                     document.getElementById("button4").style.width = 70
-                }
+                    return                }
                 if(document.getElementById("button3").style.background == 'gold'){
                     document.getElementById("button3").style.background = 'rgb(204,0,0)';
                     document.getElementById("button3").style.right = 905
                     document.getElementById("button3").style.width = 70
-                }
+                    return                }
                 if(document.getElementById("button2").style.background == 'gold'){
+                    
                     document.getElementById("button2").style.background = 'rgb(204,0,0)';
                     document.getElementById("button2").style.right = 905
                     document.getElementById("button2").style.width = 70
-                }
+                    return                }
                 if(document.getElementById("button1").style.background == 'gold'){
                     document.getElementById("button1").style.background = 'rgb(204,0,0)';
                     document.getElementById("button1").style.right = 905
                     document.getElementById("button1").style.width = 70
-                }
+                    return                }
             }
 
 
@@ -606,56 +564,88 @@
                 document.getElementById('text1').innerHTML = "Now Displaying: Floor 7";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
+                set_red()
                 red()
+                document.getElementById("button1").style.background = 'gold';
+                document.getElementById("button1").style.right = 885
+                document.getElementById("button1").style.width = 90
+
             }
             function guess6(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
                 document.getElementById('text1').innerHTML = "Now Displaying: Floor 6";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
+                set_red()
                 red()
+                document.getElementById("button2").style.background = 'gold';
+                document.getElementById("button2").style.right = 885
+                document.getElementById("button2").style.width = 90
             }
             function guess5(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
                 document.getElementById('text1').innerHTML = "Now Displaying: Floor 5";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
+                set_red()
                 red()
+                document.getElementById("button3").style.background = 'gold';
+                document.getElementById("button3").style.right = 885
+                document.getElementById("button3").style.width = 90
             }
             function guess4(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
                 document.getElementById('text1').innerHTML = "Now Displaying: Floor 4";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
+                set_red()
                 red()
+                document.getElementById("button4").style.background = 'gold';
+                document.getElementById("button4").style.right = 885
+                document.getElementById("button4").style.width = 90
             }
             function guess3(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
                 document.getElementById('text1').innerHTML = "Now Displaying: Floor 3";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
+                set_red()
                 red()
+                document.getElementById("button5").style.background = 'gold';
+                document.getElementById("button5").style.right = 885
+                document.getElementById("button5").style.width = 90
             }       
             function guess2(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
                 document.getElementById('text1').innerHTML = "Now Displaying: Floor 2";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
+                set_red()
                 red()
+                document.getElementById("button6").style.background = 'gold';
+                document.getElementById("button6").style.right = 885
+                document.getElementById("button6").style.width = 90
             }
             function guess1(){
                 document.getElementById('p1image').src = "Floor one.png"
                 document.getElementById('text1').innerHTML = "Now Displaying: Floor 1";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
-                gold()
+                set_red()
+                document.getElementById("button7").style.background = 'gold';
+                document.getElementById("button7").style.right = 885
+                document.getElementById("button7").style.width = 90
             }
             function guessB(){
                 document.getElementById('p1image').src = "Ground floor.png"
                 document.getElementById('text1').innerHTML = "Now Displaying: Floor B";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
+                set_red()
                 red()
+                document.getElementById("button8").style.background = 'gold';
+                document.getElementById("button8").style.right = 885
+                document.getElementById("button8").style.width = 90
             }
             function red(){
                 document.getElementById("button7").style.background = 'rgb(204,0,0)';
@@ -671,49 +661,49 @@
     </head>
 
   <body class = "back" style="background-image: url('blue.jpg');">
-    <button1 >
+    <button1>
        <butt1 class="butt1" type="button" id = "button1" value="test" onclick="guess7();">
           7
        </butt1>
     </button1>
 
-    <button2 >
+    <button2">
         <butt2 class="butt2" type="button" id = "button2" value="test" onclick="guess6();" >
            6
         </butt2>
     </button2>
 
-    <button3 >
+    <button3>
         <butt3 class="butt3" type="button" id = "button3" value="test" onclick="guess5();">
            5
         </butt3>
     </button3>
 
-    <button4 >
+    <button4>
         <butt4 class="butt4" type="button" id = "button4" value="test" onclick="guess4();">
            4
         </butt4>
      </button4>
  
-     <button5 >
+     <button5>
          <butt5 class="butt5" type="button" id = "button5" value="test" onclick="guess3();">
             3
          </butt5>
      </button5>
  
-     <button6 >
+     <button6>
          <butt6 class="butt6" type="button" id = "button6" value="test" onclick="guess2();">
             2
          </butt6>
      </button6>
 
-     <button7 >
+     <button7">
         <butt7 class="butt7" type="button" id = "button7" value="test" onclick="guess1();">
            1
         </butt7>
     </button7>
 
-    <button8 >
+    <button8>
         <butt8 class="butt8" type="button" id = "button8" value="test" onclick="guessB();">
            B
         </butt8>
