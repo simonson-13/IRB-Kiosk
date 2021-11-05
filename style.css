@@ -23,7 +23,7 @@ body {
 
 .weekdays li {
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 0px;
   width: 13.9%;
   font-size: large;
   font-weight: bold;
