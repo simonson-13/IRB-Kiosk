@@ -1,5 +1,13 @@
 <html lang=en  content= "width=device-width, user-scalable=no"> 
-    
+    <head>
+        <meta charset="UTF-8">
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <!-- <title>Search For a Class</title> -->
+        <!-- <link rel="stylesheet" href="class_style.css"> -->
+        <script src="https://kit.fontawesome.com/09b41211e9.js" crossorigin="anonymous"></script>
+    </head>
+
     <head>
 
         <style>
@@ -340,7 +348,7 @@
             color: white;
             font-size: 72px;
             top : 20px;
-            right : 180px;
+            right : 170px; /*was 180px felt 170px aligned better with the rest of the screen*/
             height:50px;
             width: 700px;
             position: absolute;
@@ -373,14 +381,15 @@
         }
 
         .move2{
-            top:12px;
+            top:-120px;
             position: absolute;
-            right: 33px;
+            right: -103px;
+            transform: rotate(220deg);
         }
 
 
 
-        /* this part pertions to the popup */
+        /* this part is for the popup */
 
         .popup .overlay{
             position: fixed;
@@ -398,8 +407,8 @@
             left:50%;
             transform: translate(-50%,-50%) scale(0);
             background: #fff;
-            width: 1000px;
-            height: 700px;
+            width: 350px;
+            height: 590px;
             z-index: 21;
             text-align: center;
             padding: 20px;
@@ -408,8 +417,8 @@
         .popup .close-btn{
             cursor: pointer;
             position: absolute;
-            right: 20px;
-            top: 20px;
+            right: 5px;
+            top: 5px;
             width:30px;
             height:30px;
             background:#222;
@@ -436,8 +445,8 @@
             width: 30px;
             height: 30px;
             padding: 10px;
-            right: -144px;
-            top: -610px;
+            right: -324px;
+            top: -260px;
             position: absolute;
             border-radius: 100px;
             
@@ -468,7 +477,7 @@
 .wrapper .search-input {
   position: relative;
   background: white;
-  width: 50rem;
+  width: 15rem;
   border-radius: 5px;
   box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
 }
@@ -476,7 +485,7 @@
 /*controls search bar outline and input box size*/
 .search-input input {
   height: 4rem;
-  width: 45rem;
+  width: 15rem;
   outline: none;
   border: none;
   border-radius: 5px;
@@ -492,44 +501,44 @@
   width: 55px;
   line-height: 55px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 12;
+  right: 4;
   text-align: center;
   font-size: 30px;
 }
-
-.search-input .suggestions-box {
+/* 
+/* .search-input .suggestions-box {
   /*height of contained suggestions*/
-  max-height: 120px;
-  overflow-y: auto;
-  /*hide suggestions*/
+  /* max-height: 120px;
+  overflow-y: auto; */
+  /*hide suggestions
   opacity: 0;
   pointer-events: none;
-}
-
+} */ 
+/* 
 .search-input.active .suggestions-box {
   opacity: 1;
   pointer-events: auto;
-}
+} */
 
 /*styles list so that it no longer has bullet points and suggestions are scrollable*/
-.suggestions-box li {
+/* .suggestions-box li {
   list-style: none;
   padding: 8px 12px;
   width: 100%;
   cursor: default;
   border-radius: 3px;
   /*temporarily hide*/
-  display: none;
-}
+  /* display: none;
+} */
 
-.suggestions-box li:hover {
+/* .suggestions-box li:hover {
   background: #efefef;
-}
-
+} */
+/*
 .search-input.active .suggestions-box li {
   display: block;
-}
+} */
 
 /* KEYBOARD */
 .container {
@@ -613,7 +622,7 @@
             let map1 = new Map();
             map1.set("B0120", [610,610]);
             map1.set("1222", [660,144]);
-            
+            map1.set("0325", [260,324]);
             function search(){
                 console.log("enter")
                 result = document.getElementById("texttext").value;
@@ -621,7 +630,9 @@
                 console.log(result)
                 floor = result[0];
                 document.getElementById("texttext").value = "";
-                
+                if (map1.has(result)){
+                    document.getElementById("spoop").innerHTML = ""
+                }
                 if (map1.has(result) && floor=="B"){
                     guessB();
                     togglePopup();
@@ -629,42 +640,74 @@
                     document.getElementById("high").style.top = map1.get(result)[0]+"px";
                     
                     document.getElementById("high").innerHTML = result;
+                    
                 }
-                else if(map1.has(result)&&floor=="1"){
-                    guess1();
+                else if(map1.has(result)&&floor=="0"){
+                    guess0();
                     togglePopup();
                     document.getElementById("high").style.right = map1.get(result)[1]+"px";
                     document.getElementById("high").style.top = map1.get(result)[0]+"px";
-                    
+                    document.getElementById("rowrow").style.right = (map1.get(result)[1]+30)+"px";
+                    document.getElementById("rowrow").style.top = (map1.get(result)[0]-30)+"px";
+
+                    document.getElementById("high").innerHTML = result;
+                }
+                else if(map1.has(result)&&floor=="1"){
+                    guess1()
+                    togglePopup()
+                    document.getElementById("high").style.right = map1.get(result)[1]+"px";
+                    document.getElementById("high").style.top = map1.get(result)[0]+"px";
+                    document.getElementById("rowrow").style.right = (map1.get(result)[1]+30)+"px";
+                    document.getElementById("rowrow").style.top = (map1.get(result)[0]-30)+"px";
                     document.getElementById("high").innerHTML = result;
                 }
                 else if(map1.has(result)&&floor=="2"){
                     guess2()
                     togglePopup()
+                    document.getElementById("high").style.right = map1.get(result)[1]+"px";
+                    document.getElementById("high").style.top = map1.get(result)[0]+"px";
+                    
+                    document.getElementById("high").innerHTML = result;
                 }
                 else if(map1.has(result)&&floor=="3"){
                     guess3()
                     togglePopup()
+                    document.getElementById("high").style.right = map1.get(result)[1]+"px";
+                    document.getElementById("high").style.top = map1.get(result)[0]+"px";
+                    
+                    document.getElementById("high").innerHTML = result;
                 }
                 else if(map1.has(result)&&floor=="4"){
                     guess4()
                     togglePopup()
+                    document.getElementById("high").style.right = map1.get(result)[1]+"px";
+                    document.getElementById("high").style.top = map1.get(result)[0]+"px";
+                    
+                    document.getElementById("high").innerHTML = result;
                 }
                 else if(map1.has(result)&&floor=="5"){
                     guess5()
                     togglePopup()
+                    document.getElementById("high").style.right = map1.get(result)[1]+"px";
+                    document.getElementById("high").style.top = map1.get(result)[0]+"px";
+                    
+                    document.getElementById("high").innerHTML = result;
                 }
                 else if(map1.has(result)&&floor=="6"){
                     guess6()
                     togglePopup()
-                }
-                else if(map1.has(result)&&floor=="7"){
-                    guess7()
-                    togglePopup()
+                    document.getElementById("high").style.right = map1.get(result)[1]+"px";
+                    document.getElementById("high").style.top = map1.get(result)[0]+"px";
+                    
+                    document.getElementById("high").innerHTML = result;
                 }
                 else{
                     console.log("invalid");
-                    document.getElementById("spoop").innerHTML = "Room number: " + result + " does not exist";
+                    if(result.length>0){
+                        document.getElementById("spoop").innerHTML = "Room " + result + " does not exist";
+                    } else{
+                        document.getElementById("spoop").innerHTML = ""
+                    }
                 }
                 
             }
@@ -720,13 +763,16 @@
 
             function togglePopup(){
                 document.getElementById("popup-1").classList.toggle("active");
-
+                document.getElementById("spoop").innerHTML = ""
+                document.getElementById("texttext").value = ""
             }
-            function guess7(){
+            function guess6(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
-                document.getElementById('text1').innerHTML = "Now Displaying: Floor 7";
+                document.getElementById('text1').innerHTML = "Now Displaying: Floor 6";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
+                document.getElementById("rowrow").style.right = -100
+                document.getElementById("rowrow").style.top = -100
                 set_red()
                 red()
                 document.getElementById("button1").style.background = 'gold';
@@ -734,66 +780,79 @@
                 document.getElementById("button1").style.width = 90
 
             }
-            function guess6(){
+            function guess5(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
-                document.getElementById('text1').innerHTML = "Now Displaying: Floor 6";
+                document.getElementById('text1').innerHTML = "Now Displaying: Floor 5";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
+                document.getElementById("rowrow").style.right = -100
+                document.getElementById("rowrow").style.top = -100
+                
                 set_red()
                 red()
                 document.getElementById("button2").style.background = 'gold';
                 document.getElementById("button2").style.right = 885
                 document.getElementById("button2").style.width = 90
             }
-            function guess5(){
+            function guess4(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
-                document.getElementById('text1').innerHTML = "Now Displaying: Floor 5";
+                document.getElementById('text1').innerHTML = "Now Displaying: Floor 4";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
+                document.getElementById("rowrow").style.right = -100
+                document.getElementById("rowrow").style.top = -100
                 set_red()
                 red()
                 document.getElementById("button3").style.background = 'gold';
                 document.getElementById("button3").style.right = 885
                 document.getElementById("button3").style.width = 90
             }
-            function guess4(){
+            function guess3(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
-                document.getElementById('text1').innerHTML = "Now Displaying: Floor 4";
+                document.getElementById('text1').innerHTML = "Now Displaying: Floor 3";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
+                document.getElementById("rowrow").style.right = -100
+                document.getElementById("rowrow").style.top = -100
                 set_red()
                 red()
                 document.getElementById("button4").style.background = 'gold';
                 document.getElementById("button4").style.right = 885
                 document.getElementById("button4").style.width = 90
             }
-            function guess3(){
+            function guess2(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
-                document.getElementById('text1').innerHTML = "Now Displaying: Floor 3";
+                document.getElementById('text1').innerHTML = "Now Displaying: Floor 2";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
+                document.getElementById("rowrow").style.right = -100
+                document.getElementById("rowrow").style.top = -100
                 set_red()
                 red()
                 document.getElementById("button5").style.background = 'gold';
                 document.getElementById("button5").style.right = 885
                 document.getElementById("button5").style.width = 90
             }       
-            function guess2(){
+            function guess1(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
-                document.getElementById('text1').innerHTML = "Now Displaying: Floor 2";
+                document.getElementById('text1').innerHTML = "Now Displaying: Floor 1";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
+                document.getElementById("rowrow").style.right = -100
+                document.getElementById("rowrow").style.top = -100
                 set_red()
                 red()
                 document.getElementById("button6").style.background = 'gold';
                 document.getElementById("button6").style.right = 885
                 document.getElementById("button6").style.width = 90
             }
-            function guess1(){
+            function guess0(){
                 document.getElementById('p1image').src = "Floor one.png"
-                document.getElementById('text1').innerHTML = "Now Displaying: Floor 1";
+                document.getElementById('text1').innerHTML = "Now Displaying: Floor 0";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
+                document.getElementById("rowrow").style.right = -100
+                document.getElementById("rowrow").style.top = -100
                 set_red()
                 document.getElementById("button7").style.background = 'gold';
                 document.getElementById("button7").style.right = 885
@@ -804,6 +863,8 @@
                 document.getElementById('text1').innerHTML = "Now Displaying: Floor B";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
+                document.getElementById("rowrow").style.right = -100
+                document.getElementById("rowrow").style.top = -100
                 set_red()
                 red()
                 document.getElementById("button8").style.background = 'gold';
@@ -825,44 +886,44 @@
 
   <body class = "back" style="background-image: url('blue.jpg');">
     <button1>
-       <butt1 class="butt1" type="button" id = "button1" value="test" onclick="guess7();">
-          7
+       <butt1 class="butt1" type="button" id = "button1" value="test" onclick="guess6();">
+          6
        </butt1>
     </button1>
 
     <button2">
-        <butt2 class="butt2" type="button" id = "button2" value="test" onclick="guess6();" >
-           6
+        <butt2 class="butt2" type="button" id = "button2" value="test" onclick="guess5();" >
+           5
         </butt2>
     </button2>
 
     <button3>
-        <butt3 class="butt3" type="button" id = "button3" value="test" onclick="guess5();">
-           5
+        <butt3 class="butt3" type="button" id = "button3" value="test" onclick="guess4();">
+           4
         </butt3>
     </button3>
 
     <button4>
-        <butt4 class="butt4" type="button" id = "button4" value="test" onclick="guess4();">
-           4
+        <butt4 class="butt4" type="button" id = "button4" value="test" onclick="guess3();">
+           3
         </butt4>
      </button4>
  
      <button5>
-         <butt5 class="butt5" type="button" id = "button5" value="test" onclick="guess3();">
-            3
+         <butt5 class="butt5" type="button" id = "button5" value="test" onclick="guess2();">
+            2
          </butt5>
      </button5>
  
      <button6>
-         <butt6 class="butt6" type="button" id = "button6" value="test" onclick="guess2();">
-            2
+         <butt6 class="butt6" type="button" id = "button6" value="test" onclick="guess1();">
+            1
          </butt6>
      </button6>
 
      <button7">
-        <butt7 class="butt7" type="button" id = "button7" value="test" onclick="guess1();">
-           1
+        <butt7 class="butt7" type="button" id = "button7" value="test" onclick="guess0();">
+           0
         </butt7>
     </button7>
 
@@ -893,9 +954,7 @@
         
     </searchButton>
 
-    <!-- <backButton class = "backButton" type="button">
-        <img  class = "move2" src="arrow2.png" alt="second" id = "p2image" width="50" height="33">
-    </backButton> -->
+    <img id = "rowrow" class = "move2" src="arrow2.png" alt="second" id = "p2image" width="90" height="27" style = "background-color: black;">
 
     <Highlight id = "high" class= "highlighter">
         room number
@@ -906,62 +965,63 @@
     <div class = "popup" id = "popup-1">
         <div class = "overlay">
             <div class = "content">
+
                     <div class = "close-btn" onclick="togglePopup()">&times;</div>
-                    
                     <!-- <div >
                         <input type = "text" id = "texttext" class = "input" placeholder="search for a room number">
                         <button onclick="search()">Search</button>
                     </div> -->
-                    <div class="wrapper">
-                        <div class="search-input">
-                        <input type="text" id = "texttext" class = "input" placeholder="search for a room number">
-                            <div id="suggestions" class="suggestions-box">
-                            </div>
-                        <div class="icon"><i class="fas fa-search"></i></div>
+                    <div class="wrapper" >
+                        <div class="search-input" style="right:-40px">
+                        
+                        <input type="text" id = "texttext" style= "text-align: center;" placeholder="search for a room...">
+                            
+                        <div class="icon"><i class="fas fa-search" onclick="search()"></i></div>
                     </div>
-                    <br><br><br><br>
+                    <br><br>
                     <body>
-                        <form name="calculator">
-                           <table style="width: 260px; height: 48px;">
+                        <form name="calculator" style="background-color: rgb(218, 218, 218);">
+                           <table style="width: 0px; height: 0px; left: 70px; position:absolute; background-color: rgb(238, 234, 234);" >
                               <!-- <tr>
                                  <td colspan="4">
                                     <input type="text" name="display" id="display" disabled>
                                  </td>
                               </tr> -->
                               <tr >
-                                 <td><input type="button"  class="keys" name="one" value="1" onclick="texttext.value += '1'"></td>
-                                 <td><input type="button"  class="keys" name="two" value="2" onclick="texttext.value += '2'"></td>
-                                 <td><input type="button"  class="keys" name="three" value="3" onclick="texttext.display.value += '3'"></td>
+                                  
+                                 <td><input type="button"  class="keys" name="one" value="1" onclick="if(texttext.value.length < 5){texttext.value += '1'}"></td>
+                                 <td><input type="button"  class="keys" name="two" value="2" onclick="if(texttext.value.length < 5){texttext.value += '2'}"></td>
+                                 <td><input type="button"  class="keys" name="three" value="3" onclick="if(texttext.value.length < 5){texttext.display.value += '3'}"></td>
                               </tr>
                               <tr >
-                                 <td><input type="button"  class="keys" name="four" value="4" onclick="texttext.value += '4'" ></td>
-                                 <td><input type="button"  class="keys" name="five" value="5" onclick="texttext.value += '5'"></td>
-                                 <td><input type="button"  class="keys" name="six" value="6" onclick="texttext.display.value += '6'"></td>
+                                 <td><input type="button"  class="keys" name="four" value="4" onclick="if(texttext.value.length < 5){texttext.value += '4'}" ></td>
+                                 <td><input type="button"  class="keys" name="five" value="5" onclick="if(texttext.value.length < 5){texttext.value += '5'}"></td>
+                                 <td><input type="button"  class="keys" name="six" value="6" onclick="if(texttext.value.length < 5){texttext.display.value += '6'}"></td>
                               </tr>
                               <tr>
-                                 <td><input type="button"  class="keys" name="seven" value="7" onclick="texttext.value += '7'"></td>
-                                 <td><input type="button"  class="keys" name="eight" value="8" onclick="texttext.value += '8'"></td>
-                                 <td><input type="button"  class="keys" name="nine" value="9" onclick="texttext.value += '9'"></td>
+                                 <td><input type="button"  class="keys" name="seven" value="7" onclick="if(texttext.value.length < 5){texttext.value += '7'}"></td>
+                                 <td><input type="button"  class="keys" name="eight" value="8" onclick="if(texttext.value.length < 5){texttext.value += '8'}"></td>
+                                 <td><input type="button"  class="keys" name="nine" value="9" onclick="if(texttext.value.length < 5){texttext.value += '9'}"></td>
+                              </tr>
+                              <tr >
+                                 <td><input type="button"  class="keys" name="zero" value="0" onclick="if(texttext.value.length < 5){texttext.value += '0'}"></td>
+                                 <td><input type="button"  class="keys" name="B" value="B" onclick="if(texttext.value.length < 5){texttext.value += 'B'}"></td>
+                                 <td><input type="button"  class="keys" style = "width: 60px; height: 60px;" name="delete" value="delete" onclick="texttext.value = texttext.value.slice(0,-1)"></td>
                               </tr>
                               <tr>
-                                 <td><input type="button"  class="keys" name="delete" value="&times" onclick="texttext.value = texttext.value.slice(0,-1)"></td>
-                                 <td><input type="button"  class="keys" name="zero" value="0" onclick="texttext.value += '0'"></td>
-                                 <td><input type="button"  class="keys" name="B" value="B" onclick="texttext.value += 'B'"></td>
-                              </tr>
-                              <tr>
-                                <td><input class="keys" type="button" name="clear" value="clear" onclick="texttext.value = ''"></td>
-                                <td><input style="top:447px; right:372px; position:absolute;"class="keys" type="button" name="' '" value=""></td>
+                                <td><br><br><br><br></td>
+                              </tr>  
                            </table>
                         </form>
-                        <button style="top:447px;right:466px;position:absolute;" class="keys" onclick="search()">Search</button>
+                        <button style="top:411px;right:137px;position:absolute;" class="keys" onclick="search()">Search</button>
                      </body>
 
                      <space>
                         <br>
                         <br>
                         <br>
-                        <br>
-                        <spoop id = "spoop">
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <spoop id = "spoop" style = "font-size: 40px; position: absolute; left:10px">
                         </spoop>
                         
                     </space>
