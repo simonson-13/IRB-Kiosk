@@ -42,17 +42,6 @@ body {
   background-color: rgb(204, 0, 0);
 }
 
-/*html, body {
-    background-position: center center center;
-    background-repeat: no-repeat;
-    background-image: url(./IRBrooms.jpg);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100%;
-}*/
-
 /* controls positions of search and suggests*/
 .wrapper {
   margin: auto;
