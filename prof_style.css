@@ -4,8 +4,6 @@
     'Open Sans', sans-serif;
 }
 
-
-
 /*home button*/
 .home {
     height:15px;
@@ -17,8 +15,8 @@ color: white;
 cursor:pointer;
 text-align:center;
 border-radius: 5px;
-top : 0px;
-right : 0px;
+top : 2px;
+right : 55px;
 position: absolute;
 zoom: normal;
 z-index: 0;
@@ -41,8 +39,8 @@ outline: 2px solid white;
     cursor:pointer;
     text-align:center;
     border-radius: 5px;
-    top : 0px;
-    right : 911px;
+    top : 2px;
+    right : 910px;
     position: absolute;
     zoom: normal;
     z-index: 0;
