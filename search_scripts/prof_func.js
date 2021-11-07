@@ -38,12 +38,15 @@ searchIcon.onclick = () => {
     if (inputBox.value.toLowerCase() in officeMap) {
         result = officeMap[inputBox.value.toLowerCase()]
         showSuggestions('');
-        result = inputBox.value + "'s Office is: " + result;
+        //result = inputBox.value + "'s Office is: " + result;
+        result = result;
         viewFP.style.zIndex=5;
         viewFP.style.display = 'block';
+        document.getElementById('result').style.marginLeft = '27%';
         document.getElementById('result').innerHTML = result;
     } else {
         result = "Professor Not Found"
+        document.getElementById('result').style.marginLeft = '0px';
         document.getElementById('result').innerHTML = result;
     }
     
@@ -63,7 +66,8 @@ for (let i = 0; i < keys.length; i++)
     keyBoard.style.display = 'none';
     result = officeMap[e.target.innerHTML.toLowerCase()]
     showSuggestions('');
-    result = inputBox.value + "'s Office is: " + result;
+    //result = inputBox.value + "'s Office is: " + result;
+    result = result;
     viewFP.style.zIndex=5;
     viewFP.style.display = 'block';
     document.getElementById('result').innerHTML = result;
@@ -95,11 +99,14 @@ for (let i = 0; i < keys.length; i ++) {
             if (inputBox.value.toLowerCase() in officeMap) {
                 result = officeMap[inputBox.value.toLowerCase()]
                 showSuggestions([]);
-                result = inputBox.value + "'s Office is: " + result;
+                //result = inputBox.value + "'s Office is: " + result;
+                result = result;
+                document.getElementById('result').style.marginLeft = '27%';
                 viewFP.style.zIndex=5;
                 viewFP.style.display = 'block';
             } else {
                 result = "Professor Not Found"
+                document.getElementById('result').style.marginLeft = '0px';
             }
             document.getElementById('result').innerHTML = result;
             //search

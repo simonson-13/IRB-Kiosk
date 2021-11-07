@@ -88,10 +88,14 @@ h1 {
 }
 
 #result {
-    background-color: rgb(204, 0, 0, 0.8);
+    background-color: rgb(27,41,58, 0.8);
     display: inline-block !important;
     z-index: 2;
     border-radius: 5px;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    text-align: center;
+    margin-left: 27%;
+    font-size: 90px;
 }
 
 .nav {
