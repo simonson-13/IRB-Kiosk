@@ -65,7 +65,8 @@ searchIcon.onclick = () => {
             time.innerHTML = classMap[inputBox.value.toUpperCase()][i]['time'];
             prof.innerHTML = classMap[inputBox.value.toUpperCase()][i]['professor'];
             room.innerHTML = classMap[inputBox.value.toUpperCase()][i]['room'];
-            floor.innerHTML = `<div class='floorplanbutton' alt=${room.innerHTML}>View Floor Plan</div>
+            console.log(room.innerHTML.toString().slice(-4));
+            floor.innerHTML = `<div class='floorplanbutton' alt=${room.innerHTML.toString().slice(-4)}>View Floor Plan</div>
             <!--modal floor plan image-->
             <div id='myModal' class="modal">
                   <!-- The Close Button -->
@@ -78,23 +79,6 @@ searchIcon.onclick = () => {
                 <div id="caption"></div>
                 
             </div>`;
-            viewFP = document.getElementsByClassName("floorplanbutton");
-            /* floor plan pop up */
-            /*for (var j = 0; j < viewFP.length; i++) {
-                viewFP[j].addEventListener("click", (e) => {
-                console.log('viewFP clicked!')
-                let floor = this.alt.slice(-4, -3)
-                let room = this.alt;
-                let floorimg= `./floor_${floor}.png`
-                modal.style.display = 'block'
-                img.src = floorimg;
-                captionText.innerHTML = `Floor ${floor}, Office: ${room}`
-             })
-                /*close floor plan pop up*/
-                /*close[j].onclick = function() {
-                    modal.style.display='none';
-                }
-            }*/
             rowCount++;
         }
     } else {
@@ -133,7 +117,7 @@ for (let i = 0; i < keys.length; i++)
             time.innerHTML = classMap[inputBox.value.toUpperCase()][i]['time'];
             prof.innerHTML = classMap[inputBox.value.toUpperCase()][i]['professor'];
             room.innerHTML = classMap[inputBox.value.toUpperCase()][i]['room'];
-            floor.innerHTML = `<div class='floorplanbutton' alt=${room.innerHTML}>View Floor Plan</div>
+            floor.innerHTML = `<div class='floorplanbutton' alt=${room.innerHTML.toString().slice(-4)}>View Floor Plan</div>
             <!--modal floor plan image-->
             <div id='myModal' class="modal">
                   <!-- The Close Button -->
@@ -147,22 +131,6 @@ for (let i = 0; i < keys.length; i++)
                 
             </div>`;
             viewFP = document.getElementsByClassName("floorplanbutton");
-                        /* floor plan pop up */
-                        /*for (var j = 0; j < viewFP.length; i++) {
-                            viewFP[j].addEventListener("click", (e) => {
-                            console.log('viewFP clicked!')
-                            let floor = this.alt.slice(-4, -3)
-                            let room = this.alt;
-                            let floorimg= `./floor_${floor}.png`
-                            modal.style.display = 'block'
-                            img.src = floorimg;
-                            captionText.innerHTML = `Floor ${floor}, Office: ${room}`
-                         })
-                            /*close floor plan pop up*/
-                            /*close[j].onclick = function() {
-                                modal.style.display='none';
-                            }
-                        }*/
             rowCount++;
         }
     } 
@@ -191,36 +159,8 @@ for (let i = 0; i < keys.length; i ++) {
                     time.innerHTML = classMap[inputBox.value.toUpperCase()][i]['time'];
                     prof.innerHTML = classMap[inputBox.value.toUpperCase()][i]['professor'];
                     room.innerHTML = classMap[inputBox.value.toUpperCase()][i]['room'];
-                    floor.innerHTML = `<div class='floorplanbutton' alt=${room.innerHTML} >View Floor Plan</div>
-                    <!--modal floor plan image-->
-                    <div id='myModal' class="modal">
-                          <!-- The Close Button -->
-                        <span class="close">&times;</span>
-            
-                        <!-- Modal Content (The Image) -->
-                        <img class="modal-content" id="floorimg">
-            
-                        <!-- Modal Caption (Image Text) -->
-                        <div id="caption"></div>
-                        
-                    </div>`;
-                    viewFP = document.getElementsByClassName("floorplanbutton");
-                                /* floor plan pop up */
-            /*for (var j = 0; j < viewFP.length; i++) {
-                viewFP[j].addEventListener("click", (e) => {
-                console.log('viewFP clicked!')
-                let floor = this.alt.slice(-4, -3)
-                let room = this.alt;
-                let floorimg= `./floor_${floor}.png`
-                modal.style.display = 'block'
-                img.src = floorimg;
-                captionText.innerHTML = `Floor ${floor}, Office: ${room}`
-             })
-                /*close floor plan pop up*/
-                /*close[j].onclick = function() {
-                    modal.style.display='none';
-                }
-            }*/
+                    console.log(room.innerHTML.toString().slice(-4, room.innerHTML.toString.length))
+                    floor.innerHTML = `<div class='floorplanbutton' alt=${room.innerHTML.toString().slice(-4, room.innerHTML.toString.length)}>View Floor Plan</div>`
                     rowCount++;
                 }
             } else {
@@ -292,6 +232,25 @@ function showSuggestions(list) {
 }
 
 /*floor plan pop up*/
+document.addEventListener('click',function(e) {
+    if(e.target && e.target.getAttribute('class') === 'floorplanbutton'){
+        console.log('viewFP clicked!')
+        console.log(e.target);
+        let floor = e.target.getAttribute('alt')[0]
+        let room = e.target.getAttribute('alt');
+        let floorimg= `./floor_${floor}.png`
+        modal.style.display='block';
+        img.src = floorimg;
+        captionText.innerHTML = `Floor ${floor}, Office: ${room}`
+    } else if (e.target && e.target.getAttribute('class') === 'close') {
+         /*close floor plan pop up*/
+         modal.style.display='none';
+         img.src = floorimg;
+    }
+});
+
+
+
     
 
 
