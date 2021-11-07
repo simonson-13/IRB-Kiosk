@@ -12,6 +12,9 @@
 
         <style>
         @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+        * {
+            font-family: "Open Sans", sans-serif;
+        }
 
         h1 { 
             text-align:center;
@@ -333,12 +336,13 @@
         .move_search{
             top:12px;
             position: absolute;
-            right: 31px;
+            /*right: 31px;*/ /*for search_icon.png*/
+            right: 38px; /*for search fa-icon not png*/
         }
 
         .img{
             top : 147px;
-            right : 20px;
+            right : 23px;
             position: absolute;
         }
         
@@ -347,8 +351,8 @@
         .tit{    
             color: white;
             font-size: 72px;
-            top : 20px;
-            right : 170px; /*was 180px felt 170px aligned better with the rest of the screen*/
+            top : 45px;
+            right : 180px; /*was 180px felt 170px aligned better with the rest of the screen*/
             height:50px;
             width: 700px;
             position: absolute;
@@ -950,7 +954,8 @@
         
     </homeButton>
     <searchButton class = "search" type="button" onclick="togglePopup()">
-        <img class = "move_search" src="search_icon.png" alt="second" id = "p1image" width="50" height="33">
+        <div class="move_search"><i class="fas fa-search" onclick="search()"></i></div>
+        <!--<img class = "move_search" src="search_icon.png" alt="second" id = "p1image" width="50" height="33">-->
         
     </searchButton>
 
