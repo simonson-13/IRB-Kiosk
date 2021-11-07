@@ -16,7 +16,7 @@ cursor:pointer;
 text-align:center;
 border-radius: 5px;
 top : 2px;
-right : 2px;
+right : 910px;
 position: absolute;
 zoom: normal;
 z-index: 0;
@@ -89,13 +89,7 @@ h1 {
 
 #result {
     background-color: rgb(27,41,58, 0.8);
-    display: inline-block !important;
-    z-index: 2;
-    border-radius: 5px;
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-    text-align: center;
-    margin-left: 15%;
-    font-size: 150px;
+    display: none;
 }
 
 .nav {
@@ -272,6 +266,30 @@ body {
 }
 
 
+/* table */
+#profTable {
+    width: 120%;
+    font-size: 25px;
+    margin-left: -10%;
+    display: none;
+  }
+  
+  #profTable th {
+    background-color: rgb(204, 0, 0);
+    color: white;
+    font-size: 30px;
+  }
+  
+  #profTable td {
+    text-align: center;
+  }
+  #profTable tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  #profTable tr:nth-child(odd) {
+    background-color: rgba(255, 153, 153, 0.9);
+  }
+
 /* floor plan button*/
 #floorplanbutton {
     position: relative;
@@ -290,6 +308,11 @@ body {
     background-color: rgb(226, 96, 96);
     color:white;
 }
+
+
+
+
+
 
 /*floorplan popup*/
 
