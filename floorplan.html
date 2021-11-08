@@ -52,7 +52,7 @@
         cursor:pointer;
         text-align:center;
         border-radius: 5px;
-        top : 145px;
+        top : 185px;
         right : 905px;
         position: absolute;
         zoom: normal;
@@ -81,7 +81,7 @@
         cursor:pointer;
         text-align:center;
         border-radius: 5px;
-        top : 220px;
+        top : 260px;
         right : 905px;
         position: absolute;
         zoom: normal;
@@ -110,7 +110,7 @@
         cursor:pointer;
         text-align:center;
         border-radius: 5px;
-        top : 295px;
+        top : 335px;
         right : 905px;
         position: absolute;
         zoom: normal;
@@ -139,7 +139,7 @@
         cursor:pointer;
         text-align:center;
         border-radius: 5px;
-        top : 370px;
+        top : 410px;
         right : 905px;
         position: absolute;
         zoom: normal;
@@ -168,7 +168,7 @@
         cursor:pointer;
         text-align:center;
         border-radius: 5px;
-        top : 445px;
+        top : 485px;
         right : 905px;
         position: absolute;
         zoom: normal;
@@ -197,7 +197,7 @@
         cursor:pointer;
         text-align:center;
         border-radius: 5px;
-        top : 520px;
+        top : 560px;
         right : 905px;
         position: absolute;
         zoom: normal;
@@ -226,7 +226,7 @@
         cursor:pointer;
         text-align:center;
         border-radius: 5px;
-        top : 595px;
+        top : 635px;
         right : 885px;
         position: absolute;
         zoom: normal;
@@ -762,12 +762,7 @@
             }
             
             function set_red(){
-                if(document.getElementById("button8").style.background == 'gold'){
-                    document.getElementById("button8").style.background = 'rgb(204,0,0)';
-                    document.getElementById("button8").style.right = 905
-                    document.getElementById("button8").style.width = 70
-                    return
-                }
+                
                 if(document.getElementById("button7").style.background == 'gold'){
                     
                     document.getElementById("button7").style.background = 'rgb(204,0,0)';
@@ -903,7 +898,7 @@
                 document.getElementById("high_texts").innerHTML = "";
             }       
             function guess1(){
-                document.getElementById('p1image').src = "Upper floor_0.png"
+                document.getElementById('p1image').src = "Floor one.png"
                 document.getElementById('text1').innerHTML = "Now Displaying: Floor 1";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
@@ -920,7 +915,7 @@
                 document.getElementById("high_texts").innerHTML = "";
             }
             function guess0(){
-                document.getElementById('p1image').src = "Floor one.png"
+                document.getElementById('p1image').src = "Ground floor.png"
                 document.getElementById('text1').innerHTML = "Now Displaying: Floor 0";
                 document.getElementById("high").style.right = -100
                 document.getElementById("high").style.top = -100
@@ -935,23 +930,23 @@
                 document.getElementById("high_texts").style.top = "-1000px";
                 document.getElementById("high_texts").innerHTML = "";
             }
-            function guessB(){
-                document.getElementById('p1image').src = "Ground floor.png"
-                document.getElementById('text1').innerHTML = "Now Displaying: Floor B";
-                document.getElementById("high").style.right = -100
-                document.getElementById("high").style.top = -100
-                document.getElementById("rowrow").style.right = -100
-                document.getElementById("rowrow").style.top = -100
-                set_red()
-                red()
-                document.getElementById("button8").style.background = 'gold';
-                document.getElementById("button8").style.right = 885
-                document.getElementById("button8").style.width = 90
+            // function guessB(){
+            //     document.getElementById('p1image').src = "Ground floor.png"
+            //     document.getElementById('text1').innerHTML = "Now Displaying: Floor B";
+            //     document.getElementById("high").style.right = -100
+            //     document.getElementById("high").style.top = -100
+            //     document.getElementById("rowrow").style.right = -100
+            //     document.getElementById("rowrow").style.top = -100
+            //     set_red()
+            //     red()
+            //     document.getElementById("button8").style.background = 'gold';
+            //     document.getElementById("button8").style.right = 885
+            //     document.getElementById("button8").style.width = 90
 
-                document.getElementById("high_texts").style.right = "-1000px";
-                document.getElementById("high_texts").style.top = "-1000px";
-                document.getElementById("high_texts").innerHTML = "";
-            }
+            //     document.getElementById("high_texts").style.right = "-1000px";
+            //     document.getElementById("high_texts").style.top = "-1000px";
+            //     document.getElementById("high_texts").innerHTML = "";
+            // }
             function red(){
                 document.getElementById("button7").style.background = 'rgb(204,0,0)';
                 document.getElementById("button7").style.right = 905
@@ -1008,14 +1003,10 @@
         </butt7>
     </button7>
 
-    <button8>
-        <butt8 class="butt8" type="button" id = "button8" value="test" onclick="guessB();">
-           B
-        </butt8>
-    </button8>
+    
     <td >
         <div class ="img" type="image">
-           <img src="Floor one.png" alt="second" id = "p1image" width="850" height="580" >
+           <img src="Ground floor.png" alt="second" id = "p1image" width="850" height="580" >
            
         </div>
     </td>
