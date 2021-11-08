@@ -412,7 +412,7 @@
             transform: translate(-50%,-50%) scale(0);
             background: #fff;
             width: 350px;
-            height: 590px;
+            height: 640px;
             z-index: 21;
             text-align: center;
             padding: 20px;
@@ -443,9 +443,9 @@
 
         /* highlighter */
         .highlighter{
-            background-color:rgb(204, 184, 0);
+            background-color:#f1e740;
             color: black;
-            opacity: .8;
+            /* opacity: .8; */
             width: 30px;
             height: 30px;
             padding: 10px;
@@ -453,13 +453,22 @@
             top: -260px;
             position: absolute;
             border-radius: 100px;
-            
+            outline: 6px solid black;
         }
+        .high_text{
+            /* left:-200px;
+            top:-200px */
+            z-index: 30;
+            color:black;
+            position: absolute;
+            text-align: center;
+        }        
         .tableDesign {
             padding: 0px;
             color: red;
             font-size: 20;
         }
+        
 
 
 
@@ -510,39 +519,40 @@
   text-align: center;
   font-size: 30px;
 }
-/* 
-/* .search-input .suggestions-box {
-  /*height of contained suggestions*/
-  /* max-height: 120px;
-  overflow-y: auto; */
-  /*hide suggestions
+ 
+.search-input .suggestions-box {
+  /* height of contained suggestions */
+  max-height: 75px;
+  overflow-y: auto; 
+  text-align: left;
+  /* hide suggestions */
   opacity: 0;
   pointer-events: none;
-} */ 
-/* 
+}  
+ 
 .search-input.active .suggestions-box {
   opacity: 1;
   pointer-events: auto;
-} */
+} 
 
 /*styles list so that it no longer has bullet points and suggestions are scrollable*/
-/* .suggestions-box li {
+.suggestions-box li {
   list-style: none;
   padding: 8px 12px;
   width: 100%;
   cursor: default;
   border-radius: 3px;
   /*temporarily hide*/
-  /* display: none;
-} */
+  display: none;
+} 
 
-/* .suggestions-box li:hover {
+.suggestions-box li:hover {
   background: #efefef;
-} */
-/*
+} 
+
 .search-input.active .suggestions-box li {
   display: block;
-} */
+} 
 
 /* KEYBOARD */
 .container {
@@ -616,6 +626,18 @@
   width: 80%;
 }
 
+.calc{
+    top:172px;
+    left: -0px;
+    position: absolute;
+}
+.spacing{
+    line-height:10px;
+}
+.spoop{
+    top:532px;
+    left: -0px;
+}
         
 
       
@@ -628,12 +650,12 @@
             map1.set("1222", [660,144]);
             map1.set("0325", [260,324]);
             function search(){
-                console.log("enter")
-                result = document.getElementById("texttext").value;
-                console.log("something")
-                console.log(result)
+                // console.log("enter")
+                result = document.getElementById("room_for").value;
+                // console.log("something")
+                // console.log(result)
                 floor = result[0];
-                document.getElementById("texttext").value = "";
+                document.getElementById("room_for").value = "";
                 if (map1.has(result)){
                     document.getElementById("spoop").innerHTML = ""
                 }
@@ -642,28 +664,35 @@
                     togglePopup();
                     document.getElementById("high").style.right = map1.get(result)[1]+"px";
                     document.getElementById("high").style.top = map1.get(result)[0]+"px";
-                    
-                    document.getElementById("high").innerHTML = result;
-                    
+                
+                    document.getElementById("high_texts").style.right = (map1.get(result)[1]+2)+"px";
+                    document.getElementById("high_texts").style.top = (map1.get(result)[0]+12)+"px";
+                    document.getElementById("high_texts").innerHTML = result;
                 }
                 else if(map1.has(result)&&floor=="0"){
                     guess0();
                     togglePopup();
                     document.getElementById("high").style.right = map1.get(result)[1]+"px";
                     document.getElementById("high").style.top = map1.get(result)[0]+"px";
-                    document.getElementById("rowrow").style.right = (map1.get(result)[1]+30)+"px";
-                    document.getElementById("rowrow").style.top = (map1.get(result)[0]-30)+"px";
-
-                    document.getElementById("high").innerHTML = result;
+    
+                    document.getElementById("high_texts").style.right = (map1.get(result)[1]+6.5)+"px";
+                    document.getElementById("high_texts").style.top = (map1.get(result)[0]+12)+"px";
+                    document.getElementById("high_texts").innerHTML = result;
+                    
+                    
+                    // document.getElementById("rowrow").style.right = (map1.get(result)[1]+30)+"px";
+                    // document.getElementById("rowrow").style.top = (map1.get(result)[0]-30)+"px";
                 }
                 else if(map1.has(result)&&floor=="1"){
                     guess1()
                     togglePopup()
                     document.getElementById("high").style.right = map1.get(result)[1]+"px";
                     document.getElementById("high").style.top = map1.get(result)[0]+"px";
-                    document.getElementById("rowrow").style.right = (map1.get(result)[1]+30)+"px";
-                    document.getElementById("rowrow").style.top = (map1.get(result)[0]-30)+"px";
-                    document.getElementById("high").innerHTML = result;
+                    // document.getElementById("rowrow").style.right = (map1.get(result)[1]+30)+"px";
+                    // document.getElementById("rowrow").style.top = (map1.get(result)[0]-30)+"px";
+                    document.getElementById("high_texts").style.right = (map1.get(result)[1]+6.5)+"px";
+                    document.getElementById("high_texts").style.top = (map1.get(result)[0]+12)+"px";
+                    document.getElementById("high_texts").innerHTML = result;              
                 }
                 else if(map1.has(result)&&floor=="2"){
                     guess2()
@@ -671,7 +700,9 @@
                     document.getElementById("high").style.right = map1.get(result)[1]+"px";
                     document.getElementById("high").style.top = map1.get(result)[0]+"px";
                     
-                    document.getElementById("high").innerHTML = result;
+                    document.getElementById("high_texts").style.right = (map1.get(result)[1]+6.5)+"px";
+                    document.getElementById("high_texts").style.top = (map1.get(result)[0]+12)+"px";
+                    document.getElementById("high_texts").innerHTML = result;
                 }
                 else if(map1.has(result)&&floor=="3"){
                     guess3()
@@ -679,7 +710,9 @@
                     document.getElementById("high").style.right = map1.get(result)[1]+"px";
                     document.getElementById("high").style.top = map1.get(result)[0]+"px";
                     
-                    document.getElementById("high").innerHTML = result;
+                    document.getElementById("high_texts").style.right = (map1.get(result)[1]+6.5)+"px";
+                    document.getElementById("high_texts").style.top = (map1.get(result)[0]+12)+"px";
+                    document.getElementById("high_texts").innerHTML = result;
                 }
                 else if(map1.has(result)&&floor=="4"){
                     guess4()
@@ -687,7 +720,9 @@
                     document.getElementById("high").style.right = map1.get(result)[1]+"px";
                     document.getElementById("high").style.top = map1.get(result)[0]+"px";
                     
-                    document.getElementById("high").innerHTML = result;
+                    document.getElementById("high_texts").style.right = (map1.get(result)[1]+6.5)+"px";
+                    document.getElementById("high_texts").style.top = (map1.get(result)[0]+12)+"px";
+                    document.getElementById("high_texts").innerHTML = result;
                 }
                 else if(map1.has(result)&&floor=="5"){
                     guess5()
@@ -695,7 +730,9 @@
                     document.getElementById("high").style.right = map1.get(result)[1]+"px";
                     document.getElementById("high").style.top = map1.get(result)[0]+"px";
                     
-                    document.getElementById("high").innerHTML = result;
+                    document.getElementById("high_texts").style.right = (map1.get(result)[1]+6.5)+"px";
+                    document.getElementById("high_texts").style.top = (map1.get(result)[0]+12)+"px";
+                    document.getElementById("high_texts").innerHTML = result;
                 }
                 else if(map1.has(result)&&floor=="6"){
                     guess6()
@@ -703,14 +740,16 @@
                     document.getElementById("high").style.right = map1.get(result)[1]+"px";
                     document.getElementById("high").style.top = map1.get(result)[0]+"px";
                     
-                    document.getElementById("high").innerHTML = result;
+                    document.getElementById("high_texts").style.right = (map1.get(result)[1]+6.5)+"px";
+                    document.getElementById("high_texts").style.top = (map1.get(result)[0]+12)+"px";
+                    document.getElementById("high_texts").innerHTML = result;
                 }
                 else{
-                    console.log("invalid");
+                    // console.log("invalid");
                     if(result.length>0){
                         document.getElementById("spoop").innerHTML = "Room " + result + " does not exist";
                     } else{
-                        document.getElementById("spoop").innerHTML = ""
+                        document.getElementById("high_texts").innerHTML = result;                    
                     }
                 }
                 
@@ -768,7 +807,7 @@
             function togglePopup(){
                 document.getElementById("popup-1").classList.toggle("active");
                 document.getElementById("spoop").innerHTML = ""
-                document.getElementById("texttext").value = ""
+                document.getElementById("room_for").value = ""
             }
             function guess6(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
@@ -782,6 +821,10 @@
                 document.getElementById("button1").style.background = 'gold';
                 document.getElementById("button1").style.right = 885
                 document.getElementById("button1").style.width = 90
+
+                document.getElementById("high_texts").style.right = "-1000px";
+                document.getElementById("high_texts").style.top = "-1000px";
+                document.getElementById("high_texts").innerHTML = "";
 
             }
             function guess5(){
@@ -797,6 +840,10 @@
                 document.getElementById("button2").style.background = 'gold';
                 document.getElementById("button2").style.right = 885
                 document.getElementById("button2").style.width = 90
+
+                document.getElementById("high_texts").style.right = "-1000px";
+                document.getElementById("high_texts").style.top = "-1000px";
+                document.getElementById("high_texts").innerHTML = "";
             }
             function guess4(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
@@ -810,6 +857,10 @@
                 document.getElementById("button3").style.background = 'gold';
                 document.getElementById("button3").style.right = 885
                 document.getElementById("button3").style.width = 90
+
+                document.getElementById("high_texts").style.right = "-1000px";
+                document.getElementById("high_texts").style.top = "-1000px";
+                document.getElementById("high_texts").innerHTML = "";
             }
             function guess3(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
@@ -823,6 +874,10 @@
                 document.getElementById("button4").style.background = 'gold';
                 document.getElementById("button4").style.right = 885
                 document.getElementById("button4").style.width = 90
+
+                document.getElementById("high_texts").style.right = "-1000px";
+                document.getElementById("high_texts").style.top = "-1000px";
+                document.getElementById("high_texts").innerHTML = "";
             }
             function guess2(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
@@ -836,6 +891,10 @@
                 document.getElementById("button5").style.background = 'gold';
                 document.getElementById("button5").style.right = 885
                 document.getElementById("button5").style.width = 90
+
+                document.getElementById("high_texts").style.right = "-1000px";
+                document.getElementById("high_texts").style.top = "-1000px";
+                document.getElementById("high_texts").innerHTML = "";
             }       
             function guess1(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
@@ -849,6 +908,10 @@
                 document.getElementById("button6").style.background = 'gold';
                 document.getElementById("button6").style.right = 885
                 document.getElementById("button6").style.width = 90
+
+                document.getElementById("high_texts").style.right = "-1000px";
+                document.getElementById("high_texts").style.top = "-1000px";
+                document.getElementById("high_texts").innerHTML = "";
             }
             function guess0(){
                 document.getElementById('p1image').src = "Floor one.png"
@@ -861,6 +924,10 @@
                 document.getElementById("button7").style.background = 'gold';
                 document.getElementById("button7").style.right = 885
                 document.getElementById("button7").style.width = 90
+
+                document.getElementById("high_texts").style.right = "-1000px";
+                document.getElementById("high_texts").style.top = "-1000px";
+                document.getElementById("high_texts").innerHTML = "";
             }
             function guessB(){
                 document.getElementById('p1image').src = "Ground floor.png"
@@ -874,6 +941,10 @@
                 document.getElementById("button8").style.background = 'gold';
                 document.getElementById("button8").style.right = 885
                 document.getElementById("button8").style.width = 90
+
+                document.getElementById("high_texts").style.right = "-1000px";
+                document.getElementById("high_texts").style.top = "-1000px";
+                document.getElementById("high_texts").innerHTML = "";
             }
             function red(){
                 document.getElementById("button7").style.background = 'rgb(204,0,0)';
@@ -962,10 +1033,11 @@
     <img id = "rowrow" class = "move2" src="arrow2.png" alt="second" id = "p2image" width="90" height="27" style = "background-color: black;">
 
     <Highlight id = "high" class= "highlighter">
-        room number
-
+        
     </Highlight>
-
+    <something id = "high_texts" class ="high_text" >
+        
+    </something>
 
     <div class = "popup" id = "popup-1">
         <div class = "overlay">
@@ -979,13 +1051,15 @@
                     <div class="wrapper" >
                         <div class="search-input" style="right:-40px">
                         
-                        <input type="text" id = "texttext" style= "text-align: center;" placeholder="search for a room...">
+                        <input id = "room_for" style= "text-align: center;" placeholder="search for a room...">
+                            <div id="suggestions" class="suggestions-box">
+                            </div>
                             
                         <div class="icon"><i class="fas fa-search" onclick="search()"></i></div>
                     </div>
-                    <br><br>
-                    <body>
-                        <form name="calculator" style="background-color: rgb(218, 218, 218);">
+                    
+                    <body >
+                        <form name="calculator" class="calc" style="background-color: rgb(218, 218, 218);">
                            <table style="width: 0px; height: 0px; left: 70px; position:absolute; background-color: rgb(238, 234, 234);" >
                               <!-- <tr>
                                  <td colspan="4">
@@ -994,42 +1068,39 @@
                               </tr> -->
                               <tr >
                                   
-                                 <td><input type="button"  class="keys" name="one" value="1" onclick="if(texttext.value.length < 5){texttext.value += '1'}"></td>
-                                 <td><input type="button"  class="keys" name="two" value="2" onclick="if(texttext.value.length < 5){texttext.value += '2'}"></td>
-                                 <td><input type="button"  class="keys" name="three" value="3" onclick="if(texttext.value.length < 5){texttext.display.value += '3'}"></td>
+                                 <td><input type="button"  class="keys" name="one" value="1" onclick="if(room_for.value.length < 5){room_for.value += '1'}"></td>
+                                 <td><input type="button"  class="keys" name="two" value="2" onclick="if(room_for.value.length < 5){room_for.value += '2'}"></td>
+                                 <td><input type="button"  class="keys" name="three" value="3" onclick="if(room_for.value.length < 5){room_for.value += '3'}"></td>
                               </tr>
                               <tr >
-                                 <td><input type="button"  class="keys" name="four" value="4" onclick="if(texttext.value.length < 5){texttext.value += '4'}" ></td>
-                                 <td><input type="button"  class="keys" name="five" value="5" onclick="if(texttext.value.length < 5){texttext.value += '5'}"></td>
-                                 <td><input type="button"  class="keys" name="six" value="6" onclick="if(texttext.value.length < 5){texttext.display.value += '6'}"></td>
+                                 <td><input type="button"  class="keys" name="four" value="4" onclick="if(room_for.value.length < 5){room_for.value += '4'}" ></td>
+                                 <td><input type="button"  class="keys" name="five" value="5" onclick="if(room_for.value.length < 5){room_for.value += '5'}"></td>
+                                 <td><input type="button"  class="keys" name="six" value="6" onclick="if(room_for.value.length < 5){room_for.value += '6'}"></td>
                               </tr>
                               <tr>
-                                 <td><input type="button"  class="keys" name="seven" value="7" onclick="if(texttext.value.length < 5){texttext.value += '7'}"></td>
-                                 <td><input type="button"  class="keys" name="eight" value="8" onclick="if(texttext.value.length < 5){texttext.value += '8'}"></td>
-                                 <td><input type="button"  class="keys" name="nine" value="9" onclick="if(texttext.value.length < 5){texttext.value += '9'}"></td>
+                                 <td><input type="button"  class="keys" name="seven" value="7" onclick="if(room_for.value.length < 5){room_for.value += '7'}"></td>
+                                 <td><input type="button"  class="keys" name="eight" value="8" onclick="if(room_for.value.length < 5){room_for.value += '8'}"></td>
+                                 <td><input type="button"  class="keys" name="nine" value="9" onclick="if(room_for.value.length < 5){room_for.value += '9'}"></td>
                               </tr>
                               <tr >
-                                 <td><input type="button"  class="keys" name="zero" value="0" onclick="if(texttext.value.length < 5){texttext.value += '0'}"></td>
-                                 <td><input type="button"  class="keys" name="B" value="B" onclick="if(texttext.value.length < 5){texttext.value += 'B'}"></td>
-                                 <td><input type="button"  class="keys" style = "width: 60px; height: 60px;" name="delete" value="delete" onclick="texttext.value = texttext.value.slice(0,-1)"></td>
+                                 <td><input type="button"  class="keys" name="zero" value="0" onclick="if(room_for.value.length < 5){room_for.value += '0'}"></td>
+                                 <td><input type="button"  class="keys" name="B" value="B" onclick="if(room_for.value.length < 5){room_for.value += 'B'}"></td>
+                                 <td><input type="button"  class="keys" style = "width: 60px; height: 60px;" name="delete" value="delete" onclick="room_for.value = room_for.value.slice(0,-1)"></td>
                               </tr>
-                              <tr>
-                                <td><br><br><br><br></td>
+                              <tr class = "spacing">
+                                <td><br><br><br><br><br><br><br></td>
                               </tr>  
                            </table>
                         </form>
-                        <button style="top:411px;right:137px;position:absolute;" class="keys" onclick="search()">Search</button>
+                        <button style="top:461px;right:137px;position:absolute;" class="keys" onclick="search()">Search</button>
                      </body>
 
-                     <space>
-                        <br>
-                        <br>
-                        <br>
-                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                        <spoop id = "spoop" style = "font-size: 40px; position: absolute; left:10px">
+                       
+                        
+                        <spoop class= "spoop" id = "spoop" style = "font-size: 40px; position: absolute; left:10px">
                         </spoop>
                         
-                    </space>
+                    
                     
 
 
@@ -1041,6 +1112,9 @@
 
  
     
-    
+    <script src="recomendations.js"></script>
+    <!-- <script src="/officeMap.js"></script> -->
+    <script src="floor_func.js"></script>
  </body>
 </html>
+
