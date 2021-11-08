@@ -274,7 +274,7 @@
         } */
 
         .home {
-            height:15px;
+            height:55px;
         width: 72px;
         /* border: .5px outset yellow; */
         background-color: rgb(204,0,0);
@@ -285,7 +285,7 @@
         text-align:center;
         border-radius: 5px;
         top : 2px;
-        right : 2.5px;
+        right : 910.5px;
         position: absolute;
         zoom: normal;
         z-index: 0;
@@ -302,7 +302,7 @@
         }
 
         .search {
-            height:15px;
+            height:55px;
         width: 72px;
         /* border: .5px outset yellow; */
         background-color: rgb(204,0,0);
@@ -313,7 +313,7 @@
         text-align:center;
         border-radius: 5px;
         top : 2px;
-        right : 910.5px;
+        right : 1.5px;
         position: absolute;
         zoom: normal;
         z-index: 0;
@@ -337,7 +337,7 @@
             top:12px;
             position: absolute;
             /*right: 31px;*/ /*for search_icon.png*/
-            right: 38px; /*for search fa-icon not png*/
+            right: 40px; /*for search fa-icon not png*/
         }
 
         .img{
@@ -350,9 +350,9 @@
         
         .tit{    
             color: white;
-            font-size: 72px;
-            top : 45px;
-            right : 180px; /*was 180px felt 170px aligned better with the rest of the screen*/
+            font-size: 69px;
+            top : 20px;
+            right : 187px; /*was 180px felt 170px aligned better with the rest of the screen*/
             height:50px;
             width: 700px;
             position: absolute;
@@ -458,7 +458,7 @@
         .high_text{
             /* left:-200px;
             top:-200px */
-            z-index: 30;
+            z-index: 1;
             color:black;
             position: absolute;
             text-align: center;
@@ -635,8 +635,12 @@
     line-height:10px;
 }
 .spoop{
-    top:532px;
+    top:542px;
+    color: rgb(204,0,0);
     left: -0px;
+    text-align: center;
+    font-weight: bold;
+
 }
         
 
@@ -747,7 +751,9 @@
                 else{
                     // console.log("invalid");
                     if(result.length>0){
-                        document.getElementById("spoop").innerHTML = "Room " + result + " does not exist";
+                        s = "Invalid Room " + '<br/>'+ result;
+                        document.getElementById("spoop").innerHTML = s
+                        //  " does not exist";
                     } else{
                         document.getElementById("high_texts").innerHTML = result;                    
                     }
@@ -1022,10 +1028,17 @@
 
     <homeButton class = "home" type="button" action = "homepage.html" onclick="location.href = './homepage.html';">
         <img class = "move" src="hoooo.png" alt="second" id = "p1image" width="50" height="33">
+        <div style="font-size: 22px; font-weight: bold; line-height: 20px; left:22px; top: 60px; position: absolute;">
+            Home
+        </div>
         
     </homeButton>
     <searchButton class = "search" type="button" onclick="togglePopup()">
-        <div class="move_search"><i class="fas fa-search" onclick="search()"></i></div>
+        <div class="move_search"><i class="fas fa-search fa"  onclick="search()" ></i></div>
+        <div style="font-size: 22px; font-weight: bold; line-height: 21px; left:22px; top: 50px; position: absolute;">
+            Room <br> Search
+        </div>
+        
         <!--<img class = "move_search" src="search_icon.png" alt="second" id = "p1image" width="50" height="33">-->
         
     </searchButton>
@@ -1097,7 +1110,7 @@
 
                        
                         
-                        <spoop class= "spoop" id = "spoop" style = "font-size: 40px; position: absolute; left:10px">
+                        <spoop class= "spoop" id = "spoop" style = "font-size: 32px; position: absolute; left:80px">
                         </spoop>
                         
                     
@@ -1113,7 +1126,6 @@
  
     
     <script src="recomendations.js"></script>
-    <!-- <script src="/officeMap.js"></script> -->
     <script src="floor_func.js"></script>
  </body>
 </html>
