@@ -1,11 +1,8 @@
-* {
-  box-sizing: border-box;
-  font-family: sans-serif, Times New Roman, sans-serif;
-}
+* {box-sizing: border-box;
+  font-family: sans-serif, Times New Roman, sans-serif;}
 
-ul {
-  list-style-type: none;
-}
+
+ul {list-style-type: none;}
 
 h1 {
   font-family: sans-serif, Times New Roman, sans-serif;
@@ -15,11 +12,12 @@ h1 {
 }
 
 body {
-  font-family: Times New Roman, sans-serif;
-  /* background-image: url('blue.jpg'); */
-  background-image: url("eventsBackground4.jpeg");
-  background-size: 1295px;
-  margin: 0px;
+   font-family: Times New Roman, sans-serif;
+   /* background-image: url('blue.jpg'); */
+   background-image: url('eventsBackground4.jpeg');
+   background-size: 1295px;
+   margin: 0px
+
 }
 
 .weekdays {
@@ -57,7 +55,7 @@ body {
 
 .days li {
   /* background-color:rgba(255, 255, 255, .91); */
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color:rgba(255, 255, 255, .75);
 
   /* background: #eee; */
   font-weight: bold;
@@ -70,7 +68,7 @@ body {
   text-align: left;
   margin-bottom: 5px;
   /* margin-left: 5px; */
-  font-size: 20px;
+  font-size:20px;
   color: black;
   border: 1px solid black;
   padding-top: 5px;
@@ -79,7 +77,7 @@ body {
   float: left;
 }
 
-.days li .active {
+.days li .active {	
   padding-left: 5px;
   padding-right: 3px;
   /* padding-bottom: 3px; */
@@ -131,7 +129,8 @@ body {
 }
 /* END - EVENT COLOR */
 
-.days li .passed {
+
+.days li .passed {	
   /* border-style: dotted; */
   /* padding-right: 3px;
   padding-bottom: 3px; */
@@ -144,28 +143,31 @@ body {
   height: 27px;
   width: 27px;
   border-radius: 50%;
-  position: relative;
+  position:relative;
   top: 406px;
   display: inline-block;
-  font-size: small;
-
+  font-size:small;
+  
   /* vertical-align:; */
 }
 
 .legend {
-  display: inline;
-  border-radius: 5%;
+  /* display: inline; */
+  border-radius: 5%;;
   vertical-align: middle;
   position: absolute;
-  /* display:inline-block; */
+  /* display:inline; */
 
-  top: 15px;
+  top:100px;
+  right: 25px;
   background-color: rgba(255, 255, 255, 0.75);
-  width: 200px;
-  height: 140px;
+  width: 195px;
+  height: 70px;
   /* margin: 0px; */
   /* padding-top: 8px;
   padding-left: 1px; */
+
+  
 }
 
 /* .legend div .dot {
@@ -183,25 +185,20 @@ body {
 } */
 
 .legend div {
-  display: inline;
-  border-radius: 50%;
-  position: relative;
-  /* padding-bottom: 19px; */
-  /* padding: 5px; */
-  font-weight: bold;
-  bottom: 5px;
-  /* margin-top: 15px; */
-  margin: 5px;
-  margin-bottom: -10px;
-
-  /* border-radius: 10%; */
+  position:relative;
+  display: block;
+  margin-bottom: 15px;
 }
 
+/* .legend span {
+  white-space: pre;
+} */
+
 .legend div span {
-  border-radius: 15%;
-  /* margin: 20px; */
+  /* color:red; */
   white-space: pre;
   padding: 5px;
+  font-weight: bold;
 }
 
 .viewAllButton {
@@ -216,7 +213,7 @@ body {
   width: 130px;
   display: inline-block;
   text-align: center;
-  vertical-align: text-bottom;
+  vertical-align:text-bottom;
   border-radius: 5px; /* same as p tag*/
 }
 
@@ -232,10 +229,11 @@ body {
   width: 130px;
   display: inline-block;
   text-align: center;
-  vertical-align: text-bottom;
+  vertical-align:text-bottom;
   border-radius: 5px; /* same as p tag*/
 
   opacity: 0;
+
 }
 
 .viewAllButtonPassed p {
@@ -244,12 +242,11 @@ body {
 
 .viewAllButton p {
   position: relative;
-  bottom: 8px;
+  bottom:8px;
 }
 
 .socialDot {
-  background-color: lightgreen;
-}
+  background-color: lightgreen;}
 
 .professionalDot {
   background-color: lightskyblue;
@@ -296,10 +293,10 @@ body {
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 15% auto; 
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 80%; 
 }
 
 .close {
@@ -316,84 +313,84 @@ body {
   cursor: pointer;
 }
 
-.move2 {
-  top: 12px;
+.move2{
+  top:12px;
   position: absolute;
   right: 33px;
 }
 
 .backButton {
-  height: 57px;
+  height:57px;
   width: 72px;
-  border: 0.5px outset yellow;
+  border: .5px outset yellow;
   background-color: red;
   font-size: 35px;
   padding: 20px;
   color: white;
-  cursor: pointer;
-  text-align: center;
+  cursor:pointer;
+  text-align:center;
   border-radius: 5px;
-  top: 0px;
-  right: 911px;
+  top : 0px;
+  right : 911px;
   position: absolute;
   zoom: normal;
   z-index: 0;
-  line-height: 20px;
+  line-height:20px;
 }
 
-.move {
-  top: 12px;
+.move{
+  top:10px;
   position: absolute;
-  right: 33px;
+  /* right: 33px; */
+  /* size: 50px; */
+  width: 50px;
+  left: 31px;
+  top: 12px;
 }
 
 .homeText {
   color: white;
   position: relative;
-  font-size: 90%;
-  right: 46px;
+  font-size: 65%;
+  right: 37px;
+  top: 7px;
+  letter-spacing: .5px;
 }
 
 .home {
-  height: 93px;
-  width: 114px;
-  border: 0.5px outset yellow;
-  background-color: red;
+  height:95px;
+  width: 112px;
+  border: rgb(204,0,0);
+  background-color: rgb(204,0,0);
   font-size: 35px;
   padding: 20px;
   color: white;
-  cursor: pointer;
-  text-align: center;
+  /* cursor:pointer; */
+  text-align:center;
   border-radius: 5px;
-  top: 0px;
-  right: 0px;
+  top : 2px;
+  right : 909.51px;
   position: absolute;
   zoom: normal;
   z-index: 0;
-  line-height: 20px;
+  line-height:20px;
+  outline: 2px solid white;
+  opacity: .9;
+
 }
 
+
+
 /* Add media queries for smaller screens */
-@media screen and (max-width: 720px) {
-  .weekdays li,
-  .days li {
-    width: 13.1%;
-  }
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
 }
 
 @media screen and (max-width: 420px) {
-  .weekdays li,
-  .days li {
-    width: 12.5%;
-  }
-  .days li .active {
-    padding: 2px;
-  }
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
 }
 
 @media screen and (max-width: 290px) {
-  .weekdays li,
-  .days li {
-    width: 12.2%;
-  }
+  .weekdays li, .days li {width: 12.2%;}
 }
