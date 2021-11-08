@@ -449,8 +449,8 @@
             width: 30px;
             height: 30px;
             padding: 10px;
-            right: -324px;
-            top: -260px;
+            right: 637px;
+            top: 585px;
             position: absolute;
             border-radius: 100px;
             outline: 6px solid black;
@@ -653,6 +653,12 @@
             map1.set("B0120", [610,610]);
             map1.set("1222", [660,144]);
             map1.set("0325", [260,324]);
+            map1.set("2107", [560,524]);
+            map1.set("4237", [600,100]);
+            map1.set("4237", [600,100]);
+            map1.set("0102", [640,466]);
+            map1.set("0120", [555,667]);
+            map1.set("1116", [555,667]);
             function search(){
                 // console.log("enter")
                 result = document.getElementById("room_for").value;
@@ -1017,12 +1023,11 @@
         </div>
     </td>
 
-    <homeButton class = "home" type="button" action = "homepage.html" onclick="location.href = './homepage.html';">
+    <homeButton class = "home" type="button" action = "homepage.html" onclick="location.href = 'homepage.html';">
         <img class = "move" src="hoooo.png" alt="second" id = "p1image" width="50" height="33">
         <div style="font-size: 22px; font-weight: bold; line-height: 20px; left:22px; top: 60px; position: absolute;">
             Home
         </div>
-        
     </homeButton>
     <searchButton class = "search" type="button" onclick="togglePopup()">
         <div class="move_search"><i class="fas fa-search fa"  onclick="search()" ></i></div>
@@ -1037,7 +1042,6 @@
     <img id = "rowrow" class = "move2" src="arrow2.png" alt="second" id = "p2image" width="90" height="27" style = "background-color: black;">
 
     <Highlight id = "high" class= "highlighter">
-        
     </Highlight>
     <something id = "high_texts" class ="high_text" >
         
