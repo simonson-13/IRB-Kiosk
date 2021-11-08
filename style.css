@@ -347,31 +347,30 @@ body {
   right: 33px;
 }
 
+.homeText {
+  color: white;
+  position: relative;
+  font-size: 90%;
+  right: 46px;
+}
+
 .home {
-  height: 55px;
-  width: 72px;
-  /* border: .5px outset yellow; */
-  background-color: rgb(204, 0, 0);
+  height: 93px;
+  width: 114px;
+  border: 0.5px outset yellow;
+  background-color: red;
   font-size: 35px;
   padding: 20px;
   color: white;
   cursor: pointer;
   text-align: center;
   border-radius: 5px;
-  top: 2px;
-  right: 910.5px;
+  top: 0px;
+  right: 0px;
   position: absolute;
   zoom: normal;
   z-index: 0;
   line-height: 20px;
-  outline: 2px solid white;
-  opacity: 0.9;
-}
-
-.home:hover {
-  background-color: rgb(226, 96, 96);
-  color: white;
-  opacity: 0.9;
 }
 
 /* Add media queries for smaller screens */
