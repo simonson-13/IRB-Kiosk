@@ -52,7 +52,7 @@
         cursor:pointer;
         text-align:center;
         border-radius: 5px;
-        top : 185px;
+        top : 205px;
         right : 905px;
         position: absolute;
         zoom: normal;
@@ -81,7 +81,7 @@
         cursor:pointer;
         text-align:center;
         border-radius: 5px;
-        top : 260px;
+        top : 220px;
         right : 905px;
         position: absolute;
         zoom: normal;
@@ -110,7 +110,7 @@
         cursor:pointer;
         text-align:center;
         border-radius: 5px;
-        top : 335px;
+        top : 295px;
         right : 905px;
         position: absolute;
         zoom: normal;
@@ -139,7 +139,7 @@
         cursor:pointer;
         text-align:center;
         border-radius: 5px;
-        top : 410px;
+        top : 370px;
         right : 905px;
         position: absolute;
         zoom: normal;
@@ -168,7 +168,7 @@
         cursor:pointer;
         text-align:center;
         border-radius: 5px;
-        top : 485px;
+        top : 445px;
         right : 905px;
         position: absolute;
         zoom: normal;
@@ -197,7 +197,7 @@
         cursor:pointer;
         text-align:center;
         border-radius: 5px;
-        top : 560px;
+        top : 520px;
         right : 905px;
         position: absolute;
         zoom: normal;
@@ -226,7 +226,7 @@
         cursor:pointer;
         text-align:center;
         border-radius: 5px;
-        top : 635px;
+        top : 595px;
         right : 885px;
         position: absolute;
         zoom: normal;
@@ -449,8 +449,8 @@
             width: 30px;
             height: 30px;
             padding: 10px;
-            right: 355px;
-            top: 580px;
+            right: -355px;
+            top: -580px;
             position: absolute;
             border-radius: 100px;
             outline: 6px solid black;
@@ -659,7 +659,7 @@
             map1.set("0102", [640,466]);
             map1.set("0120", [555,667]);
             map1.set("1116", [585,652]);
-            map1.set("6120", [505,720]);
+            // map1.set("6120", [505,720]);
             map1.set("5232", [550,105]);
             map1.set("3207", [580,355]);
             function search(){
@@ -747,16 +747,16 @@
                     document.getElementById("high_texts").style.top = (map1.get(result)[0]+12)+"px";
                     document.getElementById("high_texts").innerHTML = result;
                 }
-                else if(map1.has(result)&&floor=="6"){
-                    guess6()
-                    togglePopup()
-                    document.getElementById("high").style.right = map1.get(result)[1]+"px";
-                    document.getElementById("high").style.top = map1.get(result)[0]+"px";
+                // else if(map1.has(result)&&floor=="6"){
+                //     guess6()
+                //     togglePopup()
+                //     document.getElementById("high").style.right = map1.get(result)[1]+"px";
+                //     document.getElementById("high").style.top = map1.get(result)[0]+"px";
                     
-                    document.getElementById("high_texts").style.right = (map1.get(result)[1]+6.5)+"px";
-                    document.getElementById("high_texts").style.top = (map1.get(result)[0]+12)+"px";
-                    document.getElementById("high_texts").innerHTML = result;
-                }
+                //     document.getElementById("high_texts").style.right = (map1.get(result)[1]+6.5)+"px";
+                //     document.getElementById("high_texts").style.top = (map1.get(result)[0]+12)+"px";
+                //     document.getElementById("high_texts").innerHTML = result;
+                // }
                 else{
                     // console.log("invalid");
                     if(result.length>0){
@@ -806,11 +806,11 @@
                     document.getElementById("button2").style.right = 905
                     document.getElementById("button2").style.width = 70
                     return                }
-                if(document.getElementById("button1").style.background == 'gold'){
-                    document.getElementById("button1").style.background = 'rgb(204,0,0)';
-                    document.getElementById("button1").style.right = 905
-                    document.getElementById("button1").style.width = 70
-                    return                }
+                // if(document.getElementById("button1").style.background == 'gold'){
+                //     document.getElementById("button1").style.background = 'rgb(204,0,0)';
+                //     document.getElementById("button1").style.right = 905
+                //     document.getElementById("button1").style.width = 70
+                //     return                }
             }
 
 
@@ -970,11 +970,11 @@
     </head>
 
   <body class = "back" style="background-image: url('blue.jpg');">
-    <button1>
+    <!-- <button1>
        <butt1 class="butt1" type="button" id = "button1" value="test" onclick="guess6();">
           6
        </butt1>
-    </button1>
+    </button1> -->
 
     <button2">
         <butt2 class="butt2" type="button" id = "button2" value="test" onclick="guess5();" >
@@ -1008,7 +1008,7 @@
 
      <button7">
         <butt7 class="butt7" type="button" id = "button7" value="test" onclick="guess0();">
-           0
+           G
         </butt7>
     </button7>
 
