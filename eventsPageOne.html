@@ -27,8 +27,139 @@
 </button>
 <h1 style="text-align: center;">IRB Events</h1>
 
+<!-- START: POP UP WINDOW CONTENT -->
 
-<div id="popupWindow" class="modal">
+<!-- SUNDAY -->
+<div id="popupWindow" class="sunday">
+
+  <div class="modal-content">
+    <span class="close" onclick="closeFunction()">&times;</span>
+      <h2>Showing 3 Events</h2>
+      <!-- contents -->
+
+      <!-- Event 1 -->
+      <span class="social" style="font-weight: bold; padding: 5px;">
+        hello
+      </span>
+      <div>
+
+        <!-- general info -->
+        <pre style="font-weight: bold;">
+        time
+        location
+        [view floor plan button]
+        </pre>
+  
+        <!-- description -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Description:
+          </span>
+          <br>
+          <span>
+            description description description description description description description
+            description description description  
+          </span>
+        </p>
+        
+        <!-- speakers -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Speakers:
+          </span>
+          <br>
+          <span>
+            Speaker1, Speaker2, Speaker3
+          </span>
+        </p>
+
+      </div>
+
+      <br>
+
+      <!-- Event 2 -->
+      <span class="academic" style="font-weight: bold; padding: 5px;">
+        hello
+      </span>
+      <div>
+
+        <!-- general info -->
+        <pre style="font-weight: bold;">
+        time
+        location
+        [view floor plan button]
+        </pre>
+  
+        <!-- description -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Description:
+          </span>
+          <br>
+          <span>
+            description description description description description description description
+            description description description  
+          </span>
+        </p>
+        
+        <!-- speakers -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Speakers:
+          </span>
+          <br>
+          <span>
+            Speaker1, Speaker2, Speaker3
+          </span>
+        </p>
+
+      </div>
+      
+      <br>
+
+      <!-- Event 3 -->
+      <span class="professional" style="font-weight: bold; padding: 5px;">
+        hello
+      </span>
+      <div>
+
+        <!-- general info -->
+        <pre style="font-weight: bold;">
+        time
+        location
+        [view floor plan button]
+        </pre>
+  
+        <!-- description -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Description:
+          </span>
+          <br>
+          <span>
+            description description description description description description description
+            description description description  
+          </span>
+        </p>
+        
+        <!-- speakers -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Speakers:
+          </span>
+          <br>
+          <span>
+            Speaker1, Speaker2, Speaker3
+          </span>
+        </p>
+
+      </div>
+      
+  </div>
+</div>
+
+<!-- MONDAY -->
+<div id="popupWindow" class="monday">
 
   <div class="modal-content">
     <span class="close" onclick="closeFunction()">&times;</span>
@@ -40,16 +171,13 @@
     <br>
     <br><span class="social">A Conversation with U.S. Senator Cardin on Coastal Climate Resilience</span>
     <br>
-    <br><span class="social">A Conversation with U.S. Senator Cardin on Coastal Climate Resilience</span>
-    <br>
-    <br><span class="social">A Conversation with U.S. Senator Cardin on Coastal Climate Resilience</span>
-    <br><span class="social">A Conversation with U.S. Senator Cardin on Coastal Climate Resilience</span>
-    <br><span class="social">A Conversation with U.S. Senator Cardin on Coastal Climate Resilience</span>
-    <br><span class="social">A Conversation with U.S. Senator Cardin on Coastal Climate Resilience</span>
-    <br><span class="social">A Conversation with U.S. Senator Cardin on Coastal Climate Resilience</span>
     </p>
   </div>
 </div>
+
+
+<!-- END: POP UP WINDOW CONTENT -->
+
 
 <ul class="weekdays">
   <li>Su</li>
@@ -64,7 +192,7 @@
 <ul id = "days" class="days">  
   
   <!-- START: ONE COLUMN -->
-  <li onclick="myFunction()">
+  <li onclick="myFunction('sunday')">
     <span class="passed">Nov 7</span>
 
     <div style="text-align:center;">
@@ -107,7 +235,7 @@
 
 
   <!-- START: ONE COLUMN -->
-  <li onclick="myFunction()">
+  <li onclick="myFunction('monday')">
     <span class="passed">8</span>
 
     <div style="text-align:center;">
@@ -154,7 +282,7 @@
 
 
   <!-- START: ONE COLUMN -->
-  <li onclick="myFunction()">
+  <li onclick="myFunction('tuesday')">
     <span class="active">9</span>
 
     <div style="text-align:center;">
@@ -199,7 +327,7 @@
 
 
   <!-- START: ONE COLUMN -->
-  <li onclick="myFunction()">
+  <li onclick="myFunction('wednesday')">
     <span class="incoming">10</span>
 
     <div style="text-align:center;">
@@ -249,7 +377,7 @@
 
 
   <!-- START: ONE COLUMN -->
-  <li onclick="myFunction()">
+  <li onclick="myFunction('thursday')">
     <span class="incoming">11</span>
 
     <div style="text-align:center;">
@@ -292,7 +420,7 @@
 
 
     <!-- START: ONE COLUMN -->
-    <li onclick="myFunction()">
+    <li onclick="myFunction('friday')">
       <span class="incoming">12</span>
   
       <div style="text-align:center;">
@@ -342,7 +470,7 @@
 
 
     <!-- START: ONE COLUMN -->
-    <li onclick="myFunction()">
+    <li onclick="myFunction('saturday')">
       <span class="incoming">13</span>
   
       <div style="text-align:center;">
@@ -399,32 +527,18 @@
   
 </div>
 
-
-<!-- <div class="legend">
-  <div>
-    <span class="dot" style="background-color: lightgreen;">
-      SOCIAL
-    </span>
-  </div>
-
-  <div>
-    <span class="dot" style="background-color: lightskyblue;"></span>
-    <span>Professional</span>
-  </div>
-
-  <div>
-    <span class="dot" style="background-color: rgb(255, 247, 0);;"></span>
-    <span>Academic</span>
-  </div>
-
-  <div>
-    <span class="dot" style="background-color: rgb(255, 94, 94);;"></span>
-    <span>Other</span>
-  </div>
-</div> -->
-
 <script>
   var modal = document.getElementById("popupWindow");
+
+  // days
+  var sunday = document.getElementsByClassName("sunday");
+  var monday = document.getElementsByClassName("monday");
+  var tuesday = document.getElementsByClassName("tuesday");
+  var wednesday = document.getElementsByClassName("wednesday");
+  var thursday = document.getElementsByClassName("thursday");
+  var friday = document.getElementsByClassName("friday");
+  var saturday = document.getElementsByClassName("saturday");
+
   var socialButton = document.getElementById("Social button");
   var days = document.getElementsByClassName("days")
   var socialBool = true;
@@ -441,14 +555,36 @@
 
     bool = !bool;
   }
-  function myFunction() {
-    modal.style.display = "block";
+
+  function myFunction(day) {
+    if(day === "sunday") {
+      sunday[0].style.display = "block"
+    } else if(day === "monday") {
+      monday[0].style.display = "block"
+    }else if(day === "tuesday") {
+      tuesday[0].style.display = "block"
+    }else if(day === "wednesday") {
+      wednesday[0].style.display = "block"
+    }else if(day === "thursday") {
+      thursday[0].style.display = "block"
+    }else if(day === "friday") {
+      friday[0].style.display = "block"
+    }else if(day === "saturday") {
+      saturday[0].style.display = "block"
+    }
+    console.log(day);
+
   }
 
   function closeFunction() {
 
-    modal.style.display = "none";
-
+    sunday[0].style.display = "none"
+    monday[0].style.display = "none"
+    tuesday[0].style.display = "none"
+    wednesday[0].style.display = "none"
+    thursday[0].style.display = "none"
+    friday[0].style.display = "none"
+    saturday[0].style.display = "none"
   }
 
   window.addEventListener("click", function(event) {
