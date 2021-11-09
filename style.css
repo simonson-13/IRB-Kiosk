@@ -299,7 +299,17 @@ body {
   display: none;
 }
 
-
+.nextButton {
+  position:absolute;
+  top: 180px;
+  right: 26px;
+  
+  background-color: #ddd;;
+  border-top: 19px solid transparent;
+  border-bottom: 19px solid transparent;
+  border-left: 30px solid green;
+  border-right: 0px solid transparent;
+}
 
 .modal-content {
   background-color: #fefefe;
