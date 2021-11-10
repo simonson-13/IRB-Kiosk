@@ -2,11 +2,68 @@
 <html lang="en">
 <Title>Events</Title>  
 
+
+<!-- 
+SECTIONS YOU CAN FIND BY COMMAND F:
+
+startPopUpContent
+
+  sunday1PopUpContent
+  sunday2PopUpContent
+
+  monday1PopUpContent
+  monday2PopUpContent
+
+  tuesday1PopUpContent
+  tuesday2PopUpContent
+
+  wedsneday1PopUpContent
+  wedsneday2PopUpContent
+
+  thursday1PopUpContent
+  thursday2PopUpContent
+
+  friday1PopUpContent
+  friday2PopUpContent
+
+endPopUpContent
+
+startCalendarContent
+
+  startWeek0
+
+    sundayWeek0CalendarContent
+    tuesdayWeek0CalendarContent
+    wedsnedayWeek0CalendarContent
+    thursdayWeek0CalendarContent
+    fridayWeek0CalendarContent
+    saturdayWeek0CalendarContent
+
+  EndWeek0
+
+  startWeek1
+
+    sundayWeek1CalendarContent
+    tuesdayWeek1CalendarContent
+    wedsnedayWeek1CalendarContent
+    thursdayWeek1CalendarContent
+    fridayWeek1CalendarContent
+    saturdayWeek1CalendarContent
+
+  EndWeek1 
+
+endCalendarContent
+
+ -->
+
+
 <head>
 <link rel="stylesheet" type="text/css" href="style.css"></link>
 </head>
 
 <body>
+  <!-- variables -->
+  <span id="weekNum" style="display: none;">0</span>
 
 <!-- <button onclick="backFunction()" class = "backButton">
   <img  class = "move2" src="arrow2.png" alt="second" id = "p2image" width="50" height="33">
@@ -27,9 +84,9 @@
 </button>
 <h1 style="text-align: center;">IRB Events</h1>
 
-<!-- START: POP UP WINDOW CONTENT -->
+<!-- startPopUpContent -->
 
-<!-- SUNDAY -->
+<!-- sunday1PopUpContent -->
 <div id="popupWindow" class="sunday">
 
   <div class="modal-content">
@@ -39,31 +96,29 @@
 
       <!-- Event 1 -->
       <span class="social" style="font-weight: bold; padding: 5px;">
-        hello
+        sunday1PopUpContent
       </span>
       <div>
 
         <!-- general info -->
         <pre style="font-weight: bold;">
-        time
-        location
-        [view floor plan button]
-        </pre>
+      time
+      location
+      <button class="viewFloorPlanButton">View Floor Plan</button></pre>
   
         <!-- description -->
-        <p style="margin-left: 35px;">
+        <p style="margin-left: 25px;">
           <span style="font-weight: bold;">
             Description:
           </span>
           <br>
           <span>
-            description description description description description description description
-            description description description  
+            description description description 
           </span>
         </p>
         
         <!-- speakers -->
-        <p style="margin-left: 35px;">
+        <p style="margin-left: 25px;">
           <span style="font-weight: bold;">
             Speakers:
           </span>
@@ -78,32 +133,30 @@
       <br>
 
       <!-- Event 2 -->
-      <span class="academic" style="font-weight: bold; padding: 5px;">
-        hello
+      <span class="social" style="font-weight: bold; padding: 5px;">
+        sunday1stuff
       </span>
       <div>
 
         <!-- general info -->
         <pre style="font-weight: bold;">
-        time
-        location
-        [view floor plan button]
-        </pre>
+      time
+      location
+      [view floor plan button]</pre>
   
         <!-- description -->
-        <p style="margin-left: 35px;">
+        <p style="margin-left: 25px;">
           <span style="font-weight: bold;">
             Description:
           </span>
           <br>
           <span>
-            description description description description description description description
-            description description description  
+            description description description 
           </span>
         </p>
         
         <!-- speakers -->
-        <p style="margin-left: 35px;">
+        <p style="margin-left: 25px;">
           <span style="font-weight: bold;">
             Speakers:
           </span>
@@ -114,69 +167,787 @@
         </p>
 
       </div>
-      
       <br>
-
-      <!-- Event 3 -->
-      <span class="professional" style="font-weight: bold; padding: 5px;">
-        hello
-      </span>
-      <div>
-
-        <!-- general info -->
-        <pre style="font-weight: bold;">
-        time
-        location
-        [view floor plan button]
-        </pre>
-  
-        <!-- description -->
-        <p style="margin-left: 35px;">
-          <span style="font-weight: bold;">
-            Description:
-          </span>
-          <br>
-          <span>
-            description description description description description description description
-            description description description  
-          </span>
-        </p>
-        
-        <!-- speakers -->
-        <p style="margin-left: 35px;">
-          <span style="font-weight: bold;">
-            Speakers:
-          </span>
-          <br>
-          <span>
-            Speaker1, Speaker2, Speaker3
-          </span>
-        </p>
-
-      </div>
       
   </div>
 </div>
 
-<!-- MONDAY -->
+<!-- sunday2PopUpContent -->
+<div id="popupWindow" class="sunday">
+
+  <div class="modal-content">
+    <span class="close" onclick="closeFunction()">&times;</span>
+      <h2>Showing 3 Events</h2>
+      <!-- contents -->
+
+      <!-- Event 1 -->
+      <span class="social" style="font-weight: bold; padding: 5px;">
+        sunday2PopUpContent
+      </span>
+      <div>
+
+        <!-- general info -->
+        <pre style="font-weight: bold;">
+      time
+      location
+      [view floor plan button]</pre>
+  
+        <!-- description -->
+        <p style="margin-left: 25px;">
+          <span style="font-weight: bold;">
+            Description:
+          </span>
+          <br>
+          <span>
+            description description description 
+          </span>
+        </p>
+        
+        <!-- speakers -->
+        <p style="margin-left: 25px;">
+          <span style="font-weight: bold;">
+            Speakers:
+          </span>
+          <br>
+          <span>
+            Speaker1, Speaker2, Speaker3
+          </span>
+        </p>
+
+      </div>
+
+      <br>
+
+      <!-- Event 2 -->
+      <span class="social" style="font-weight: bold; padding: 5px;">
+        sunday2stuff
+      </span>
+      <div>
+
+        <!-- general info -->
+        <pre style="font-weight: bold;">
+      time
+      location
+      [view floor plan button]</pre>
+  
+        <!-- description -->
+        <p style="margin-left: 25px;">
+          <span style="font-weight: bold;">
+            Description:
+          </span>
+          <br>
+          <span>
+            description description description 
+          </span>
+        </p>
+        
+        <!-- speakers -->
+        <p style="margin-left: 25px;">
+          <span style="font-weight: bold;">
+            Speakers:
+          </span>
+          <br>
+          <span>
+            Speaker1, Speaker2, Speaker3
+          </span>
+        </p>
+
+      </div>
+      <br>
+      
+  </div>
+</div>
+
+
+
+
+<!-- monday1PopUpContent -->
 <div id="popupWindow" class="monday">
 
   <div class="modal-content">
     <span class="close" onclick="closeFunction()">&times;</span>
-    <p>Descriptions of events go here.
-      <br><span class="social">A Conversation with U.S. Senator Cardin on Coastal Climate Resilience</span>
-    <br>
+      <h2>Showing 3 Events</h2>
+      <!-- contents -->
+
+      <!-- Event 1 -->
+      <span class="social" style="font-weight: bold; padding: 5px;">
+        monday1PopUpContent
+      </span>
+      <div>
+
+        <!-- general info -->
+        <pre style="font-weight: bold;">
+      time
+      location
+      [view floor plan button]</pre>
+  
+        <!-- description -->
+        <p style="margin-left: 25px;">
+          <span style="font-weight: bold;">
+            Description:
+          </span>
+          <br>
+          <span>
+            description description description 
+          </span>
+        </p>
+        
+        <!-- speakers -->
+        <p style="margin-left: 25px;">
+          <span style="font-weight: bold;">
+            Speakers:
+          </span>
+          <br>
+          <span>
+            Speaker1, Speaker2, Speaker3
+          </span>
+        </p>
+
+      </div>
+
+      <br>
+
+      <!-- Event 2 -->
+      <span class="social" style="font-weight: bold; padding: 5px;">
+        monday1PopUpContent
+      </span>
+      <div>
+
+        <!-- general info -->
+        <pre style="font-weight: bold;">
+      time
+      location
+      [view floor plan button]</pre>
+  
+        <!-- description -->
+        <p style="margin-left: 25px;">
+          <span style="font-weight: bold;">
+            Description:
+          </span>
+          <br>
+          <span>
+            description description description 
+          </span>
+        </p>
+        
+        <!-- speakers -->
+        <p style="margin-left: 25px;">
+          <span style="font-weight: bold;">
+            Speakers:
+          </span>
+          <br>
+          <span>
+            Speaker1, Speaker2, Speaker3
+          </span>
+        </p>
+
+      </div>
+      <br>
+      
+  </div>
+</div>
+
+  <!-- monday2PopUpContent -->
+  <div id="popupWindow" class="monday">
+
+    <div class="modal-content">
+      <span class="close" onclick="closeFunction()">&times;</span>
+        <h2>Showing 3 Events</h2>
+        <!-- contents -->
+  
+        <!-- Event 1 -->
+        <span class="social" style="font-weight: bold; padding: 5px;">
+          monday2PopUpContent
+        </span>
+        <div>
+  
+          <!-- general info -->
+          <pre style="font-weight: bold;">
+        time
+        location
+        [view floor plan button]</pre>
     
-    <br><span class="social">A Conversation with U.S. Senator Cardin on Coastal Climate Resilience</span>
-    <br>
-    <br><span class="social">A Conversation with U.S. Senator Cardin on Coastal Climate Resilience</span>
-    <br>
-    </p>
+          <!-- description -->
+          <p style="margin-left: 25px;">
+            <span style="font-weight: bold;">
+              Description:
+            </span>
+            <br>
+            <span>
+              description description description 
+            </span>
+          </p>
+          
+          <!-- speakers -->
+          <p style="margin-left: 25px;">
+            <span style="font-weight: bold;">
+              Speakers:
+            </span>
+            <br>
+            <span>
+              Speaker1, Speaker2, Speaker3
+            </span>
+          </p>
+  
+        </div>
+  
+        <br>
+  
+        <!-- Event 2 -->
+        <span class="social" style="font-weight: bold; padding: 5px;">
+          monday2PopUpContent
+        </span>
+        <div>
+  
+          <!-- general info -->
+          <pre style="font-weight: bold;">
+        time
+        location
+        [view floor plan button]</pre>
+    
+          <!-- description -->
+          <p style="margin-left: 25px;">
+            <span style="font-weight: bold;">
+              Description:
+            </span>
+            <br>
+            <span>
+              description description description 
+            </span>
+          </p>
+          
+          <!-- speakers -->
+          <p style="margin-left: 25px;">
+            <span style="font-weight: bold;">
+              Speakers:
+            </span>
+            <br>
+            <span>
+              Speaker1, Speaker2, Speaker3
+            </span>
+          </p>
+  
+        </div>
+        <br>
+        
+    </div>
+  </div>
+
+
+<!-- tuesday1PopUpContent -->
+<div id="popupWindow" class="tuesday">
+
+  <div class="modal-content">
+    <span class="close" onclick="closeFunction()">&times;</span>
+      <h2>Showing 3 Events</h2>
+      <!-- contents -->
+
+      <!-- Event 1 -->
+      <span class="social" style="font-weight: bold; padding: 5px;">
+        tuesday1PopUpContent
+      </span>
+      <div>
+
+        <!-- general info -->
+        <pre style="font-weight: bold;">
+      time
+      location
+      [view floor plan button]
+        </pre>
+  
+        <!-- description -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Description:
+          </span>
+          <br>
+          <span>
+            description description description description description description description
+            description description description  
+          </span>
+        </p>
+        
+        <!-- speakers -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Speakers:
+          </span>
+          <br>
+          <span>
+            Speaker1, Speaker2, Speaker3
+          </span>
+        </p>
+
+      </div>
+      <br>
+  </div>
+</div>
+
+<!-- tuesday2PopUpContent -->
+<div id="popupWindow" class="tuesday">
+
+  <div class="modal-content">
+    <span class="close" onclick="closeFunction()">&times;</span>
+      <h2>Showing 3 Events</h2>
+      <!-- contents -->
+
+      <!-- Event 1 -->
+      <span class="social" style="font-weight: bold; padding: 5px;">
+        tuesday2PopUpContent
+      </span>
+      <div>
+
+        <!-- general info -->
+        <pre style="font-weight: bold;">
+      time
+      location
+      [view floor plan button]
+        </pre>
+  
+        <!-- description -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Description:
+          </span>
+          <br>
+          <span>
+            description description description description description description description
+            description description description  
+          </span>
+        </p>
+        
+        <!-- speakers -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Speakers:
+          </span>
+          <br>
+          <span>
+            Speaker1, Speaker2, Speaker3
+          </span>
+        </p>
+
+      </div>
+      <br>
   </div>
 </div>
 
 
+<!-- wedsneday1PopUpContent  -->
+<div id="popupWindow" class="wednesday">
+
+  <div class="modal-content">
+    <span class="close" onclick="closeFunction()">&times;</span>
+      <h2>Showing 3 Events</h2>
+      <!-- contents -->
+
+      <!-- Event 1 -->
+      <span class="social" style="font-weight: bold; padding: 5px;">
+        wedsneday1PopUpContent
+      </span>
+      <div>
+
+        <!-- general info -->
+        <pre style="font-weight: bold;">
+      time
+      location
+      [view floor plan button]
+        </pre>
+  
+        <!-- description -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Description:
+          </span>
+          <br>
+          <span>
+            description description description description description description description
+            description description description  
+          </span>
+        </p>
+        
+        <!-- speakers -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Speakers:
+          </span>
+          <br>
+          <span>
+            Speaker1, Speaker2, Speaker3
+          </span>
+        </p>
+
+      </div>
+
+      <br>
+      
+  </div>
+</div>
+
+<!-- wedsneday2PopUpContent  -->
+<div id="popupWindow" class="wednesday">
+
+  <div class="modal-content">
+    <span class="close" onclick="closeFunction()">&times;</span>
+      <h2>Showing 3 Events</h2>
+      <!-- contents -->
+
+      <!-- Event 1 -->
+      <span class="social" style="font-weight: bold; padding: 5px;">
+        wedsneday2PopUpContent
+      </span>
+      <div>
+
+        <!-- general info -->
+        <pre style="font-weight: bold;">
+      time
+      location
+      [view floor plan button]
+        </pre>
+  
+        <!-- description -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Description:
+          </span>
+          <br>
+          <span>
+            description description description description description description description
+            description description description  
+          </span>
+        </p>
+        
+        <!-- speakers -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Speakers:
+          </span>
+          <br>
+          <span>
+            Speaker1, Speaker2, Speaker3
+          </span>
+        </p>
+
+      </div>
+
+      <br>
+      
+  </div>
+</div>
+
+<!-- thursday1PopUpContent -->
+<div id="popupWindow" class="thursday">
+
+  <div class="modal-content">
+    <span class="close" onclick="closeFunction()">&times;</span>
+      <h2>Showing 3 Events</h2>
+      <!-- contents -->
+
+      <!-- Event 1 -->
+      <span class="social" style="font-weight: bold; padding: 5px;">
+        thursday1PopUpContent
+      </span>
+      <div>
+
+        <!-- general info -->
+        <pre style="font-weight: bold;">
+      time
+      location
+      [view floor plan button]
+        </pre>
+  
+        <!-- description -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Description:
+          </span>
+          <br>
+          <span>
+            description description description description description description description
+            description description description  
+          </span>
+        </p>
+        
+        <!-- speakers -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Speakers:
+          </span>
+          <br>
+          <span>
+            Speaker1, Speaker2, Speaker3
+          </span>
+        </p>
+
+      </div>
+
+      <br>
+      
+  </div>
+</div>
+
+<!-- thursday2PopUpContent -->
+<div id="popupWindow" class="thursday">
+
+  <div class="modal-content">
+    <span class="close" onclick="closeFunction()">&times;</span>
+      <h2>Showing 3 Events</h2>
+      <!-- contents -->
+
+      <!-- Event 1 -->
+      <span class="social" style="font-weight: bold; padding: 5px;">
+        thursday2PopUpContent
+      </span>
+      <div>
+
+        <!-- general info -->
+        <pre style="font-weight: bold;">
+      time
+      location
+      [view floor plan button]
+        </pre>
+  
+        <!-- description -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Description:
+          </span>
+          <br>
+          <span>
+            description description description description description description description
+            description description description  
+          </span>
+        </p>
+        
+        <!-- speakers -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Speakers:
+          </span>
+          <br>
+          <span>
+            Speaker1, Speaker2, Speaker3
+          </span>
+        </p>
+
+      </div>
+
+      <br>
+      
+  </div>
+</div>
+
+
+<!-- friday1PopUpContent -->
+<div id="popupWindow" class="friday">
+
+  <div class="modal-content">
+    <span class="close" onclick="closeFunction()">&times;</span>
+      <h2>Showing 3 Events</h2>
+      <!-- contents -->
+
+      <!-- Event 1 -->
+      <span class="social" style="font-weight: bold; padding: 5px;">
+        friday1PopUpContent
+      </span>
+      <div>
+
+        <!-- general info -->
+        <pre style="font-weight: bold;">
+      time
+      location
+      [view floor plan button]
+        </pre>
+  
+        <!-- description -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Description:
+          </span>
+          <br>
+          <span>
+            description description description description description description description
+            description description description  
+          </span>
+        </p>
+        
+        <!-- speakers -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Speakers:
+          </span>
+          <br>
+          <span>
+            Speaker1, Speaker2, Speaker3
+          </span>
+        </p>
+
+      </div>
+
+      <br>
+      
+  </div>
+</div>
+
+<!-- friday2PopUpContent -->
+<div id="popupWindow" class="friday">
+
+  <div class="modal-content">
+    <span class="close" onclick="closeFunction()">&times;</span>
+      <h2>Showing 3 Events</h2>
+      <!-- contents -->
+
+      <!-- Event 1 -->
+      <span class="social" style="font-weight: bold; padding: 5px;">
+        friday2PopUpContent
+      </span>
+      <div>
+
+        <!-- general info -->
+        <pre style="font-weight: bold;">
+      time
+      location
+      [view floor plan button]
+        </pre>
+  
+        <!-- description -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Description:
+          </span>
+          <br>
+          <span>
+            description description description description description description description
+            description description description  
+          </span>
+        </p>
+        
+        <!-- speakers -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Speakers:
+          </span>
+          <br>
+          <span>
+            Speaker1, Speaker2, Speaker3
+          </span>
+        </p>
+
+      </div>
+
+      <br>
+      
+  </div>
+</div>
+
+
+<!-- saturday1PopUpContent -->
+<div id="popupWindow" class="saturday">
+
+  <div class="modal-content">
+    <span class="close" onclick="closeFunction()">&times;</span>
+      <h2>Showing 3 Events</h2>
+      <!-- contents -->
+
+      <!-- Event 1 -->
+      <span class="social" style="font-weight: bold; padding: 5px;">
+        saturday1PopUpContent
+      </span>
+      <div>
+
+        <!-- general info -->
+        <pre style="font-weight: bold;">
+      time
+      location
+      [view floor plan button]
+        </pre>
+  
+        <!-- description -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Description:
+          </span>
+          <br>
+          <span>
+            description description description description description description description
+            description description description 1 
+          </span>
+        </p>
+        
+        <!-- speakers -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Speakers:
+          </span>
+          <br>
+          <span>
+            Speaker1, Speaker2, Speaker3
+          </span>
+        </p>
+
+      </div>
+
+      <br>
+      
+  </div>
+</div>
+
+<!-- saturday2PopUpContent -->
+<div id="popupWindow" class="saturday">
+
+  <div class="modal-content">
+    <span class="close" onclick="closeFunction()">&times;</span>
+      <h2>Showing 3 Events</h2>
+      <!-- contents -->
+
+      <!-- Event 1 -->
+      <span class="social" style="font-weight: bold; padding: 5px;">
+        saturday2PopUpContent
+      </span>
+      <div>
+
+        <!-- general info -->
+        <pre style="font-weight: bold;">
+      time
+      location
+      [view floor plan button]
+        </pre>
+  
+        <!-- description -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Description:
+          </span>
+          <br>
+          <span>
+            description description description description description description description
+            description description description 1 
+          </span>
+        </p>
+        
+        <!-- speakers -->
+        <p style="margin-left: 35px;">
+          <span style="font-weight: bold;">
+            Speakers:
+          </span>
+          <br>
+          <span>
+            Speaker1, Speaker2, Speaker3
+          </span>
+        </p>
+
+      </div>
+
+      <br>
+      
+  </div>
+</div>
+
 <!-- END: POP UP WINDOW CONTENT -->
+
+<!-- next button -->
+<button onclick="nextWeek()" class="nextButton"></button>
+<button onclick="prevWeek()" class="prevButton"></button>
 
 
 <ul class="weekdays">
@@ -189,239 +960,229 @@
   <li>Sa</li>
 </ul>
 
-<ul id = "days" class="days">  
-  
-  <!-- START: ONE COLUMN -->
-  <li onclick="myFunction('sunday')">
-    <span class="passed">Nov 7</span>
+<!-- startCalendarContent -->
 
-    <div style="text-align:center;">
+<!-- startWeek0 -->
 
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
+<div class="week" style="display: block;">
+  <ul id = "days" class="days">  
+    
+    <!-- sundayWeek0 -->
+    <li onclick="myFunction('sunday')">
+      <span class="passed">Nov 14</span>
+
+      <div style="text-align:center;">
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+      </div>
+
+      <span class="viewAllButtonPassed">
+        <p>View All</p>
       </span>
 
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
+      <div class="calendarContent">
+        <p class="finished">week0</p>
+
+      </div>
+    </li>
+
+    <!-- mondayWeek0 -->
+    <li onclick="myFunction('monday')">
+      <span class="active">15</span>
+
+      <div style="text-align:center;">
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+      </div>
+
+      <span class="viewAllButton">
+        <p>View All</p>
       </span>
 
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
+      <div class="calendarContent">
+        <p class="professional">Event 1 random stuff random stuff random stuff</p>
+        <p class="other">Event 2 random stuff random stuff random stuff</p>
+        <p class="professional">Event 3 random stuff random stuff random stuff</p>
+
+      </div>
+    </li>
+
+    <!-- tuesdayWeek0 -->
+    <li onclick="myFunction('tuesday')">
+      <span class="incoming">16</span>
+
+      <div style="text-align:center;">
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+      </div>
+
+      <span class="viewAllButton">
+        <p>View All</p>
       </span>
 
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
-      </span>
-    </div>
+      <div class="calendarContent">
+        <p class="other">A Conversation with U.S. Senator Cardin on Coastal Climate Resilience</p>
+        <p class="professional">Pants Kruskal</p>
+        <p class="academic">Tell Teli He's Beautiful</p>
+      </div>
+    </li>
 
-    <span class="viewAllButtonPassed">
-      <p>View All</p>
-    </span>
+    <!-- wednesdayWeek0 -->
+    <li onclick="myFunction('wednesday')">
+      <span class="incoming">17</span>
 
-    <div class="calendarContent">
-      <p class="finished">Event 1 random stuff random stuff random stuff</p>
+      <div style="text-align:center;">
 
-    </div>
-  </li>
-  <!-- END: ONE COLUMN -->
+        <span class="socialDot">
+          <div style="position:relative; top: 5px;">
+            +1
+          </div>
+        </span>
 
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
 
-  <!-- START: ONE COLUMN -->
-  <li onclick="myFunction('monday')">
-    <span class="passed">8</span>
+        <span class="academicDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
 
-    <div style="text-align:center;">
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+      </div>
 
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
-      </span>
-
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
-      </span>
-
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
-      </span>
-
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
-      </span>
-    </div>
-
-    <span class="viewAllButtonPassed">
-      <p>View All</p>
-    </span>
-
-    <div class="calendarContent">
-      <p class="finished">Event 1 random stuff random stuff random stuff</p>
-      <p class="finished">Event 2 random stuff random stuff random stuff</p>
-      <p class="finished">Event 3 random stuff random stuff random stuff</p>
-
-    </div>
-  </li>
-  <!-- END: ONE COLUMN -->
-
-
-
-
-  <!-- START: ONE COLUMN -->
-  <li onclick="myFunction('tuesday')">
-    <span class="active">9</span>
-
-    <div style="text-align:center;">
-
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
+      <span class="viewAllButton">
+        <p>View All</p>
       </span>
 
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
+      <div class="calendarContent">
+        <p class="social">Spongebob Meet & Greet</p>
+        <p class="social">A Maaaaaaaaaaaaaaaaaaaaaaa
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasive 
+          Event Title
+        </p>
+
+      </div>
+    </li>
+
+    <!-- thursdayWeek0 -->
+    <li onclick="myFunction('thursday')">
+      <span class="incoming">18</span>
+
+      <div style="text-align:center;">
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+      </div>
+
+      <span class="viewAllButton">
+        <p>View All</p>
       </span>
 
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
-      </span>
+      <div class="calendarContent">
+        <p class="professional">Chicken fight</p>
+      </div>
+    </li>
 
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
-      </span>
-    </div>
-
-    <span class="viewAllButton">
-      <p>View All</p>
-    </span>
-
-    <div class="calendarContent">
-      <p class="other">A Conversation with U.S. Senator Cardin on Coastal Climate Resilience</p>
-      <p class="professional">Pants Kruskal</p>
-      <p class="academic">Tell Teli He's Beautiful</p>
-    </div>
-  </li>
-  <!-- END: ONE COLUMN -->
-
-
-
-  <!-- START: ONE COLUMN -->
-  <li onclick="myFunction('wednesday')">
-    <span class="incoming">10</span>
-
-    <div style="text-align:center;">
-
-      <span class="socialDot">
-        <div style="position:relative; top: 5px;">
-          +1
-        </div>
-      </span>
-
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
-      </span>
-
-      <span class="academicDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
-      </span>
-
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
-      </span>
-    </div>
-
-    <span class="viewAllButton">
-      <p>View All</p>
-    </span>
-
-    <div class="calendarContent">
-      <p class="social">Spongebob Meet & Greet</p>
-      <p class="social">A Maaaaaaaaaaaaaaaaaaaaaaa
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasive 
-        Event Title
-      </p>
-
-    </div>
-  </li>
-  <!-- END: ONE COLUMN -->
-  
-
-
-  <!-- START: ONE COLUMN -->
-  <li onclick="myFunction('thursday')">
-    <span class="incoming">11</span>
-
-    <div style="text-align:center;">
-
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
-      </span>
-
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
-      </span>
-
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
-      </span>
-
-      <span class="noDot">
-        <div style="position:relative; top: 5px;">
-          +3
-        </div>
-      </span>
-    </div>
-
-    <span class="viewAllButton">
-      <p>View All</p>
-    </span>
-
-    <div class="calendarContent">
-      <p class="professional">Chicken fight</p>
-    </div>
-  </li>
-  <!-- END: ONE COLUMN -->
-
-
-
-    <!-- START: ONE COLUMN -->
+    <!-- fridayWeek0 -->
     <li onclick="myFunction('friday')">
-      <span class="incoming">12</span>
+      <span class="incoming">19</span>
   
       <div style="text-align:center;">
   
@@ -465,13 +1226,10 @@
         
       </div>
     </li>
-    <!-- END: ONE COLUMN -->
 
-
-
-    <!-- START: ONE COLUMN -->
+    <!-- saturdayWeek0 -->
     <li onclick="myFunction('saturday')">
-      <span class="incoming">13</span>
+      <span class="incoming">20</span>
   
       <div style="text-align:center;">
   
@@ -509,8 +1267,342 @@
         <p class="academic">CMSC Book Burning</p>
       </div>
     </li>
+
+  </ul>
+</div>
+
+<!-- endWeek0 -->
+
+<!-- startWeek1 -->
+
+<div class="week" style="display: none;">
+  <ul id = "days" class="days">  
+    
+    <!-- START: ONE COLUMN -->
+    <li onclick="myFunction('sunday')">
+      <span class="incoming">21</span>
+
+      <div style="text-align:center;">
+
+        <span class="socialDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="otherDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+      </div>
+
+      <span class="viewAllButton">
+        <p>View All</p>
+      </span>
+
+      <div class="calendarContent">
+        <p class="social">Event on week1</p>
+
+      </div>
+    </li>
     <!-- END: ONE COLUMN -->
-</ul>
+
+
+    <!-- START: ONE COLUMN -->
+    <li onclick="myFunction('monday')">
+      <span class="incoming">22</span>
+
+      <div style="text-align:center;">
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="professionalDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="academicDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+      </div>
+
+      <span class="viewAllButton">
+        <p>View All</p>
+      </span>
+
+      <div class="calendarContent">
+        <p class="other">Event 1 random stuff random stuff random stuff</p>
+        <p class="academic">Event 2 random stuff random stuff random stuff</p>
+        <p class="academic">Event 3 random stuff random stuff random stuff</p>
+
+      </div>
+    </li>
+    <!-- END: ONE COLUMN -->
+
+
+
+
+    <!-- START: ONE COLUMN -->
+    <li onclick="myFunction('tuesday')">
+      <span class="incoming">23</span>
+
+      <div style="text-align:center;">
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+      </div>
+
+      <span class="viewAllButton">
+        <p>View All</p>
+      </span>
+
+      <div class="calendarContent">
+        <p class="other">A Conversation with U.S. Senator Cardin on Coastal Climate Resilience</p>
+        <p class="professional">Pants Kruskal</p>
+        <p class="academic">Tell Teli He's Beautiful</p>
+      </div>
+    </li>
+    <!-- END: ONE COLUMN -->
+
+
+
+    <!-- START: ONE COLUMN -->
+    <li onclick="myFunction('wednesday')">
+      <span class="incoming">24</span>
+
+      <div style="text-align:center;">
+
+        <span class="socialDot">
+          <div style="position:relative; top: 5px;">
+            +1
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="academicDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+      </div>
+
+      <span class="viewAllButton">
+        <p>View All</p>
+      </span>
+
+      <div class="calendarContent">
+        <p class="social">Spongebob Meet & Greet</p>
+        <p class="social">A Maaaaaaaaaaaaaaaaaaaaaaa
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasive 
+          Event Title
+        </p>
+
+      </div>
+    </li>
+    <!-- END: ONE COLUMN -->
+    
+
+
+    <!-- START: ONE COLUMN -->
+    <li onclick="myFunction('thursday')">
+      <span class="incoming">25</span>
+
+      <div style="text-align:center;">
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+
+        <span class="noDot">
+          <div style="position:relative; top: 5px;">
+            +3
+          </div>
+        </span>
+      </div>
+
+      <span class="viewAllButton">
+        <p>View All</p>
+      </span>
+
+      <div class="calendarContent">
+        <p class="professional">Chicken fight</p>
+      </div>
+    </li>
+    <!-- END: ONE COLUMN -->
+
+
+
+      <!-- START: ONE COLUMN -->
+      <li onclick="myFunction('friday')">
+        <span class="incoming">26</span>
+    
+        <div style="text-align:center;">
+    
+          <span class="socialDot">
+            <div style="position:relative; top: 5px;">
+              +2
+            </div>
+          </span>
+    
+          <span class="professionalDot">
+            <div style="position:relative; top: 5px;">
+              +2
+            </div>
+          </span>
+    
+          <span class="academicDot">
+            <div style="position:relative; top: 5px;">
+              +3
+            </div>
+          </span>
+    
+          <span class="otherDot">
+            <div style="position:relative; top: 5px;">
+              +1
+            </div>
+          </span>
+        </div>
+    
+        <span class="viewAllButton">
+          <p>View All</p>
+        </span>
+    
+        <div class="calendarContent">
+          <p class="social">Another Maaaaaaaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasive 
+            Event Title
+          </p>
+          <p class="other">Storm Area 51 and Sing Kum Baya</p>
+          
+        </div>
+      </li>
+      <!-- END: ONE COLUMN -->
+
+
+
+      <!-- START: ONE COLUMN -->
+      <li onclick="myFunction('saturday')">
+        <span class="incoming">27</span>
+    
+        <div style="text-align:center;">
+    
+          <span class="noDot">
+            <div style="position:relative; top: 5px;">
+              +3
+            </div>
+          </span>
+    
+          <span class="noDot">
+            <div style="position:relative; top: 5px;">
+              +3
+            </div>
+          </span>
+    
+          <span class="noDot">
+            <div style="position:relative; top: 5px;">
+              +3
+            </div>
+          </span>
+    
+          <span class="noDot">
+            <div style="position:relative; top: 5px;">
+              +3
+            </div>
+          </span>
+        </div>
+    
+        <span class="viewAllButton">
+          <p>View All</p>
+        </span>
+    
+        <div class="calendarContent">
+          <p class="social">Homecoming</p>
+          <p class="academic">CMSC Book Burning</p>
+        </div>
+      </li>
+      <!-- END: ONE COLUMN -->
+  </ul>
+</div>
+
+<!-- endWeek1 -->
+
+<!-- endCalendarContent -->
 
 
 <div class="legend">
@@ -527,6 +1619,8 @@
   
 </div>
 
+
+
 <script>
   var modal = document.getElementById("popupWindow");
 
@@ -542,6 +1636,7 @@
   var socialButton = document.getElementById("Social button");
   var days = document.getElementsByClassName("days")
   var socialBool = true;
+  var weekNum = parseInt(document.getElementById("weekNum").textContent)
 
   function socialFilter() {
     if (!bool) {
@@ -556,35 +1651,83 @@
     bool = !bool;
   }
 
+  function nextWeek() {
+    console.log("next button hit")
+
+    //if we are already looking at the max week (limiting to 2 weeks)
+    if(weekNum == 1) return
+
+    //remove old week
+    document.getElementsByClassName("week")[weekNum].style.display = "none";
+
+    //increment variable that tells us which week we are on
+    weekNum++
+    document.getElementById("weekNum").textContent = weekNum.toString()
+
+    //bring up new week
+    document.getElementsByClassName("week")[weekNum].style.display = "block";
+
+    //bring up buttons depending on first or last page
+    if(weekNum == 1) 
+      document.getElementsByClassName("nextButton")[0].style.display = "none";
+    document.getElementsByClassName("prevButton")[0].style.display = "block";
+  }
+
+  function prevWeek() {
+    console.log("prev button hit")
+
+    //check if we are on the current week
+    if(weekNum == 0) return
+
+    //remove old week
+    document.getElementsByClassName("week")[weekNum].style.display = "none";
+
+    //increment variable that tells us which week we are on      
+    weekNum--
+    document.getElementById("weekNum").textContent = weekNum.toString()
+
+    //bring up new week
+    document.getElementsByClassName("week")[weekNum].style.display = "block";
+
+    //bring up buttons depending on first or last page
+    if(weekNum == 0) 
+      document.getElementsByClassName("prevButton")[0].style.display = "none";
+    document.getElementsByClassName("nextButton")[0].style.display = "block";
+  }
+
   function myFunction(day) {
+    // var weekNum = parseInt(document.getElementById("weekNum").textContent)
+
     if(day === "sunday") {
-      sunday[0].style.display = "block"
+      sunday[weekNum].style.display = "block"
     } else if(day === "monday") {
-      monday[0].style.display = "block"
+      monday[weekNum].style.display = "block"
     }else if(day === "tuesday") {
-      tuesday[0].style.display = "block"
+      tuesday[weekNum].style.display = "block"
     }else if(day === "wednesday") {
-      wednesday[0].style.display = "block"
+      wednesday[weekNum].style.display = "block"
     }else if(day === "thursday") {
-      thursday[0].style.display = "block"
+      thursday[weekNum].style.display = "block"
     }else if(day === "friday") {
-      friday[0].style.display = "block"
+      friday[weekNum].style.display = "block"
     }else if(day === "saturday") {
-      saturday[0].style.display = "block"
+      saturday[weekNum].style.display = "block"
     }
-    console.log(day);
+
+    console.log(parseInt(document.getElementById("weekNum").textContent));
 
   }
 
   function closeFunction() {
+    //want to do for loop here i is 0 to < numWeeks
 
-    sunday[0].style.display = "none"
-    monday[0].style.display = "none"
-    tuesday[0].style.display = "none"
-    wednesday[0].style.display = "none"
-    thursday[0].style.display = "none"
-    friday[0].style.display = "none"
-    saturday[0].style.display = "none"
+    sunday[weekNum].style.display = "none"
+    monday[weekNum].style.display = "none"
+    tuesday[weekNum].style.display = "none"
+    wednesday[weekNum].style.display = "none"
+    thursday[weekNum].style.display = "none"
+    friday[weekNum].style.display = "none"
+    saturday[weekNum].style.display = "none"
   }
 
   window.addEventListener("click", function(event) {
