@@ -68,7 +68,7 @@ body {
   text-align: left;
   margin-bottom: 5px;
   /* margin-left: 5px; */
-  font-size:20px;
+  font-size:18px;
   color: black;
   border: 1px solid black;
   padding-top: 5px;
@@ -78,15 +78,15 @@ body {
 }
 
 .days li .active {	
-  padding-left: 5px;
-  padding-right: 3px;
+  /* padding-left: 5px;
+  padding-right: 3px; */
   /* padding-bottom: 3px; */
   background: #f00c0c;
   color: white;
   position: relative;
   display: inline-block;
-  width: 23px;
-  height: 23px;
+  width: 21px;
+  height: 21px;
   border-radius: 15px;
   left: 7px;
 }
@@ -207,7 +207,7 @@ body {
   top: 410px;
   left: 3%;
   /* background-color: rgb(176, 176, 176); */
-  background-color: lightgray;
+  background-color: gray;
   border-radius: 50%;
   height: 25px;
   width: 130px;
@@ -292,6 +292,8 @@ body {
 }
 
 .nextButton {
+  display: block;
+
   position:absolute;
   top: 180px;
   right: 14px;
@@ -305,7 +307,21 @@ body {
   border-right: 0px solid transparent;
 }
 
+.viewFloorPlanButton {
+  background-color: rgb(204, 0, 0);
+  width: 25%;
+  font-size: 15px;
+  text-align: center;
+  border: transparent;
+  color: white;
+
+  outline: 2px solid white;
+
+}
+
 .prevButton {
+  display: none;
+
   position:absolute;
   top: 180px;
   left: 13px;
