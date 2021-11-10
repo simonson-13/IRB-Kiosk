@@ -5,7 +5,7 @@
 
 h1 {
   font-weight: bold;
-  font-size: 72px;
+  font-size: 69px;
   text-align: center;
   color: rgb(255, 255, 255);
 }
@@ -128,6 +128,7 @@ body {
   left: 0;
   right: 0;
   bottom: -55%;
+  z-index:7;
 }
 
 .keyboardwrapper {
@@ -138,6 +139,7 @@ body {
   position: relative;
   order: 2;
   display: none;
+  z-index:7;
 }
 
 .keyrow {
@@ -199,16 +201,17 @@ body {
   background-color: rgb(204, 0, 0);
   color: white;
   font-size: 30px;
+  padding: 5px;
 }
 
 #classes td {
   text-align: center;
 }
 #classes tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 #classes tr:nth-child(odd) {
-  background-color: rgba(255, 153, 153, 0.9);
+  background-color: rgba(255, 153, 153, 0.8);
 }
 
 /*home button*/
@@ -286,6 +289,7 @@ body {
   text-align: center;
   outline: 2px solid white;
   z-index: 5;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.8);
 }
 
 #floorplanbutton:hover {
