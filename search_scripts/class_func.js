@@ -50,7 +50,6 @@ background.onclick=() => {
 
 
 searchIcon.onclick = () => {
-    console.log("search pressed!")
     keyBoard.style.display = 'none';
     keyBoard.style.zIndex = 0;
     showSuggestions([]);
@@ -70,8 +69,6 @@ searchIcon.onclick = () => {
             time.innerHTML = classMap[inputBox.value.toUpperCase()][i]['time'];
             prof.innerHTML = classMap[inputBox.value.toUpperCase()][i]['professor'];
             room.innerHTML = classMap[inputBox.value.toUpperCase()][i]['room'];
-            console.log(room.innerHTML.toString().slice(-4));
-            console.log('creating foorplanbutton for ' + room.innerHTML.toString());
             floor.innerHTML = `<div class='floorplanbutton' alt=${room.innerHTML.toString().slice(-4)}>View Floor Plan</div>
             <!--modal floor plan image-->
             <div id='myModal' class="modal">
@@ -169,7 +166,6 @@ for (let i = 0; i < keys.length; i ++) {
                     time.innerHTML = classMap[inputBox.value.toUpperCase()][i]['time'];
                     prof.innerHTML = classMap[inputBox.value.toUpperCase()][i]['professor'];
                     room.innerHTML = classMap[inputBox.value.toUpperCase()][i]['room'];
-                    console.log(room.innerHTML.toString().slice(-4, room.innerHTML.toString.length))
                     floor.innerHTML = `<div class='floorplanbutton' alt=${room.innerHTML.toString().slice(-4)}>View Floor Plan</div>
                     <!--modal floor plan image-->
                     <div id='myModal' class="modal">
@@ -215,7 +211,6 @@ for (let i = 0; i < keys.length; i ++) {
             inputBox.value = inputBox.value + e.target.getAttribute("keyname");
         } else {
             inputBox.value = inputBox.value + e.target.getAttribute("lcname");
-            console.log(e.target.getAttribute("lcname"));
 
         }
         // start filtering array
@@ -226,7 +221,6 @@ for (let i = 0; i < keys.length; i ++) {
                     return data;
                 }
             })
-            console.log(filtered);
             list = ''
             filtered = filtered.map((res) => {
                 list += '<li>' + res + '</li>';
@@ -249,21 +243,15 @@ function showSuggestions(list) {
     } else {
         suggBox.innerHTML = '';
     }
-    console.log('called');
 
 }
 
 /*floor plan pop up*/
 document.addEventListener('click',function(e) {
-    console.log(e.target);
     if(e.target && e.target.getAttribute('class') === 'floorplanbutton'){
         
-
-        console.log('viewFP clicked!')
-        console.log(e.target);
         let floor = e.target.getAttribute('alt')[0]
         let room = e.target.getAttribute('alt');
-        console.log(room);
         let floorimg= `./floor_${floor}.png`
         modal.style.display='block';
         img.src = floorimg;
