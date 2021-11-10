@@ -33,6 +33,7 @@ inputBox.onclick = () => {
         //make keyboard popup
     keyBoard.style.display = 'block';
     keyBoard.style.zIndex = 7;
+    container.style.zIndex = 7;
     //make any showing result disapear
     if (inputBox.value == '') {
         res.style.display='none';
@@ -53,7 +54,11 @@ searchIcon.onclick = () => {
     keyBoard.style.display = 'none';
     keyBoard.style.zIndex = 0;
     showSuggestions([]);
-    if (inputBox.value in classMap) {
+    if (inputBox.value.toUpperCase() in classMap || "CMSC" + inputBox.value in classMap) {
+        let inputValue = inputBox.value;
+        if ("CMSC" + inputBox.value in classMap) {
+            inputValue = "CMSC" + inputValue;
+        }
         rowCount = 1;
         //delete rows from previous search
         for(var i = 1;i<table.rows.length;){
@@ -66,9 +71,9 @@ searchIcon.onclick = () => {
             let prof = row.insertCell(1);
             let room = row.insertCell(2);
             let floor = row.insertCell(3);
-            time.innerHTML = classMap[inputBox.value.toUpperCase()][i]['time'];
-            prof.innerHTML = classMap[inputBox.value.toUpperCase()][i]['professor'];
-            room.innerHTML = classMap[inputBox.value.toUpperCase()][i]['room'];
+            time.innerHTML = classMap[inputValue.toUpperCase()][i]['time'];
+            prof.innerHTML = classMap[inputValue.toUpperCase()][i]['professor'];
+            room.innerHTML = classMap[inputValue.toUpperCase()][i]['room'];
             floor.innerHTML = `<div class='floorplanbutton' alt=${room.innerHTML.toString().slice(-4)}>View Floor Plan</div>
             <!--modal floor plan image-->
             <div id='myModal' class="modal">
@@ -105,7 +110,11 @@ for (let i = 0; i < keys.length; i++)
     keyBoard.style.display = 'none';
     keyBoard.style.zIndex = 0;
     container.style.zIndex = 0;
-    if (e.target.innerHTML in classMap) {
+    if (e.target.innerHTML in classMap || "CMSC" + e.target.innerHTML in classMap) {
+        let inputValue = inputBox.value;
+        if ("CMSC" + inputBox.value in classMap) {
+            inputValue = "CMSC" + inputValue;
+        }
         showSuggestions([]);
         rowCount = 1;
         //delete rows from previous search
@@ -119,9 +128,9 @@ for (let i = 0; i < keys.length; i++)
             let prof = row.insertCell(1);
             let room = row.insertCell(2);
             let floor = row.insertCell(3);
-            time.innerHTML = classMap[inputBox.value.toUpperCase()][i]['time'];
-            prof.innerHTML = classMap[inputBox.value.toUpperCase()][i]['professor'];
-            room.innerHTML = classMap[inputBox.value.toUpperCase()][i]['room'];
+            time.innerHTML = classMap[inputValue.toUpperCase()][i]['time'];
+            prof.innerHTML = classMap[inputValue.toUpperCase()][i]['professor'];
+            room.innerHTML = classMap[inputValue.toUpperCase()][i]['room'];
             floor.innerHTML = `<div class='floorplanbutton' alt=${room.innerHTML.toString().slice(-4)}>View Floor Plan</div>
             <!--modal floor plan image-->
             <div id='myModal' class="modal">
@@ -150,22 +159,26 @@ for (let i = 0; i < keys.length; i ++) {
             keyBoard.style.display = 'none';
             keyBoard.style.zIndex = 0;
             container.style.zIndex = 0;
-            if (inputBox.value.toUpperCase() in classMap) {
+            if (inputBox.value.toUpperCase() in classMap || "CMSC" + inputBox.value.toUpperCase() in classMap) {
+                let inputValue = inputBox.value;
+                if ("CMSC" + inputBox.value in classMap) {
+                    inputValue = "CMSC" + inputValue;
+                }
                 rowCount = 1;
                 //delete rows from previous search
                 for(var i = 1;i<table.rows.length;){
                     table.deleteRow(i);
                 }
                 table.style.display = 'table';
-                for (let i = 0; i < classMap[inputBox.value.toUpperCase()].length; i++) {
+                for (let i = 0; i < classMap[inputValue.toUpperCase()].length; i++) {
                     let row = table.insertRow(rowCount);
                     let time = row.insertCell(0);
                     let prof = row.insertCell(1);
                     let room = row.insertCell(2);
                     let floor = row.insertCell(3);
-                    time.innerHTML = classMap[inputBox.value.toUpperCase()][i]['time'];
-                    prof.innerHTML = classMap[inputBox.value.toUpperCase()][i]['professor'];
-                    room.innerHTML = classMap[inputBox.value.toUpperCase()][i]['room'];
+                    time.innerHTML = classMap[inputValue.toUpperCase()][i]['time'];
+                    prof.innerHTML = classMap[inputValue.toUpperCase()][i]['professor'];
+                    room.innerHTML = classMap[inputValue.toUpperCase()][i]['room'];
                     floor.innerHTML = `<div class='floorplanbutton' alt=${room.innerHTML.toString().slice(-4)}>View Floor Plan</div>
                     <!--modal floor plan image-->
                     <div id='myModal' class="modal">
@@ -216,8 +229,9 @@ for (let i = 0; i < keys.length; i ++) {
         // start filtering array
         if (inputBox.value != "" && enterPressed==false) {
             let regex = new RegExp("\\b" + inputBox.value.toLowerCase())
+            let regexNum = new RegExp("cmsc" + inputBox.value.toLowerCase())
             filtered = classes.filter((data) => {
-                if (data.toLowerCase().match(regex)) {
+                if (data.toLowerCase().match(regex) || data.toLowerCase().match(regexNum)) {
                     return data;
                 }
             })
