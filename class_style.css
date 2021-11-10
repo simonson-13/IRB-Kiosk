@@ -364,12 +364,23 @@ body {
 /* The Close Button */
 .close {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 105px;
+  right: 175px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+}
+
+.x {
+  position: absolute;
+  top: -45px;
+  left: 11px;
 }
 
 .close:hover,

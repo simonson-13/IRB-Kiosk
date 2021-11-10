@@ -78,7 +78,7 @@ searchIcon.onclick = () => {
             <!--modal floor plan image-->
             <div id='myModal' class="modal">
                   <!-- The Close Button -->
-                <span class="close">&times;</span>
+                <span class="close"><p class="x">&times;</p></span>
     
                 <!-- Modal Content (The Image) -->
                 <img class="modal-content" id="floorimg">
@@ -135,7 +135,7 @@ for (let i = 0; i < keys.length; i++)
             <!--modal floor plan image-->
             <div id='myModal' class="modal">
                   <!-- The Close Button -->
-                <span class="close">&times;</span>
+                <span class="close"><p class="x">&times;</p></span>
     
                 <!-- Modal Content (The Image) -->
                 <img class="modal-content" id="floorimg">
@@ -183,7 +183,7 @@ for (let i = 0; i < keys.length; i ++) {
                     <!--modal floor plan image-->
                     <div id='myModal' class="modal">
                           <!-- The Close Button -->
-                        <span class="close">&times;</span>
+                        <span class="close"><p class="x">&times</p>;</span>
             
                         <!-- Modal Content (The Image) -->
                         <img class="modal-content" id="floorimg">
@@ -291,7 +291,7 @@ document.addEventListener('click',function(e) {
         highlight.style.display = 'block';
         
 
-    } else if (e.target && e.target.getAttribute('class') === 'close') {
+    } else if (e.target && (e.target.getAttribute('class') === 'close' || e.target.getAttribute('class') === 'x')) {
         
          /*close floor plan pop up*/
          modal.style.display='none';

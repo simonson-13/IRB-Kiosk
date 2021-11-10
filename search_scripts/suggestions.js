@@ -5,7 +5,6 @@ let suggestions = [
 "Clyde Kruskal",
 "Rob Patro",
 "Nelson Pauda Perez",
-"Mihai Pop",
 "Mohammad Teli",
 "Ilchul Yun",
 ]
