@@ -5,6 +5,7 @@ const background = document.getElementById("bg");
 /*search bar stuff*/
 const searchWrapper = document.querySelector(".search-input");
 const inputBox = searchWrapper.querySelector("input");
+const highlight = document.querySelector(".highlighter")
 const suggBox = document.getElementById("suggestions");
 const searchIcon = searchWrapper.querySelector(".icon");
 
@@ -22,6 +23,7 @@ const space = document.querySelector('.space')
 const shift = document.querySelector('.shift');
 const backspace = document.querySelector('.backspace');
 const caps_lock = document.querySelector('.capslock');
+const container = document.querySelector('.container');
 
 let caps_on = false;
 let shift_on = false;
@@ -30,6 +32,7 @@ let filtered = [];
 inputBox.onclick = () => {
         //make keyboard popup
     keyBoard.style.display = 'block';
+    keyBoard.style.zIndex = 7;
     //make any showing result disapear
     if (inputBox.value == '') {
         res.style.display='none';
@@ -42,12 +45,14 @@ inputBox.onclick = () => {
 background.onclick=() => {
     //make keyboard disapear
     keyBoard.style.display = 'none';
+    container.style.display = 'none';
 }
 
 
 searchIcon.onclick = () => {
     console.log("search pressed!")
     keyBoard.style.display = 'none';
+    keyBoard.style.zIndex = 0;
     showSuggestions([]);
     if (inputBox.value in classMap) {
         rowCount = 1;
@@ -66,6 +71,7 @@ searchIcon.onclick = () => {
             prof.innerHTML = classMap[inputBox.value.toUpperCase()][i]['professor'];
             room.innerHTML = classMap[inputBox.value.toUpperCase()][i]['room'];
             console.log(room.innerHTML.toString().slice(-4));
+            console.log('creating foorplanbutton for ' + room.innerHTML.toString());
             floor.innerHTML = `<div class='floorplanbutton' alt=${room.innerHTML.toString().slice(-4)}>View Floor Plan</div>
             <!--modal floor plan image-->
             <div id='myModal' class="modal">
@@ -100,6 +106,8 @@ for (let i = 0; i < keys.length; i++)
  document.getElementById("suggestions").addEventListener("click", (e) => {
     inputBox.value = e.target.innerHTML
     keyBoard.style.display = 'none';
+    keyBoard.style.zIndex = 0;
+    container.style.zIndex = 0;
     if (e.target.innerHTML in classMap) {
         showSuggestions([]);
         rowCount = 1;
@@ -143,6 +151,8 @@ for (let i = 0; i < keys.length; i ++) {
         if (e.target.getAttribute("lcname") === "enter") {
             enterPressed=true;
             keyBoard.style.display = 'none';
+            keyBoard.style.zIndex = 0;
+            container.style.zIndex = 0;
             if (inputBox.value.toUpperCase() in classMap) {
                 rowCount = 1;
                 //delete rows from previous search
@@ -160,7 +170,19 @@ for (let i = 0; i < keys.length; i ++) {
                     prof.innerHTML = classMap[inputBox.value.toUpperCase()][i]['professor'];
                     room.innerHTML = classMap[inputBox.value.toUpperCase()][i]['room'];
                     console.log(room.innerHTML.toString().slice(-4, room.innerHTML.toString.length))
-                    floor.innerHTML = `<div class='floorplanbutton' alt=${room.innerHTML.toString().slice(-4, room.innerHTML.toString.length)}>View Floor Plan</div>`
+                    floor.innerHTML = `<div class='floorplanbutton' alt=${room.innerHTML.toString().slice(-4)}>View Floor Plan</div>
+                    <!--modal floor plan image-->
+                    <div id='myModal' class="modal">
+                          <!-- The Close Button -->
+                        <span class="close">&times;</span>
+            
+                        <!-- Modal Content (The Image) -->
+                        <img class="modal-content" id="floorimg">
+            
+                        <!-- Modal Caption (Image Text) -->
+                        <div id="caption"></div>
+                        
+                    </div>`;
                     rowCount++;
                 }
             } else {
@@ -233,21 +255,47 @@ function showSuggestions(list) {
 
 /*floor plan pop up*/
 document.addEventListener('click',function(e) {
+    console.log(e.target);
     if(e.target && e.target.getAttribute('class') === 'floorplanbutton'){
+        
 
         console.log('viewFP clicked!')
         console.log(e.target);
         let floor = e.target.getAttribute('alt')[0]
         let room = e.target.getAttribute('alt');
+        console.log(room);
         let floorimg= `./floor_${floor}.png`
         modal.style.display='block';
         img.src = floorimg;
-        captionText.innerHTML = `Floor ${floor}, Office: ${room}`
+        captionText.innerHTML = `Floor ${floor}, Classroom: ${room}`
+        /* add highlight to map*/
+        if (room == '0324') {
+            highlight.style.top = '250px';
+            highlight.style.right = '420px';
+        }
+        if (room == '0318') {
+            highlight.style.top = '160px';
+            highlight.style.right = '342px';
+        }
+        if (room == '1207') {
+            highlight.style.top = '385px';
+            highlight.style.right = '605px';
+        }
+        if (room == '1116') {
+            highlight.style.top = '445px';
+            highlight.style.right = '665px';
+        }
+        highlight.innerHTML = room;
+        highlight.style.display = 'block';
+        
+
     } else if (e.target && e.target.getAttribute('class') === 'close') {
         
          /*close floor plan pop up*/
          modal.style.display='none';
-         img.src = floorimg;
+         //img.src = floorimg;
+         //make highlight disapear on close
+         highlight.style.display = 'none';
     }
 });
 
