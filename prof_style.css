@@ -1,90 +1,92 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-*{
-    font-family:
-    'Open Sans', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+* {
+  font-family: "Open Sans", sans-serif;
 }
 
 /*home button*/
 .home {
-    height:15px;
-width: 72px;
-background-color: rgb(204, 0, 0);
-font-size: 35px;
-padding: 20px;
-color: white;
-cursor:pointer;
-text-align:center;
-border-radius: 5px;
-top : 2px;
-right : 910px;
-position: absolute;
-zoom: normal;
-z-index: 0;
-line-height:20px;
-outline: 2px solid white;
+  height: 55px;
+  width: 72px;
+  /* border: .5px outset yellow; */
+  background-color: rgb(204, 0, 0);
+  font-size: 35px;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  top: 2px;
+  right: 910.5px;
+  position: absolute;
+  zoom: normal;
+  z-index: 0;
+  line-height: 20px;
+  outline: 2px solid white;
+  opacity: 0.9;
 }
 
 .home:hover {
-    background-color: rgb(226, 96, 96);
-    color:white;
+  background-color: rgb(226, 96, 96);
+  color: white;
+  opacity: 0.9;
 }
 
 .backButton {
-    height:15px;
-    width: 72px;
-    background-color: rgb(204, 0, 0);
-    font-size: 35px;
-    padding: 20px;
-    color: white;
-    cursor:pointer;
-    text-align:center;
-    border-radius: 5px;
-    top : 2px;
-    right : 910px;
-    position: absolute;
-    zoom: normal;
-    z-index: 0;
-    line-height:20px;
-    outline: 2px solid white;
+  height: 15px;
+  width: 72px;
+  background-color: rgb(204, 0, 0);
+  font-size: 35px;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  top: 2px;
+  right: 910px;
+  position: absolute;
+  zoom: normal;
+  z-index: 0;
+  line-height: 20px;
+  outline: 2px solid white;
 }
 
 .backButton:hover {
-    background-color: rgb(226, 96, 96);
-    color:white;
+  background-color: rgb(226, 96, 96);
+  color: white;
 }
 
 /* center home and back icons in button*/
-.move{
-    top:12px;
-    position: absolute;
-    right: 33px;
+.move {
+  top: 12px;
+  position: absolute;
+  right: 33px;
 }
-.move2{
-    top:12px;
-    position: absolute;
-    right: 33px;
+.move2 {
+  top: 12px;
+  position: absolute;
+  right: 33px;
 }
 
 h1 {
-    font-weight: bold;
-    font-size: 72px;
-    text-align: center;
-    color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 72px;
+  text-align: center;
+  color: rgb(255, 255, 255);
 }
 
 #bg {
-    position: fixed;
-    top: -40%;
-    left: -50%;
-    z-index: -1;
+  position: fixed;
+  top: -40%;
+  left: -50%;
+  z-index: -1;
 }
 
 #bg img {
-    position:absolute;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 40;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 40;
 }
 
 #result {
@@ -93,16 +95,16 @@ h1 {
 }
 
 .nav {
-    background-color: rgb(204, 0, 0);
-    border-radius:5px;
-    width:80px;
-    height: 60px;
-    display: inline
+  background-color: rgb(204, 0, 0);
+  border-radius: 5px;
+  width: 80px;
+  height: 60px;
+  display: inline;
 }
 
 body {
-    background-color: rgb(204, 0, 0);
-    zoom: 100%
+  background-color: rgb(204, 0, 0);
+  zoom: 100%;
 }
 
 /*html, body {
@@ -116,153 +118,149 @@ body {
     height: 100%;
 }*/
 
-
 /* controls positions of search and suggests*/
-.wrapper{
-    margin: auto;
-    width: 50rem;
+.wrapper {
+  margin: auto;
+  width: 50rem;
 }
 
 /* creates nice box arround suggestions list*/
 .wrapper .search-input {
-    position: relative;
-    background: white;
-    width: 50rem;
-    border-radius: 5px;
-    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+  position: relative;
+  background: white;
+  width: 50rem;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
 }
 
 /*controls search bar outline and input box size*/
 .search-input input {
-    height: 4rem;
-    width: 45rem;
-    outline: none;
-    border: none;
-    border-radius: 5px; 
-    padding: 0 60px 0 20px;
-    font-size: 18px;
-    /* outlines search box */
-    box-shadow: 0px 1px 5px rgba(0,0,0,0.5)
+  height: 4rem;
+  width: 45rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  /* outlines search box */
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* positions and sizes search icon*/
-.search-input .icon{
-    height: 55px;
-    width: 55px;
-    line-height: 55px;
-    position: absolute;
-    top: 0;
-    right:0;
-    text-align: center;
-    font-size: 30px;
+.search-input .icon {
+  height: 55px;
+  width: 55px;
+  line-height: 55px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 30px;
 }
 
 .search-input .suggestions-box {
-    /*height of contained suggestions*/
-    max-height: 120px;
-    overflow-y: auto;
-    /*hide suggestions*/
-    opacity: 0;
-    pointer-events: none;
+  /*height of contained suggestions*/
+  max-height: 120px;
+  overflow-y: auto;
+  /*hide suggestions*/
+  opacity: 0;
+  pointer-events: none;
 }
 
 .search-input.active .suggestions-box {
-    opacity: 1;
-    pointer-events: auto;
-
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /*styles list so that it no longer has bullet points and suggestions are scrollable*/
 .suggestions-box li {
-    list-style: none;
-    padding: 8px 12px;
-    width: 100%;
-    cursor: default;
-    border-radius: 3px;
-    /*temporarily hide*/
-   display: none;
+  list-style: none;
+  padding: 8px 12px;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+  /*temporarily hide*/
+  display: none;
 }
 
 .suggestions-box li:hover {
-    background: #efefef;
+  background: #efefef;
 }
 
 .search-input.active .suggestions-box li {
-    display: block;
-
+  display: block;
 }
 
 /* KEYBOARD */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    flex-direction: column;
-    margin: auto;
-    position:absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: -55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  flex-direction: column;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -55%;
 }
 
 .keyboardwrapper {
-    max-width: 100%;
-    width: 100%;
-    background-color: #e7e7e7;
-    overflow: hidden;
-    position: relative;
-    order: 2;
-    display: none;
+  max-width: 100%;
+  width: 100%;
+  background-color: #e7e7e7;
+  overflow: hidden;
+  position: relative;
+  order: 2;
+  display: none;
 }
 
-
 .keyrow {
-    display: flex;
+  display: flex;
 }
 
 .keys {
-    width: 60px;
-    height: 60px;
-    background-color: white;/*rgb(68, 75, 87);*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 4px;
-    transition: 0.2s;  
+  width: 60px;
+  height: 60px;
+  background-color: white; /*rgb(68, 75, 87);*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  transition: 0.2s;
 }
 
 .keys:active {
-    background-color: rgb(181, 236, 242);
+  background-color: rgb(181, 236, 242);
 }
 
 .backspace {
-    width: 130px;
+  width: 130px;
 }
 
 .tab {
-    width: 90px;
+  width: 90px;
 }
 
 .shift {
-    width: 140px;
+  width: 140px;
 }
 
 .capslock {
-    width: 128px; 
+  width: 128px;
 }
 
 .enter {
-    width: 200px
+  width: 200px;
 }
 
 .slash {
-    width: 100px;
+  width: 100px;
 }
 
 .space {
-    width: 80%
+  width: 80%;
 }
 
 
@@ -292,21 +290,21 @@ body {
 
 /* floor plan button*/
 #floorplanbutton {
-    position: relative;
-    background-color: rgb(204, 0, 0);
-    width: 50%;
-    margin-left: 25%;
-    color: white;
-    font-size: 50px;
-    text-align: center;
-    outline: 2px solid white;
-    display: none;
-    border-radius: 5px;
+  position: relative;
+  background-color: rgb(204, 0, 0);
+  width: 50%;
+  margin-left: 25%;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  outline: 2px solid white;
+  display: none;
+  border-radius: 5px;
 }
 
 #floorplanbutton:hover {
-    background-color: rgb(226, 96, 96);
-    color:white;
+  background-color: rgb(226, 96, 96);
+  color: white;
 }
 
 
@@ -318,78 +316,87 @@ body {
 
 /*background of popup*/
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 6;
-    padding-top: 100px; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  display: none;
+  position: fixed;
+  z-index: 6;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
 .modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
   }
-  
-  /* Caption of Modal Image */
-  #caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
+  to {
+    -webkit-transform: scale(1);
   }
-  
-  /* Add Animation */
-  .modal-content, #caption {  
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
   }
-  
-  @-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
+  to {
+    transform: scale(1);
   }
-  
-  @keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
   }
-  
-  /* The Close Button */
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px){
-    .modal-content {
-      width: 100%;
-    }
-  }
+}

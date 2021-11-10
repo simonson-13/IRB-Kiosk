@@ -234,6 +234,7 @@ function showSuggestions(list) {
 /*floor plan pop up*/
 document.addEventListener('click',function(e) {
     if(e.target && e.target.getAttribute('class') === 'floorplanbutton'){
+
         console.log('viewFP clicked!')
         console.log(e.target);
         let floor = e.target.getAttribute('alt')[0]
@@ -243,6 +244,7 @@ document.addEventListener('click',function(e) {
         img.src = floorimg;
         captionText.innerHTML = `Floor ${floor}, Office: ${room}`
     } else if (e.target && e.target.getAttribute('class') === 'close') {
+        
          /*close floor plan pop up*/
          modal.style.display='none';
          img.src = floorimg;
