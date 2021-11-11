@@ -264,6 +264,27 @@
         outline: 2px solid white;
         opacity: .9;
         }
+
+        .info_butt {
+            height:40px;
+        width: 70px;
+        /* border: .5px outset white; */
+        background-color: rgb(204,0,0);
+        font-size: 35px;
+        padding: 20px;
+        color: white;
+        cursor:pointer;
+        text-align:center;
+        border-radius: 5px;
+        top : 150px;
+        right : 905px;
+        position: absolute;
+        zoom: normal;
+        z-index: 2;
+        line-height:20px;
+        outline: 2px solid white;
+        opacity: .9;
+        }
         
         /* .butt8:hover {
             background-color: gold;
@@ -473,7 +494,53 @@
 
 
 
-
+        /* second popup */
+        .popup2 .overlay{
+            position: fixed;
+            top:0px;
+            left:0px;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,.7);
+            z-index: 20;
+            display: none;
+        }
+        .popup2 .content{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%) scale(0);
+            background: #fff;
+            width: 850px;
+            height: 644px;
+            z-index: 21;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .popup2 .close-btn{
+            cursor: pointer;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width:30px;
+            height:30px;
+            background:#222;
+            color:#fff;
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+        }
+        .popup2.active .overlay{
+            display: block;
+        }
+        .popup2.active .content{
+            transition: all 300ms ease-in-out;
+            transform: translate(-50%,-50%) scale(1);
+        }
+        /*second popup end*/ 
 
 
 
@@ -643,9 +710,28 @@
     font-weight: bold;
 
 }
-        
+#more {display: none;}
+#more2 {display: none;}
+#more3 {display: none;}
+#more4 {display: none;}   
+#more5 {display: none;}
+#more6 {display: none;}
 
-      
+.details{
+  background-color: rgb(204, 0, 0);
+  width: 12%;
+  text-align: center;
+  border: transparent;
+  color: white;
+  font-size: 17px;
+  outline: 2px solid white;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.50);
+}
+.info_move{
+    top:30px;
+    left:22px;
+    position:absolute;
+}
         </style>
         
         <script>
@@ -814,11 +900,14 @@
                 //     return                }
             }
 
-
+            function togglePopup2(){
+                document.getElementById("popup-2").classList.toggle("active");             
+            }
             function togglePopup(){
-                document.getElementById("popup-1").classList.toggle("active");
-                document.getElementById("spoop").innerHTML = ""
-                document.getElementById("room_for").value = ""
+                    document.getElementById("popup-1").classList.toggle("active");
+                    document.getElementById("spoop").innerHTML = ""
+                    document.getElementById("room_for").value = ""
+                
             }
             function guess6(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
@@ -967,17 +1056,292 @@
                 document.getElementById("button7").style.right = 885
                 document.getElementById("button7").style.width = 90
             }
+            function dot_set(){
+                document.getElementById("dots").style.display = "inline";
+                document.getElementById("dots2").style.display = "inline";
+                document.getElementById("dots3").style.display = "inline";
+                document.getElementById("dots4").style.display = "inline";
+                document.getElementById("dots5").style.display = "inline";
+                document.getElementById("dots6").style.display = "inline";
+            }
+            function unselect(){
+                    var dots = document.getElementById("dots");
+                    var moreText = document.getElementById("more");
+                    var btnText = document.getElementById("myBtn");
+                    btnText.innerHTML = "Read more"; 
+                    moreText.style.display = "none";
+                    btnText.style.top= "140px";
+                    btnText.style.position="absolute";
+                    document.getElementById("spoce").innerHTML = "";
+
+                    var dots = document.getElementById("dots2");
+                    var moreText = document.getElementById("more2");
+                    var btnText = document.getElementById("myBtn2");
+                    btnText.innerHTML = "Read more"; 
+                    moreText.style.display = "none";
+                    btnText.style.top= "208px";
+                    btnText.style.position="absolute";
+                    document.getElementById("spoce2").innerHTML = "";
+                    
+
+                    var dots = document.getElementById("dots3");
+                    var moreText = document.getElementById("more3");
+                    var btnText = document.getElementById("myBtn3");
+                    btnText.innerHTML = "Read more"; 
+                    moreText.style.display = "none";
+                    btnText.style.top= "276px";
+                    btnText.style.position="absolute";
+                    document.getElementById("spoce3").innerHTML = "";
+                    
+
+                    var dots = document.getElementById("dots4");
+                    var moreText = document.getElementById("more4");
+                    var btnText = document.getElementById("myBtn4");
+                    btnText.innerHTML = "Read more"; 
+                    moreText.style.display = "none";
+                    btnText.style.top= "343px";
+                    btnText.style.position="absolute";
+                    document.getElementById("spoce4").innerHTML = "";
+
+                    var dots = document.getElementById("dots5");
+                    var moreText = document.getElementById("more5");
+                    var btnText = document.getElementById("myBtn5");
+                    btnText.innerHTML = "Read more"; 
+                    moreText.style.display = "none";
+                    btnText.style.top= "408px";
+                    btnText.style.position="absolute";
+                    document.getElementById("spoce5").innerHTML = "";
+
+
+                    var dots = document.getElementById("dots6");
+                    var moreText = document.getElementById("more6");
+                    var btnText = document.getElementById("myBtn6");
+                    btnText.innerHTML = "Read more"; 
+                    moreText.style.display = "none";
+                    btnText.style.top= "478px";
+                    btnText.style.position="absolute";
+                    document.getElementById("spoce6").innerHTML = "";
+            }
+            function myFunction() {
+                unselect()
+                var dots = document.getElementById("dots");
+                var moreText = document.getElementById("more");
+                var btnText = document.getElementById("myBtn");
+                
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "Read more"; 
+                    moreText.style.display = "none";
+                    btnText.style.top= "140px";
+                    btnText.style.position="absolute";
+                    document.getElementById("spoce").innerHTML = "";
+                } else {
+                    dot_set()
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Read less"; 
+                    moreText.style.display = "inline";
+                    moreText.style.textAlign = "20px";
+                    moreText.style.left = "80px"
+                    moreText.style.position="absolute";
+                    btnText.style.top= "302px";
+                    document.getElementById("myBtn2").style.top = "348px"
+                    document.getElementById("myBtn3").style.top = "404px"
+                    document.getElementById("myBtn4").style.top = "485px"
+                    document.getElementById("myBtn5").style.top = "545px"
+                    document.getElementById("myBtn6").style.top = "615px"
+                    btnText.style.position="absolute";
+                    document.getElementById("spoce").innerHTML = "<br><br><br><br>";
+                }
+            }
+            function myFunction2() {
+                unselect()
+                var dots = document.getElementById("dots2");
+                var moreText = document.getElementById("more2");
+                var btnText = document.getElementById("myBtn2");
+
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "Read more"; 
+                    moreText.style.display = "none";
+                    btnText.style.top= "208px";
+                    btnText.style.position="absolute";
+                    document.getElementById("spoce2").innerHTML = "";
+                } else {
+                    dot_set()
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Read less"; 
+                    moreText.style.display = "inline";
+                    moreText.style.textAlign = "20px";
+                    moreText.style.left = "80px"
+                    moreText.style.position="absolute";
+                    btnText.style.top= "348px";
+                    btnText.style.position="absolute";
+                    document.getElementById("myBtn3").style.top = "404px"
+                    document.getElementById("myBtn4").style.top = "485px"
+                    document.getElementById("myBtn5").style.top = "545px"
+                    document.getElementById("myBtn6").style.top = "615px"
+                    document.getElementById("spoce2").innerHTML = "<br><br><br><br>";
+                }
+            }
+            function myFunction3() {
+                unselect()
+                var dots = document.getElementById("dots3");
+                var moreText = document.getElementById("more3");
+                var btnText = document.getElementById("myBtn3");
+
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "Read more"; 
+                    moreText.style.display = "none";
+                    btnText.style.top= "276px";
+                    btnText.style.position="absolute";
+                    document.getElementById("spoce3").innerHTML = "";
+                } else {
+                    dot_set()
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Read less"; 
+                    moreText.style.display = "inline";
+                    moreText.style.textAlign = "20px";
+                    moreText.style.left = "80px"
+                    moreText.style.position="absolute";
+                    btnText.style.top= "414px";
+                    btnText.style.position="absolute";
+                    document.getElementById("myBtn4").style.top = "485px"
+                    document.getElementById("myBtn5").style.top = "545px"
+                    document.getElementById("myBtn6").style.top = "615px"
+                    document.getElementById("spoce3").innerHTML = "<br><br><br><br>";
+                }
+            }
+            function myFunction4() {
+                unselect()
+                var dots = document.getElementById("dots4");
+                var moreText = document.getElementById("more4");
+                var btnText = document.getElementById("myBtn4");
+
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "Read more"; 
+                    moreText.style.display = "none";
+                    btnText.style.top= "343px";
+                    btnText.style.position="absolute";
+                    document.getElementById("spoce4").innerHTML = "";
+                } else {
+                    dot_set()
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Read less"; 
+                    moreText.style.display = "inline";
+                    moreText.style.textAlign = "20px";
+                    moreText.style.left = "80px"
+                    moreText.style.position="absolute";
+                    btnText.style.top= "486px";
+                    btnText.style.position="absolte";
+                    document.getElementById("myBtn5").style.top = "545px"
+                    document.getElementById("myBtn6").style.top = "615px"
+                    document.getElementById("spoce4").innerHTML = "<br><br><br><br>";
+                }
+            }
+            function myFunction5() {
+                unselect()
+                var dots = document.getElementById("dots5");
+                var moreText = document.getElementById("more5");
+                var btnText = document.getElementById("myBtn5");
+
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "Read more"; 
+                    moreText.style.display = "none";
+                    btnText.style.top= "408px";
+                    btnText.style.position="absolute";
+                    document.getElementById("spoce5").innerHTML = "";
+                } else {
+                    dot_set()
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Read less"; 
+                    moreText.style.display = "inline";
+                    moreText.style.textAlign = "20px";
+                    moreText.style.left = "80px"
+                    moreText.style.position="absolute";
+                    btnText.style.top= "549px";
+                    btnText.style.position="absolute";
+                    document.getElementById("myBtn6").style.top = "615px"
+                    document.getElementById("spoce5").innerHTML = "<br><br><br><br>";
+                }
+            }
+            function myFunction6() {
+                unselect()
+                var dots = document.getElementById("dots6");
+                var moreText = document.getElementById("more6");
+                var btnText = document.getElementById("myBtn6");
+
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "Read more"; 
+                    moreText.style.display = "none";
+                    btnText.style.top= "478px";
+                    btnText.style.position="absolute";
+                    document.getElementById("spoce6").innerHTML = "";
+                } else {
+                    dot_set()
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Read less"; 
+                    moreText.style.display = "inline";
+                    moreText.style.textAlign = "20px";
+                    moreText.style.left = "80px"
+                    moreText.style.position="absolute";
+                    btnText.style.top= "591px";
+                    btnText.style.position="absolute";
+                    document.getElementById("spoce6").innerHTML = "<br><br><br><br>";
+                }
+            }
         </script>
     </head>
-
+  
   <body class = "back" style="background-image: url('blue.jpg');">
     <!-- <button1>
        <butt1 class="butt1" type="button" id = "button1" value="test" onclick="guess6();">
           6
        </butt1>
     </button1> -->
+    <info_button class = "info_butt" onclick="togglePopup2()">
+        <div class="info_move">
+            Info
+        </div>
+    </info_button>   
+    <div class = "popup2" id = "popup-2">
+        <div class = "overlay">
+            <div class = "content">
+                    
+                    <div class = "close-btn" onclick="togglePopup2()">&times;</div>
+                    <br>
+                    <div style = "font-weight: bold; font-size: 50px;">
+                        Points of Interest
+                    </div>
+                    <br>
+                <div>
+                    <div style = "font-size: 25px; text-align: left; "><u>Michael Antonov Auditorium</u><span id="dots"><u>...</u></span><br><br><span id="more" style = "font-size: 18px; color:#222">The Antonov Auditorium has 298 seats, and will play host to the first four semesters of lectures in computer science and computer engineering majors. Named after Oculus cofounder Michael Antonov, it's designed with swivel tables and chairs to enable students to work together. It's one of two auditoriums.</span><spaces id="spoce"></spaces></div>
+                    <button onclick="myFunction()" id="myBtn" class = "details" style="top: 140px; left: 380px; position:absolute;">Read more</button>
+                    <div style = "font-size: 25px; text-align: left;"><u>Andrew Reisse Park</u></u><span id="dots2"><u>...</u></span><br><br><span id="more2" style = "font-size: 18px;">On the roof, Andrew Reisse Park has 6,400 square feet of outdoor space. Honoring the memory of the Oculus cofounder who died in a 2013 accident, it has a rock garden, a waterfall and other elements encouraging students to take a break and experience the outdoors.</span><spaces id="spoce2"></spaces></div>
+                    <button onclick="myFunction2()" id="myBtn2" class = "details" style="top: 208px; left: 275px; position:absolute;">Read more</button>
+                    <div style = "font-size: 25px; text-align: left;"><u>Breakpoint Cafe</u><span id="dots3"><u>...</u></span><br><br><span id="more3" style = "font-size: 18px;">On the roof, Andrew Reisse Park has 6,400 square feet of outdoor space. Honoring the memory of the Oculus cofounder who died in a 2013 accident, it has a rock garden, a waterfall and other elements encouraging students to take a break and experience the outdoors.</span><spaces id="spoce3"></spaces></div>
+                    <button onclick="myFunction3()" id="myBtn3" class = "details" style="top: 276px; left: 235px; position:absolute; z-index: 102;">Read more</button>
+                    <div style = "font-size: 25px; text-align: left;"><u>Maryland Robotics Center</u><span id="dots4"><u>...</u></span><br><br><span id="more4" style = "font-size: 18px;">On the roof, Andrew Reisse Park has 6,400 square feet of outdoor space. Honoring the memory of the Oculus cofounder who died in a 2013 accident, it has a rock garden, a waterfall and other elements encouraging students to take a break and experience the outdoors.</span><spaces id="spoce4"></spaces></div>
+                    <button onclick="myFunction4()" id="myBtn4" class = "details" style="top: 343px; left: 348px; position:absolute;">Read more</button>
+                    <div style = "font-size: 25px; text-align: left;"><u>Jagdeep Singh Family Makerspace</u><span id="dots5"><u>...</u></span><br><br><span id="more5" style = "font-size: 18px;">On the roof, Andrew Reisse Park has 6,400 square feet of outdoor space. Honoring the memory of the Oculus cofounder who died in a 2013 accident, it has a rock garden, a waterfall and other elements encouraging students to take a break and experience the outdoors.</span><spaces id="spoce5"></spaces></div>
+                    <button onclick="myFunction5()" id="myBtn5" class = "details" style="top: 408px; left: 440px; position:absolute;">Read more</button>
+                    <div style = "font-size: 25px; text-align: left;"><u>Maryland Blended Reality Center</u><span id="dots6"><u>...</u></span><br><br><span id="more6" style = "font-size: 18px;">The Maryland Blended Reality Center is dedicated to advancing visual computing for healthcare and innovative training for
+                        professionals in high-impact areas.</span><spaces id="spoce6"></spaces></div>
+                    <button onclick="myFunction6()" id="myBtn6" class = "details" style="top: 478px; left: 425px; position:absolute;">Read more</button>
+                </div>
+                    
 
-    <button2">
+
+                    
+                
+            </div>
+        </div>
+    </div>
+
+    <button2>
         <butt2 class="butt2" type="button" id = "button2" value="test" onclick="guess5();" >
            5
         </butt2>
