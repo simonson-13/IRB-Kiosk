@@ -98,6 +98,57 @@ endCalendarContent
 
 <!-- startPopUpContent -->
 
+<!-- floorplan popup-->
+
+<div id = "level5Floor" class="modal">
+
+  <div class="floor-content">
+    <span onclick="closeFloor()" class="close">&times;</span>
+   <p><img src = "floor_5.png" width="800px" height="500px"></p>
+  </div>
+</div>
+
+<div id = "level4Floor" class="modal">
+
+  <div class="floor-content">
+    <span onclick="closeFloor()" class="close">&times;</span>
+    <p><img src = "floor_4.png" width="800px" height="500px"></p>
+  </div>
+</div>
+
+<div id = "level1Floor" class="modal">
+
+  <div class="floor-content">
+    <span onclick="closeFloor()" class="close">&times;</span>
+    <p><img src = "floor_1.png" width="800px" height="500px"></p>
+  </div>
+</div>
+
+<div id = "level0Floor" class="modal">
+
+  <div class="floor-content">
+    <span onclick="closeFloor()" class="close">&times;</span>
+    <p><img src = "floor_0.png" width="800px" height="500px"></p>
+  </div>
+</div>
+
+<div id = "level2Floor" class="modal">
+
+  <div class="floor-content">
+    <span onclick="closeFloor()" class="close">&times;</span>
+    <p><img src = "floor_2.png" width="800px" height="500px"></p>
+  </div>
+</div>
+
+<div id = "level3Floor" class="modal">
+
+  <div class="floor-content">
+    <span onclick="closeFloor()" class="close">&times;</span>
+    <p><img src = "floor_3.png" width="800px" height="500px"></p>
+  </div>
+</div>
+
+
 <!-- sunday1PopUpContent -->
 <div id="popupWindow" class="sunday">
 
@@ -260,7 +311,7 @@ endCalendarContent
           <pre style="font-weight: bold;">
       12:00PM - 1:00PM
       IRB 4222
-      <button class="viewFloorPlanButton">View Floor Plan</button>
+      <button onClick = "level4Function('monday')" id = "level4" class="viewFloorPlanButton">View Floor Plan</button>
           </pre>
     
           <!-- description -->
@@ -311,7 +362,7 @@ endCalendarContent
         <pre style="font-weight: bold;">
       12:00PM - 1:00PM
       IRB 1234
-      <button class="viewFloorPlanButton">View Floor Plan</button>
+      <button onclick="level1Function('tuesday')" class="viewFloorPlanButton">View Floor Plan</button>
         </pre>
   
         <!-- description -->
@@ -352,7 +403,7 @@ endCalendarContent
         <pre style="font-weight: bold;">
       12:00PM - 1:00PM
       IRB 2345
-      <button class="viewFloorPlanButton">View Floor Plan</button>
+      <button onclick="level2Function('tuesday')" class="viewFloorPlanButton">View Floor Plan</button>
         </pre>
   
         <!-- description -->
@@ -389,7 +440,7 @@ endCalendarContent
         <pre style="font-weight: bold;">
       4:30PM - 6:30PM
       IRB 3456
-      <button class="viewFloorPlanButton">View Floor Plan</button>
+      <button onclick="level3Function('tuesday')" class="viewFloorPlanButton">View Floor Plan</button>
         </pre>
   
         <!-- description -->
@@ -443,7 +494,7 @@ endCalendarContent
         <pre style="font-weight: bold;">
       11:00am - 12:30pm
       IRB 5001
-      <button class="viewFloorPlanButton">View Floor Plan</button>
+      <button onclick="level5Function('tuesday')" class="viewFloorPlanButton">View Floor Plan</button>
         </pre>
   
         <!-- description -->
@@ -487,7 +538,7 @@ endCalendarContent
         <pre style="font-weight: bold;">
       12:30PM - 1:45PM
       IRB 4116
-      <button class="viewFloorPlanButton">View Floor Plan</button>
+      <button onclick="level4Function('tuesday')" class="viewFloorPlanButton">View Floor Plan</button>
         </pre>
   
         <!-- description -->
@@ -525,7 +576,7 @@ endCalendarContent
         <pre style="font-weight: bold;">
       2:00PM - 3:00PM
       IRB 2222
-      <button class="viewFloorPlanButton">View Floor Plan</button>
+      <button onclick="level2Function('tuesday')" class="viewFloorPlanButton">View Floor Plan</button>
         </pre>
   
         <!-- description -->
@@ -564,7 +615,7 @@ endCalendarContent
         <pre style="font-weight: bold;">
       2:00PM - 3:30PM
       IRB 0117
-      <button class="viewFloorPlanButton">View Floor Plan</button>
+      <button onclick="level0Function('tuesday')" class="viewFloorPlanButton">View Floor Plan</button>
         </pre>
   
         <!-- description -->
@@ -602,7 +653,7 @@ endCalendarContent
         <pre style="font-weight: bold;">
       3:30PM - 5:00PM
       IRB 0117
-      <button class="viewFloorPlanButton">View Floor Plan</button>
+      <button onclick="level0Function('tuesday')" class="viewFloorPlanButton">View Floor Plan</button>
         </pre>
   
         <!-- description -->
@@ -651,7 +702,7 @@ endCalendarContent
         <pre style="font-weight: bold;">
       4:30PM - 6:30PM
       IRB 2234
-      <button class="viewFloorPlanButton">View Floor Plan</button>
+      <button onclick="level2Function('wednesday')" class="viewFloorPlanButton">View Floor Plan</button>
         </pre>
   
         <!-- description -->
@@ -690,7 +741,7 @@ endCalendarContent
         <pre style="font-weight: bold;">
       4:30PM - 5:30PM
       IRB 2333
-      <button class="viewFloorPlanButton">View Floor Plan</button>
+      <button onclick="level2Function('wednesday')" class="viewFloorPlanButton">View Floor Plan</button>
         </pre>
   
         <!-- description -->
@@ -835,7 +886,7 @@ endCalendarContent
         <pre style="font-weight: bold;">
       12:00PM - 1:00PM 
       IRB 1112
-      <button class="viewFloorPlanButton">View Floor Plan</button>
+      <button onclick="level1Function('thrusday')" class="viewFloorPlanButton">View Floor Plan</button>
         </pre>
   
         <!-- description -->
@@ -873,7 +924,7 @@ endCalendarContent
         <pre style="font-weight: bold;">
       4:00PM - 5:00PM 
       IRB 1011
-      <button class="viewFloorPlanButton">View Floor Plan</button>
+      <button onclick="level1Function('thursday')" class="viewFloorPlanButton">View Floor Plan</button>
         </pre>
   
         <!-- description -->
@@ -923,7 +974,7 @@ endCalendarContent
         <pre style="font-weight: bold;">
       3:30PM - 4:30PM
       IRB 0322
-      <button class="viewFloorPlanButton">View Floor Plan</button>
+      <button onclick="level0Function('friday')" class="viewFloorPlanButton">View Floor Plan</button>
         </pre>
   
         <!-- description -->
@@ -973,7 +1024,7 @@ endCalendarContent
         <pre style="font-weight: bold;">
       9:00AM - 10:00AM 
       IRB 2346
-      <button class="viewFloorPlanButton">View Floor Plan</button>
+      <button onclick="level2Function('friday')" class="viewFloorPlanButton">View Floor Plan</button>
         </pre>
   
         <!-- description -->
@@ -1768,6 +1819,14 @@ endCalendarContent
 
 <script>
   var modal = document.getElementById("popupWindow");
+  var level4 = document.getElementById("level4Floor");
+  var level5 = document.getElementById("level5Floor");
+  var level3 = document.getElementById("level3Floor");
+  var level2 = document.getElementById("level2Floor");
+  var level1 = document.getElementById("level1Floor");
+  var level0 = document.getElementById("level0Floor");
+  var span = document.getElementsByClassName("close")[0];
+
 
   // days
   var sunday = document.getElementsByClassName("sunday");
@@ -1783,18 +1842,52 @@ endCalendarContent
   var socialBool = true;
   var weekNum = parseInt(document.getElementById("weekNum").textContent)
 
-  function socialFilter() {
-    if (!bool) {
+  function level4Function(day) {
+    level4.style.display = "block";
 
-      document.getElementById("13").style.background = "#eee";
-    } else {
-
-      document.getElementById("13").style.background = "yellow";
-
-    }
-
-    bool = !bool;
+    
   }
+
+  function level5Function(day) {
+    level5.style.display = "block";
+
+  }
+
+  function level3Function(day) {
+    level3.style.display = "block";
+
+
+  }
+
+  function level2Function(day) {
+    level2.style.display = "block";
+
+    
+  }
+
+  function level1Function(day) {
+    level1.style.display = "block";
+
+    
+  }
+
+  function level0Function(day) {
+    level0.style.display = "block";
+
+    
+  }
+  // function socialFilter() {
+  //   if (!bool) {
+
+  //     document.getElementById("13").style.background = "#eee";
+  //   } else {
+
+  //     document.getElementById("13").style.background = "yellow";
+
+  //   }
+
+  //   bool = !bool;
+  // }
 
   function nextWeek() {
     console.log("next button hit")
@@ -1840,6 +1933,7 @@ endCalendarContent
     document.getElementsByClassName("nextButton")[0].style.borderLeft = "30px solid rgb(204,0,0)";
   }
 
+
   function myFunction(day) {
     // var weekNum = parseInt(document.getElementById("weekNum").textContent)
 
@@ -1873,12 +1967,50 @@ endCalendarContent
     thursday[weekNum].style.display = "none"
     friday[weekNum].style.display = "none"
     saturday[weekNum].style.display = "none"
+
   }
 
+  function closeFloor() {
+
+    level4.style.display = "none";
+    level3.style.display = "none";
+    level2.style.display = "none";
+    level1.style.display = "none";
+    level0.style.display = "none";
+    level5.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+
+    if (event.target == level4) {
+      level4.style.display = "none";
+
+    } else if (event.target == level3) {
+      level3.style.display = "none";
+
+    } else if (event.target == level2) {
+      level2.style.display = "none";
+      
+    } else if (event.target == level1) {
+      level1.style.display = "none";
+      
+    } else if (event.target == level0) {
+      level0.style.display = "none";
+      
+    } else if (event.target == level5) {
+      level5.style.display = "none";
+      
+    }
+  }
   window.addEventListener("click", function(event) {
 
-    if (event.target == popupWindow) {
+    if (event.target == modal) {
       modal.style.display = "none";
+
+    } else if (event.target == monday) {  
+
+      monday[1].style.display = "none"
+
 
     }
   })
