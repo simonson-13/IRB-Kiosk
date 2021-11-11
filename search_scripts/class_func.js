@@ -6,6 +6,7 @@ const background = document.getElementById("bg");
 const searchWrapper = document.querySelector(".search-input");
 const inputBox = searchWrapper.querySelector("input");
 const highlight = document.querySelector(".highlighter")
+const high_text = document.querySelector(".high_text");
 const suggBox = document.getElementById("suggestions");
 const searchIcon = searchWrapper.querySelector(".icon");
 
@@ -287,8 +288,10 @@ document.addEventListener('click',function(e) {
             highlight.style.top = '445px';
             highlight.style.right = '665px';
         }
-        highlight.innerHTML = room;
+        high_text.innerHTML = room;
         highlight.style.display = 'block';
+        high_text.style.display = 'block';
+        
         
 
     } else if (e.target && (e.target.getAttribute('class') === 'close' || e.target.getAttribute('class') === 'x')) {
@@ -298,6 +301,7 @@ document.addEventListener('click',function(e) {
          //img.src = floorimg;
          //make highlight disapear on close
          highlight.style.display = 'none';
+         high_text.style.display = 'none';
     }
 });
 

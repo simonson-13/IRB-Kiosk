@@ -414,10 +414,11 @@ body {
           display: none;
       }
       .high_text{
-          /* left:-200px;
-          top:-200px */
-          z-index: 1;
+          left:6px;
+          top:-3px;
+          z-index: 5;
           color:black;
           position: absolute;
           text-align: center;
+
       }    
