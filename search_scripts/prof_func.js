@@ -11,6 +11,10 @@ var close = document.getElementsByClassName("close")[0];
 const keyBoard = document.getElementById("keyboard");
 const background = document.getElementById("bg");
 
+/*highlight map*/
+const highlight = document.querySelector(".highlighter");
+const high_text = document.querySelector(".high_text");
+
 /*results table*/
 const profRow = document.getElementById("profRow");
 const roomRow = document.getElementById("roomRow");
@@ -177,10 +181,46 @@ document.addEventListener('click',function(e) {
         modal.style.display='block';
         img.src = floorimg;
         captionText.innerHTML = `Floor ${floor}, ${profRow.innerHTML}'s Office: ${room}`
+        highlight.style.display='block';
+        high_text.style.display='block';
+        room = room.slice(-4, room.length);
+        high_text.innerHTML = room;
+        if (room == "1210" || room == "2210") {
+            highlight.style.right = '368px';
+            highlight.style.top = '495px';
+            high_text.style.transform = 'rotate(-90deg)';
+        } else if (room == "1124") {
+            highlight.style.right = '770px';
+            highlight.style.top = '335px';
+            high_text.style.transform = 'rotate(-30deg)';
+        } else if (room == "1128") {
+            highlight.style.right = '780px';
+            highlight.style.top = '315px';
+            high_text.style.transform = 'rotate(-30deg)';
+        } else if (room == "2240") {
+            highlight.style.right = '280px';
+            highlight.style.top = '395px';
+            high_text.style.transform = 'rotate(-90deg)';
+        } else if (room == "2212") {
+            highlight.style.right = '350px';
+            highlight.style.top = '495px';
+            high_text.style.transform = 'rotate(-90deg)';
+        } else if (room == "1248") {
+            highlight.style.right = '315px';
+            highlight.style.top = '385px';
+            high_text.style.transform = 'rotate(-90deg)';
+        } else if (room == "3220") {
+            highlight.style.right = '278px';
+            highlight.style.top = '490px';
+            high_text.style.transform = 'rotate(-90deg)';
+        }
+
     } else if (e.target && (e.target.getAttribute('class') === 'close' || e.target.getAttribute('class') === 'x')) {
         
          /*close floor plan pop up*/
          modal.style.display='none';
+         highlight.style.display = 'none';
+         high_text.style.display = 'none';
     }
 });
 
