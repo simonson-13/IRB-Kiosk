@@ -1813,9 +1813,9 @@ endCalendarContent
     document.getElementsByClassName("week")[weekNum].style.display = "block";
 
     //bring up buttons depending on first or last page
-    // if(weekNum == 1) 
-    //   document.getElementsByClassName("nextButton")[0].style.display = "none";
-    // document.getElementsByClassName("prevButton")[0].style.display = "block";
+    if(weekNum == 1) 
+      document.getElementsByClassName("nextButton")[0].style.borderLeft = "30px solid gray";
+    document.getElementsByClassName("prevButton")[0].style.borderRight = "30px solid rgb(204,0,0)";
   }
 
   function prevWeek() {
@@ -1835,9 +1835,9 @@ endCalendarContent
     document.getElementsByClassName("week")[weekNum].style.display = "block";
 
     //bring up buttons depending on first or last page
-    // if(weekNum == 0) 
-    //   document.getElementsByClassName("prevButton")[0].style.display = "none";
-    // document.getElementsByClassName("nextButton")[0].style.display = "block";
+    if(weekNum == 0) 
+      document.getElementsByClassName("prevButton")[0].style.borderRight = "30px solid gray";
+    document.getElementsByClassName("nextButton")[0].style.borderLeft = "30px solid rgb(204,0,0)";
   }
 
   function myFunction(day) {
