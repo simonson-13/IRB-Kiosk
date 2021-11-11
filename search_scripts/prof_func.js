@@ -33,7 +33,6 @@ background.onclick=() => {
 
 
 searchIcon.onclick = () => {
-    console.log("search pressed!")
     keyBoard.style.display = 'none';
     if (inputBox.value.toLowerCase() in officeMap) {
         result = officeMap[inputBox.value.toLowerCase()]
@@ -74,18 +73,6 @@ for (let i = 0; i < keys.length; i++)
     document.getElementById('result').innerHTML = result;
 
 })
-
-/* floor plan pop up */
-viewFP.addEventListener("click", (e) => {
-    console.log('viewFP clicked!')
-    let floor = document.getElementById("result").innerHTML.slice(-4,-3)
-    let res_string = document.getElementById("result").innerHTML
-    let floorimg= `./floor_${floor}.png`
-    modal.style.display = 'block'
-    img.src = floorimg;
-    captionText.innerHTML = `Floor ${floor}, ${inputBox.value}'s Office: ${res_string.slice(-8,res_string.length)}`
-})
-/*close floor plan pop up*/
 
 close.onclick = function() {
     modal.style.display='none';
@@ -135,7 +122,6 @@ for (let i = 0; i < keys.length; i ++) {
             inputBox.value = inputBox.value + e.target.getAttribute("keyname");
         } else {
             inputBox.value = inputBox.value + e.target.getAttribute("lcname");
-            console.log(e.target.getAttribute("lcname"));
 
         }
         // start filtering array
@@ -146,7 +132,6 @@ for (let i = 0; i < keys.length; i ++) {
                     return data;
                 }
             })
-            console.log(filtered)
             list = ''
             filtered = filtered.map((res) => {
                 list += '<li>' + res + '</li>';
@@ -171,6 +156,22 @@ function showSuggestions(list) {
     }
 
 }
+
+/*floor plan pop up*/
+document.addEventListener('click',function(e) {
+    if(e.target && e.target.getAttribute('class') === 'vp'){
+        let floor = roomRow.innerHTML.slice(-4,-3);
+        let room = roomRow.innerHTML;
+        let floorimg= `./floor_${floor}.png`
+        modal.style.display='block';
+        img.src = floorimg;
+        captionText.innerHTML = `Floor ${floor}, ${profRow.innerHTML}'s Office: ${room}`
+    } else if (e.target && (e.target.getAttribute('class') === 'close' || e.target.getAttribute('class') === 'x')) {
+        
+         /*close floor plan pop up*/
+         modal.style.display='none';
+    }
+});
 
 
 

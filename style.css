@@ -11,6 +11,11 @@ h1 {
   color: white;
 }
 
+h2 {
+  font-size:21px;
+  text-align: left;
+}
+
 body {
    font-family: Times New Roman, sans-serif;
    /* background-image: url('blue.jpg'); */
@@ -89,6 +94,7 @@ body {
   height: 21px;
   border-radius: 15px;
   left: 7px;
+  padding-left: 6px;
 }
 
 /* START - EVENT COLOR */
@@ -158,7 +164,7 @@ body {
   position: absolute;
   /* display:inline; */
 
-  top:10px;
+  top:100px;
   right: 25px;
   background-color: rgba(255, 255, 255, 0.75);
   width: 195px;
@@ -308,6 +314,8 @@ body {
 }
 
 .viewFloorPlanButton {
+  position: relative;
+  top: 5px;
   background-color: rgb(204, 0, 0);
   width: 25%;
   font-size: 15px;
@@ -316,11 +324,21 @@ body {
   color: white;
 
   outline: 2px solid white;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.50);
 
 }
 
+/* all spans!!! */
+span {
+  word-break:keep-all;
+}
+
+p {
+  word-break: keep-all;
+}
+
 .prevButton {
-  display: none;
+  display: block;
 
   position:absolute;
   top: 180px;

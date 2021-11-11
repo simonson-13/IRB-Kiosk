@@ -139,7 +139,7 @@ body {
   position: relative;
   order: 2;
   display: none;
-  z-index:7;
+  
 }
 
 .keyrow {
@@ -364,12 +364,23 @@ body {
 /* The Close Button */
 .close {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 105px;
+  right: 175px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+}
+
+.x {
+  position: absolute;
+  top: -45px;
+  left: 11px;
 }
 
 .close:hover,
@@ -385,3 +396,29 @@ body {
     width: 100%;
   }
 }
+
+/* highlight feature */
+        .highlighter{
+          background-color:#f1e740;
+          color: black;
+          opacity: .8;
+          width: 30px;
+          height: 30px;
+          padding: 10px;
+          right: 665px;
+          top: 445px;
+          position: absolute;
+          border-radius: 100px;
+          outline: 6px solid black;
+          z-index: 10;
+          text-align: center;
+          display: none;
+      }
+      .high_text{
+          /* left:-200px;
+          top:-200px */
+          z-index: 1;
+          color:black;
+          position: absolute;
+          text-align: center;
+      }    
