@@ -2,7 +2,7 @@ const searchWrapper = document.querySelector(".search-input");
 const inputBox = searchWrapper.querySelector("input");
 const suggBox = document.getElementById("suggestions");
 const searchIcon = searchWrapper.querySelector(".icon");
-//const viewFP = document.getElementById("floorplanbutton");
+const viewFP = document.getElementById("floorplanbutton");
 var modal = document.getElementById("myModal");
 var img = document.getElementById("floorimg");
 var captionText = document.getElementById("caption");
@@ -31,11 +31,9 @@ let caps_on = false;
 let shift_on = false;
 let filtered = [];
 
-
-
-
 inputBox.onclick = () => {
         //make keyboard popup
+    viewFP.style.zIndex=0;
     keyBoard.style.display = 'block';
 }
 
@@ -48,19 +46,15 @@ background.onclick=() => {
 searchIcon.onclick = () => {
     keyBoard.style.display = 'none';
     if (inputBox.value.toLowerCase() in officeMap) {
-        profTable.style.display = "block";
-        profRow.innerHTML = inputBox.value;
-        roomRow.innerHTML = officeMap[inputBox.value.toLowerCase()];
-        floorRow.innerHTML = `<div class='floorplanbutton'><p class='vp'>View Floor Plan</p<</div>`;
         result = officeMap[inputBox.value.toLowerCase()]
         showSuggestions('');
-        
         //result = inputBox.value + "'s Office is: " + result;
         result = result;
+        viewFP.style.zIndex=5;
+        viewFP.style.display = 'block';
         document.getElementById('result').style.marginLeft = '27%';
         document.getElementById('result').innerHTML = result;
     } else {
-        result.style.display = "block";
         result = "Professor Not Found"
         document.getElementById('result').style.marginLeft = '0px';
         document.getElementById('result').innerHTML = result;
@@ -80,11 +74,12 @@ for (let i = 0; i < keys.length; i++)
  document.getElementById("suggestions").addEventListener("click", (e) => {
     inputBox.value = e.target.innerHTML
     keyBoard.style.display = 'none';
-    profTable.style.display = "block";
-    profRow.innerHTML = e.target.innerHTML;
-    roomRow.innerHTML = officeMap[e.target.innerHTML.toLowerCase()];
-    floorRow.innerHTML = `<div class='floorplanbutton'><p class='vp'>View Floor Plan</p></div>`;
+    result = officeMap[e.target.innerHTML.toLowerCase()]
     showSuggestions('');
+    //result = inputBox.value + "'s Office is: " + result;
+    result = result;
+    viewFP.style.zIndex=5;
+    viewFP.style.display = 'block';
 
     document.getElementById('result').innerHTML = result;
 
@@ -101,13 +96,14 @@ for (let i = 0; i < keys.length; i ++) {
             enterPressed = true;
             keyBoard.style.display = 'none';
             if (inputBox.value.toLowerCase() in officeMap) {
+                result = officeMap[inputBox.value.toLowerCase()]
                 showSuggestions([]);
-                profTable.style.display = "block";
-                profRow.innerHTML = inputBox.value;
-                roomRow.innerHTML = officeMap[inputBox.value.toLowerCase()];
-                floorRow.innerHTML = `<div class='floorplanbutton'><p class='vp'>View Floor Plan</p></div>`;
+                //result = inputBox.value + "'s Office is: " + result;
+                result = result;
+                document.getElementById('result').style.marginLeft = '27%';
+                viewFP.style.zIndex=5;
+                viewFP.style.display = 'block';
             } else {
-                result.style.display = "block";
                 result = "Professor Not Found"
                 document.getElementById('result').style.marginLeft = '0px';
             }
