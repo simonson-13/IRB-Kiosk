@@ -7,6 +7,74 @@
       font-family:
       'Open Sans', sans-serif;
    }
+   .popup .overlay{
+            position: fixed;
+            top:0px;
+            left:0px;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,.7);
+            z-index: 20;
+            display: none;
+        }
+        .popup .content{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%) scale(0);
+            background: #fff;
+            width: 350px;
+            height: 640px;
+            z-index: 21;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .popup .close-btn{
+            cursor: pointer;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width:30px;
+            height:30px;
+            background:#222;
+            color:#fff;
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+        }
+        .popup.active .overlay{
+            display: block;
+        }
+        .popup.active .content{
+            transition: all 300ms ease-in-out;
+            transform: translate(-50%,-50%) scale(1);
+        }
+   .butt{
+      background-color:rgb(204,0,0);
+            /* opacity: .8; */
+            width: 60px;
+            height: 60px;
+            padding: 10px;
+            right: 938px;
+            top: 684px;
+            position: absolute;
+            border-radius: 100px;
+            outline: 2px solid white;
+            color:white;
+            opacity: .9;
+
+
+   }
+   .butt_move{
+      top:10px;
+      left:22.5px;
+      position: absolute;
+      font-size: 50px;
+      font-weight: bold;
+   }
    h1 { 
       text-align:center;
    }
@@ -165,7 +233,7 @@
 
    .tit{    
       color: white;
-      font-size: 72px;
+      font-size: 69px;
       top : 90px;
       right : 112px;
       height:50px;
@@ -197,7 +265,9 @@
 </style>
 
 <script>
-   
+   function togglePopup(){
+                    document.getElementById("popup-1").classList.toggle("active");
+            }
 </script>
 </head>
 
@@ -208,6 +278,11 @@
    &nbsp 75&#8457 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 1:01 PM &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 11/11/2021
 </header>
 <body class = "back" style="background-image: url('home_background_alt.jpg');">
+   <corner class= "butt" onclick="togglePopup()">
+      <div class="butt_move">
+         i
+      </div>
+   </corner>
    <name>
       <tit class = "tit" type ="button">
          Welcome to the Brendan Iribe Center 
@@ -251,7 +326,28 @@
       </butt4>
 
    </button4 >
-   
+   <div class = "popup" id = "popup-1">
+      <div class = "overlay">
+          <div class = "content">
+
+                  <div class = "close-btn" onclick="togglePopup()">&times;</div>
+                  <div style= "font-size: 50px;">
+                     Iribe Info
+                  </div>
+                  <div style="text-align: left;">
+                     <li>The building is the first one Route 1 visitors see afterall</li>
+                     <li>Computer Science Building</li>
+                     <li>New building</li>
+                  </div>
+                  
+                  
+
+
+                  
+              
+          </div>
+      </div>
+  </div>
    
    
 </body>
