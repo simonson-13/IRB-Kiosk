@@ -401,17 +401,19 @@ body {
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
-  background-color: rgba(0,0,0,0.8);
+  /*background-color: rgba(0,0,0,0.8);
   border-radius: 50%;
   height: 45px;
-  width: 45px;
+  width: 45px;*/
   text-align: center;
+  color: #aaa;
 }
 
 .x {
   position: absolute;
   top: -45px;
-  left: 11px;
+  left: -25px;
+  color: #aaa;
 }
 
 .close:hover,
