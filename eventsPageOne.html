@@ -150,7 +150,7 @@ endCalendarContent
 
 
 <!-- sunday1PopUpContent -->
-<div id="popupWindow" class="sunday">
+<div id="popupWindow" class="sunday" name="sunday1">
 
   <div class="modal-content">
     <span class="close" onclick="closeFunction()">&times;</span>
@@ -199,7 +199,7 @@ endCalendarContent
 </div>
 
 <!-- sunday2PopUpContent -->
-<div id="popupWindow" class="sunday">
+<div id="popupWindow" class="sunday" name="sunday2">
 
   <div class="modal-content">
     <span class="close" onclick="closeFunction()">&times;</span>
@@ -249,7 +249,7 @@ endCalendarContent
 
 
 <!-- monday1PopUpContent -->
-<div id="popupWindow" class="monday">
+<div id="popupWindow" class="monday" name="monday1">
 
   <div class="modal-content">
     <span class="close" onclick="closeFunction()">&times;</span>
@@ -294,7 +294,7 @@ endCalendarContent
 </div>
 
   <!-- monday2PopUpContent -->
-  <div id="popupWindow" class="monday">
+  <div id="popupWindow" class="monday" name="monday2">
 
     <div class="modal-content">
       <span class="close" onclick="closeFunction()">&times;</span>
@@ -345,7 +345,7 @@ endCalendarContent
 
 
 <!-- tuesday1PopUpContent -->
-<div id="popupWindow" class="tuesday">
+<div id="popupWindow" class="tuesday" name="tuesday1">
 
   <div class="modal-content">
     <span class="close" onclick="closeFunction()">&times;</span>
@@ -477,7 +477,7 @@ endCalendarContent
 </div>
 
 <!-- tuesday2PopUpContent -->
-<div id="popupWindow" class="tuesday">
+<div id="popupWindow" class="tuesday" name="tuesday2">
 
   <div class="modal-content">
     <span class="close" onclick="closeFunction()">&times;</span>
@@ -685,7 +685,7 @@ endCalendarContent
 
 
 <!-- wedsneday1PopUpContent  -->
-<div id="popupWindow" class="wednesday">
+<div id="popupWindow" class="wednesday" name="wednesday1">
 
   <div class="modal-content">
     <span class="close" onclick="closeFunction()">&times;</span>
@@ -772,7 +772,7 @@ endCalendarContent
 </div>
 
 <!-- wedsneday2PopUpContent  -->
-<div id="popupWindow" class="wednesday">
+<div id="popupWindow" class="wednesday" name="wednesday2">
 
   <div class="modal-content">
     <span class="close" onclick="closeFunction()">&times;</span>
@@ -821,7 +821,7 @@ endCalendarContent
 </div>
 
 <!-- thursday1PopUpContent -->
-<div id="popupWindow" class="thursday">
+<div id="popupWindow" class="thursday" name="thursday1">
 
   <div class="modal-content">
     <span class="close" onclick="closeFunction()">&times;</span>
@@ -869,7 +869,7 @@ endCalendarContent
 </div>
 
 <!-- thursday2PopUpContent -->
-<div id="popupWindow" class="thursday">
+<div id="popupWindow" class="thursday" name="thursday2">
 
   <div class="modal-content">
     <span class="close" onclick="closeFunction()">&times;</span>
@@ -957,7 +957,7 @@ endCalendarContent
 
 
 <!-- friday1PopUpContent -->
-<div id="popupWindow" class="friday">
+<div id="popupWindow" class="friday" name="friday1">
 
   <div class="modal-content">
     <span class="close" onclick="closeFunction()">&times;</span>
@@ -1007,7 +1007,7 @@ endCalendarContent
 </div>
 
 <!-- friday2PopUpContent -->
-<div id="popupWindow" class="friday">
+<div id="popupWindow" class="friday" name="friday2">
 
   <div class="modal-content">
     <span class="close" onclick="closeFunction()">&times;</span>
@@ -1059,7 +1059,7 @@ endCalendarContent
 
 
 <!-- saturday1PopUpContent -->
-<div id="popupWindow" class="saturday">
+<div id="popupWindow" class="saturday" name="saturday1">
 
   <div class="modal-content">
     <span class="close" onclick="closeFunction()">&times;</span>
@@ -1107,7 +1107,7 @@ endCalendarContent
 </div>
 
 <!-- saturday2PopUpContent -->
-<div id="popupWindow" class="saturday">
+<div id="popupWindow" class="saturday" name="saturday2">
 
   <div class="modal-content">
     <span class="close" onclick="closeFunction()">&times;</span>
@@ -1827,6 +1827,22 @@ endCalendarContent
   var level0 = document.getElementById("level0Floor");
   var span = document.getElementsByClassName("close")[0];
 
+  var sunday1 = document.getElementsByName("sunday1");
+  var sunday2 = document.getElementsByName("sunday2");
+  var monday1 = document.getElementsByName("monday1");
+  var monday2 = document.getElementsByName("monday2");
+  var tuesday1 = document.getElementsByName("tuesday1");
+  var tuesday2 = document.getElementsByName("tuesday2");
+  var wednesday1 = document.getElementsByName("wednesday1");
+  var wednesday2 = document.getElementsByName("wednesday2");
+  var thursday1 = document.getElementsByName("thursday1");
+  var thursday2 = document.getElementsByName("thursday2");
+  var friday1 = document.getElementsByName("friday1");
+  var friday2 = document.getElementsByName("friday2");
+  var saturday1 = document.getElementsByName("saturday1");
+  var saturday2 = document.getElementsByName("saturday2");
+
+
 
   // days
   var sunday = document.getElementsByClassName("sunday");
@@ -2002,17 +2018,81 @@ endCalendarContent
       
     }
   }
+
   window.addEventListener("click", function(event) {
 
-    if (event.target == modal) {
-      modal.style.display = "none";
+    if (event.target == sunday1[0]) {
 
-    } else if (event.target == monday) {  
+      sunday1[0].style.display = "none";
 
-      monday[1].style.display = "none"
+    } else if (event.target == sunday2[0]) {  
+
+      sunday2[0].style.display = "none"
 
 
-    }
+    } else if (event.target == monday1[0]) {  
+
+      monday1[0].style.display = "none"
+
+
+    } else if (event.target == monday2[0]) {  
+
+      monday2[0].style.display = "none"
+
+
+    } else if (event.target == tuesday1[0]) {  
+
+      tuesday1[0].style.display = "none"
+
+    } else if (event.target == tuesday2[0]) {  
+
+      tuesday2[0].style.display = "none"
+
+
+    } else if (event.target == wednesday1[0]) {  
+
+      wednesday1[0].style.display = "none"
+
+
+    }  else if (event.target == wednesday2[0]) {  
+
+      wednesday2[0].style.display = "none"
+
+
+    } else if (event.target == thursday1[0]) {  
+
+      thursday1[0].style.display = "none"
+
+
+    } else if (event.target == thursday2[0]) {  
+
+      thursday2[0].style.display = "none"
+
+
+    }  else if (event.target == friday1[0]) {  
+
+      friday1[0].style.display = "none"
+
+
+    } else if (event.target == friday2[0]) {  
+
+      friday2[0].style.display = "none"
+
+
+    } else if (event.target == saturday1[0]) {  
+
+      saturday1[0].style.display = "none"
+
+
+    }  else if (event.target == saturday2[0]) {  
+
+      saturday2[0].style.display = "none"
+
+
+    } 
+
+
+
   })
 
 
