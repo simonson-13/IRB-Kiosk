@@ -92,6 +92,7 @@ h1 {
 #result {
     background-color: rgb(27,41,58, 0.8);
     display: none;
+    top: 50px;
 }
 
 .nav {
@@ -342,7 +343,7 @@ body {
   height: 100%;
   overflow: auto;
   background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
