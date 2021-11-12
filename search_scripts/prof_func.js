@@ -20,6 +20,7 @@ const profRow = document.getElementById("profRow");
 const roomRow = document.getElementById("roomRow");
 const floorRow = document.getElementById("floorRow");
 const profTable = document.getElementById("profTable");
+const res = document.getElementById('result');
 
 
 const keys = document.querySelectorAll(".keys");
@@ -49,6 +50,7 @@ searchIcon.onclick = () => {
     keyBoard.style.display = 'none';
     if (inputBox.value.toLowerCase() in officeMap) {
         profTable.style.display = "block";
+        res.style.display = 'none';
         profRow.innerHTML = inputBox.value;
         roomRow.innerHTML = officeMap[inputBox.value.toLowerCase()];
         floorRow.innerHTML = `<div class='floorplanbutton'><p class='vp'>View Floor Plan</p<</div>`;
@@ -81,6 +83,7 @@ for (let i = 0; i < keys.length; i++)
     inputBox.value = e.target.innerHTML
     keyBoard.style.display = 'none';
     profTable.style.display = "block";
+    res.style.display = 'none';
     profRow.innerHTML = e.target.innerHTML;
     roomRow.innerHTML = officeMap[e.target.innerHTML.toLowerCase()];
     floorRow.innerHTML = `<div class='floorplanbutton'><p class='vp'>View Floor Plan</p></div>`;
@@ -103,6 +106,7 @@ for (let i = 0; i < keys.length; i ++) {
             if (inputBox.value.toLowerCase() in officeMap) {
                 showSuggestions([]);
                 profTable.style.display = "block";
+                res.style.display = 'none'
                 profRow.innerHTML = inputBox.value;
                 roomRow.innerHTML = officeMap[inputBox.value.toLowerCase()];
                 floorRow.innerHTML = `<div class='floorplanbutton'><p class='vp'>View Floor Plan</p></div>`;
