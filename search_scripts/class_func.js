@@ -66,6 +66,7 @@ searchIcon.onclick = () => {
             table.deleteRow(i);
         }
         table.style.display = 'table';
+        res.style.display = 'none';
         for (let i = 0; i < classMap[inputBox.value.toUpperCase()].length; i++) {
             let row = table.insertRow(rowCount);
             let time = row.insertCell(0);
@@ -93,6 +94,7 @@ searchIcon.onclick = () => {
     } else {
         result = "Class Not Found"
         res.style.display='block'
+        table.style.display = 'none';
         res.innerHTML = result;
     }
 }
@@ -123,6 +125,7 @@ for (let i = 0; i < keys.length; i++)
             table.deleteRow(i);
         }
         table.style.display = 'table';
+        res.style.display = 'none';
         for (let i = 0; i < classMap[e.target.innerHTML].length; i++) {
             let row = table.insertRow(rowCount);
             let time = row.insertCell(0);
@@ -171,6 +174,7 @@ for (let i = 0; i < keys.length; i ++) {
                     table.deleteRow(i);
                 }
                 table.style.display = 'table';
+                res.style.display = 'none';
                 for (let i = 0; i < classMap[inputValue.toUpperCase()].length; i++) {
                     let row = table.insertRow(rowCount);
                     let time = row.insertCell(0);
