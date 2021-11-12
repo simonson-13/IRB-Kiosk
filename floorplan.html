@@ -841,9 +841,13 @@
                     if(result.length>0){
                         s = "Invalid Room " + '<br/>'+ result;
                         document.getElementById("spoop").innerHTML = s
+                        
+                        document.getElementById("high_texts").innerHTML = "";
+                        document.getElementById("high").style.right="-999px"
+                        document.getElementById("high").style.top="-999px"
                         //  " does not exist";
                     } else{
-                        document.getElementById("high_texts").innerHTML = result;                    
+                        document.getElementById("room_for").value = ""
                     }
                 }
                 
@@ -899,7 +903,7 @@
                     document.getElementById("popup-1").classList.toggle("active");
                     document.getElementById("spoop").innerHTML = ""
                     document.getElementById("room_for").value = ""
-                
+                    
             }
             function guess6(){
                 document.getElementById('p1image').src = "Upper floor_0.png"
@@ -1310,17 +1314,17 @@
                     </div>
                     <br>
                 <div>
-                    <div style = "font-size: 25px; text-align: left; "><u>Michael Antonov Auditorium</u><span id="dots"><u>...</u></span><br><br><span id="more" style = "font-size: 18px; color:#222">The Antonov Auditorium has 298 seats, and will play host to the first four semesters of lectures in computer science and computer engineering majors. Named after Oculus cofounder Michael Antonov, it's designed with swivel tables and chairs to enable students to work together. It's one of two auditoriums.</span><spaces id="spoce"></spaces></div>
+                    <div style = "font-size: 25px; text-align: left; "><u>Michael Antonov Auditorium</u><span id="dots"></span><br><br><span id="more" style = "font-size: 18px; color:#222">The Antonov Auditorium has 298 seats, and will play host to the first four semesters of lectures in computer science and computer engineering majors. Named after Oculus cofounder Michael Antonov, it's designed with swivel tables and chairs to enable students to work together. It's one of two auditoriums.</span><spaces id="spoce"></spaces></div>
                     <button onclick="myFunction()" id="myBtn" class = "details" style="top: 140px; left: 380px; position:absolute;">Read more</button>
-                    <div style = "font-size: 25px; text-align: left;"><u>Andrew Reisse Park</u></u><span id="dots2"><u>...</u></span><br><br><span id="more2" style = "font-size: 18px;">On the roof, Andrew Reisse Park has 6,400 square feet of outdoor space. Honoring the memory of the Oculus cofounder who died in a 2013 accident, it has a rock garden, a waterfall and other elements encouraging students to take a break and experience the outdoors.</span><spaces id="spoce2"></spaces></div>
+                    <div style = "font-size: 25px; text-align: left;"><u>Andrew Reisse Park</u></u><span id="dots2"></span><br><br><span id="more2" style = "font-size: 18px;">On the roof, Andrew Reisse Park has 6,400 square feet of outdoor space. Honoring the memory of the Oculus cofounder who died in a 2013 accident, it has a rock garden, a waterfall and other elements encouraging students to take a break and experience the outdoors.</span><spaces id="spoce2"></spaces></div>
                     <button onclick="myFunction2()" id="myBtn2" class = "details" style="top: 208px; left: 275px; position:absolute;">Read more</button>
-                    <div style = "font-size: 25px; text-align: left;"><u>Breakpoint Cafe</u><span id="dots3"><u>...</u></span><br><br><span id="more3" style = "font-size: 18px;">On the roof, Andrew Reisse Park has 6,400 square feet of outdoor space. Honoring the memory of the Oculus cofounder who died in a 2013 accident, it has a rock garden, a waterfall and other elements encouraging students to take a break and experience the outdoors.</span><spaces id="spoce3"></spaces></div>
+                    <div style = "font-size: 25px; text-align: left;"><u>Breakpoint Cafe</u><span id="dots3"></span><br><br><span id="more3" style = "font-size: 18px;">On the roof, Andrew Reisse Park has 6,400 square feet of outdoor space. Honoring the memory of the Oculus cofounder who died in a 2013 accident, it has a rock garden, a waterfall and other elements encouraging students to take a break and experience the outdoors.</span><spaces id="spoce3"></spaces></div>
                     <button onclick="myFunction3()" id="myBtn3" class = "details" style="top: 276px; left: 235px; position:absolute; z-index: 102;">Read more</button>
-                    <div style = "font-size: 25px; text-align: left;"><u>Maryland Robotics Center</u><span id="dots4"><u>...</u></span><br><br><span id="more4" style = "font-size: 18px;">On the roof, Andrew Reisse Park has 6,400 square feet of outdoor space. Honoring the memory of the Oculus cofounder who died in a 2013 accident, it has a rock garden, a waterfall and other elements encouraging students to take a break and experience the outdoors.</span><spaces id="spoce4"></spaces></div>
+                    <div style = "font-size: 25px; text-align: left;"><u>Maryland Robotics Center</u><span id="dots4"></span><br><br><span id="more4" style = "font-size: 18px;">On the roof, Andrew Reisse Park has 6,400 square feet of outdoor space. Honoring the memory of the Oculus cofounder who died in a 2013 accident, it has a rock garden, a waterfall and other elements encouraging students to take a break and experience the outdoors.</span><spaces id="spoce4"></spaces></div>
                     <button onclick="myFunction4()" id="myBtn4" class = "details" style="top: 343px; left: 348px; position:absolute;">Read more</button>
-                    <div style = "font-size: 25px; text-align: left;"><u>Jagdeep Singh Family Makerspace</u><span id="dots5"><u>...</u></span><br><br><span id="more5" style = "font-size: 18px;">On the roof, Andrew Reisse Park has 6,400 square feet of outdoor space. Honoring the memory of the Oculus cofounder who died in a 2013 accident, it has a rock garden, a waterfall and other elements encouraging students to take a break and experience the outdoors.</span><spaces id="spoce5"></spaces></div>
+                    <div style = "font-size: 25px; text-align: left;"><u>Jagdeep Singh Family Makerspace</u><span id="dots5"></span><br><br><span id="more5" style = "font-size: 18px;">On the roof, Andrew Reisse Park has 6,400 square feet of outdoor space. Honoring the memory of the Oculus cofounder who died in a 2013 accident, it has a rock garden, a waterfall and other elements encouraging students to take a break and experience the outdoors.</span><spaces id="spoce5"></spaces></div>
                     <button onclick="myFunction5()" id="myBtn5" class = "details" style="top: 408px; left: 440px; position:absolute;">Read more</button>
-                    <div style = "font-size: 25px; text-align: left;"><u>Maryland Blended Reality Center</u><span id="dots6"><u>...</u></span><br><br><span id="more6" style = "font-size: 18px;">The Maryland Blended Reality Center is dedicated to advancing visual computing for healthcare and innovative training for
+                    <div style = "font-size: 25px; text-align: left;"><u>Maryland Blended Reality Center</u><span id="dots6"></span><br><br><span id="more6" style = "font-size: 18px;">The Maryland Blended Reality Center is dedicated to advancing visual computing for healthcare and innovative training for
                         professionals in high-impact areas.</span><spaces id="spoce6"></spaces></div>
                     <button onclick="myFunction6()" id="myBtn6" class = "details" style="top: 478px; left: 425px; position:absolute;">Read more</button>
                 </div>
