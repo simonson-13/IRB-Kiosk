@@ -58,11 +58,13 @@ searchIcon.onclick = () => {
         showSuggestions('');
         
         //result = inputBox.value + "'s Office is: " + result;
-        result = result;
+        res.style.display = 'block';
+        profTable.style.display = 'none';
         document.getElementById('result').style.marginLeft = '27%';
         document.getElementById('result').innerHTML = result;
     } else {
-        result.style.display = "block";
+        res.style.display = 'block';
+        profTable.style.display = 'none';
         result = "Professor Not Found"
         document.getElementById('result').style.marginLeft = '0px';
         document.getElementById('result').innerHTML = result;
@@ -111,7 +113,8 @@ for (let i = 0; i < keys.length; i ++) {
                 roomRow.innerHTML = officeMap[inputBox.value.toLowerCase()];
                 floorRow.innerHTML = `<div class='floorplanbutton'><p class='vp'>View Floor Plan</p></div>`;
             } else {
-                result.style.display = "block";
+                res.style.display = "block";
+                profTable.style.display = 'none';
                 result = "Professor Not Found"
                 document.getElementById('result').style.marginLeft = '0px';
             }
