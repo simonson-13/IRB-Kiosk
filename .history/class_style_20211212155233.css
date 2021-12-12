@@ -3,70 +3,6 @@
   font-family: "Open Sans", sans-serif;
 }
 
-/*home button*/
-.home {
-  height: 55px;
-  width: 72px;
-  /* border: .5px outset yellow; */
-  background-color: rgb(204, 0, 0);
-  font-size: 35px;
-  padding: 20px;
-  color: white;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 5px;
-  top: 2px;
-  right: 910.5px;
-  position: absolute;
-  zoom: normal;
-  z-index: 0;
-  line-height: 20px;
-  outline: 2px solid white;
-  opacity: 0.9;
-}
-
-.home:hover {
-  background-color: rgb(226, 96, 96);
-  color: white;
-  opacity: 0.9;
-}
-
-.backButton {
-  height: 15px;
-  width: 72px;
-  background-color: rgb(204, 0, 0);
-  font-size: 35px;
-  padding: 20px;
-  color: white;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 5px;
-  top: 2px;
-  right: 910px;
-  position: absolute;
-  zoom: normal;
-  z-index: 0;
-  line-height: 20px;
-  outline: 2px solid white;
-}
-
-.backButton:hover {
-  background-color: rgb(226, 96, 96);
-  color: white;
-}
-
-/* center home and back icons in button*/
-.move {
-  top: 12px;
-  position: absolute;
-  right: 33px;
-}
-.move2 {
-  top: 12px;
-  position: absolute;
-  right: 33px;
-}
-
 h1 {
   font-weight: bold;
   font-size: 69px;
@@ -90,9 +26,8 @@ h1 {
 }
 
 #result {
-    background-color: rgb(27,41,58, 0.8);
-    display: none;
-    top: 50px;
+  background-color: rgb(27, 41, 58, 0.8);
+  display: none;
 }
 
 .nav {
@@ -105,19 +40,7 @@ h1 {
 
 body {
   background-color: rgb(204, 0, 0);
-  zoom: 100%;
 }
-
-/*html, body {
-    background-position: center center center;
-    background-repeat: no-repeat;
-    background-image: url(./IRBrooms.jpg);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100%;
-}*/
 
 /* controls positions of search and suggests*/
 .wrapper {
@@ -144,7 +67,7 @@ body {
   padding: 0 60px 0 20px;
   font-size: 18px;
   /* outlines search box */
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* positions and sizes search icon*/
@@ -216,7 +139,7 @@ body {
   position: relative;
   order: 2;
   display: none;
-  z-index:7;
+  
 }
 
 .keyrow {
@@ -266,68 +189,113 @@ body {
   width: 80%;
 }
 
-
-#tableWrapper {
-  width: 100%;
+/* table Style*/
+#classes {
+  width: 120%;
+  font-size: 25px;
+  margin-left: -10%;
+  display: none;
 }
-/* table */
-#profTable {
-    font-size: 25px;
-    display: none;
-    width: 100%
-  }
-  
-  #profTable th {
-    background-color: rgb(204, 0, 0);
-    color: white;
-    font-size: 30px;
-    padding: 10px;
-    white-space:nowrap;
-    width: 600px;
-  }
-  
-  #profTable td {
-    text-align: center;
-    white-space:nowrap;
-    height: 60px;
 
-  }
-  #profTable tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 1);
-  }
-  #profTable tr:nth-child(odd) {
-    background-color: rgba(255, 153, 153, 1);
-  }
+#classes th {
+  background-color: rgb(204, 0, 0);
+  color: white;
+  font-size: 30px;
+  padding: 5px;
+}
+
+#classes td {
+  text-align: center;
+}
+#classes tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#classes tr:nth-child(odd) {
+  background-color: rgba(255, 153, 153, 0.8);
+}
+
+/*home button*/
+.home {
+  height: 55px;
+  width: 72px;
+  /* border: .5px outset yellow; */
+  background-color: rgb(204, 0, 0);
+  font-size: 35px;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  top: 2px;
+  right: 910.5px;
+  position: absolute;
+  zoom: normal;
+  z-index: 0;
+  line-height: 20px;
+  outline: 2px solid white;
+  opacity: 0.9;
+}
+
+.home:hover {
+  background-color: rgb(226, 96, 96);
+  color: white;
+  opacity: 0.9;
+}
+
+.backButton {
+  height: 15px;
+  width: 72px;
+  outline: 2px solid white;
+  background-color: rgb(204, 0, 0);
+  font-size: 35px;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  top: 2px;
+  right: 2px;
+  position: absolute;
+  zoom: normal;
+  z-index: 0;
+  line-height: 20px;
+}
+
+.backButton:hover {
+  background-color: rgb(226, 96, 96);
+  color: white;
+}
+
+/* center home and back icons in button*/
+.move {
+  top: 12px;
+  position: absolute;
+  right: 33px;
+}
+.move2 {
+  top: 12px;
+  position: absolute;
+  right: 33px;
+}
 
 /* floor plan button*/
 .floorplanbutton {
   position: relative;
   background-color: rgb(204, 0, 0);
-  width: 90%;
-  margin-left: 5%;
-  justify-content: center;
+  width: 70%;
+  margin-left: 20%;
   color: white;
-  font-size: 20px;
-  text-align: center center center;
+  font-size: 15px;
+  text-align: center;
   outline: 2px solid white;
+  z-index: 5;
   box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.8);
-  height: 50%;
 }
 
 #floorplanbutton:hover {
   background-color: rgb(226, 96, 96);
   color: white;
 }
-
-.vp {
-  position: relative;
-  top: 5px;
-}
-
-
-
-
-
 
 /*floorplan popup*/
 
@@ -366,6 +334,7 @@ body {
   height: 150px;
 }
 
+
 /* The Close Button */
 .close {
   position: absolute;
@@ -375,18 +344,15 @@ body {
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
-  /*background-color: rgba(0,0,0,0.8);
-  border-radius: 50%;
   height: 45px;
-  width: 45px;*/
+  width: 45px;
   text-align: center;
-  color: #aaa;
 }
 
 .x {
   position: absolute;
   top: -45px;
-  left: -25px;
+  left: 20px;
   color: #aaa;
 }
 
@@ -394,6 +360,7 @@ body {
 .close:focus {
   color: #bbb;
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* 100% Image Width on Smaller Screens */
@@ -404,30 +371,28 @@ body {
 }
 
 /* highlight feature */
-.highlighter{
-  background-color:#f1e740;
-  color: black;
-  opacity: .7;
-  width: 18px;
-  height: 18px;
-  padding: 10px;
-  right: 770px;
-  top: 335px;
-  position: absolute;
-  border-radius: 100px;
-  outline: 6px solid black;
-  z-index: 10;
-  display: none;
-}
-.high_text{
-  /* left:-200px;
-  top:-200px */
-  z-index: 1;
-  color:black;
-  position: absolute;
-  top: -8px;
-  left: 0px;
-  /*transform: rotate(-90deg);*/
-  display: none;
-  /*background-color: #f1e740;*/
-}    
+        .highlighter{
+          background-color:#f1e740;
+          color: black;
+          opacity: .8;
+          width: 30px;
+          height: 30px;
+          padding: 10px;
+          right: 665px;
+          top: 445px;
+          position: absolute;
+          border-radius: 100px;
+          outline: 6px solid black;
+          z-index: 10;
+          text-align: center;
+          display: none;
+      }
+      .high_text{
+          left:6px;
+          top:-3px;
+          z-index: 5;
+          color:black;
+          position: absolute;
+          text-align: center;
+
+      }    

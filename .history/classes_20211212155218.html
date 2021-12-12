@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search For a Professor</title>
-    <link rel="stylesheet" href="prof_style.css">
+    <title>Search For a Class</title>
+    <link rel="stylesheet" href="class_style.css">
     <script src="https://kit.fontawesome.com/09b41211e9.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -19,55 +19,49 @@
         
     </homeButton>
 
-    </div>
-    <h1>Find a Professor's Office <!--<img src="glasses.png" alt="Glasses Icon" width="10%">--></h1>
+
+
+    <h1>Find Your Classroom <!--<img src="glasses.png" alt="Glasses Icon" width="10%">--></h1>
     </div>
         <div class="wrapper">
             <div class="search-input">
-            <input type="text" placeholder="Search for professor by name...">
+            <input type="text" placeholder="CMSC131...">
                 <div id="suggestions" class="suggestions-box">
                 </div>
             <div class="icon"><i class="fas fa-search"></i></div>
         </div>
-        <br/>
 
-        <div id="tableWrapper">
-        <table id="profTable">
+        <br></br>
+
+        <table id="classes">
             <tr>
+                <th>Time:</th>
                 <th>Professor:</th>
                 <th>Room Number:</th>
-                <th>Location:</th>
+                <th>Floor Plan:</th>
             </tr>
-            <tr class=resultRow>
-                <td id="profRow"></td>
-                <td id="roomRow"></td>
-                <td id="floorRow"></td>
-              </tr>
         </table>
-    </div>
 
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+        <div class="highlighter"><p class="high_text"></p></div>
 
-        <h1 id="result"></h1>
+        <br></br>
+        <br></br>
 
-        <div class="highlighter"><p class="high_text">1210</p></div>
-
+        <h1 id=result>
+        </h1>
         <!--modal floor plan image-->
         <div id='myModal' class="modal">
-              <!-- The Close Button -->
-            <span class="close"><p class="x">&times;</p></span>
+            <!-- The Close Button -->
+          <span class="close"><p class="x">&times;</p></span>
 
-            <!-- Modal Content (The Image) -->
-            <img class="modal-content" id="floorimg">
+          <!-- Modal Content (The Image) -->
+          <img class="modal-content" id="floorimg">
 
-            <!-- Modal Caption (Image Text) -->
-            <div id="caption"></div>
-            
-        </div>
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+          
+      </div>
+
 
 <!-- Virtual Keyboard for ipad -->
         <div class="container">
@@ -151,9 +145,9 @@
             <img src="IRBrooms.jpg" alt = 'iribe background picture'>
         </div>
 
-        <script src="search_scripts/suggestions.js"></script>
-        <script src="search_scripts/officeMap.js"></script>
-        <script src="search_scripts/prof_func.js"></script>
+        <script src="search_scripts/classes.js"></script>
+        <script src="search_scripts/classMap.js"></script>
+        <script src="search_scripts/class_func.js"></script>
         
     
 </body>

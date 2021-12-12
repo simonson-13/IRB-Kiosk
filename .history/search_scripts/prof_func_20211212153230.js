@@ -111,7 +111,7 @@ for (let i = 0; i < keys.length; i ++) {
                 res.style.display = 'none'
                 profRow.innerHTML = inputBox.value;
                 roomRow.innerHTML = officeMap[inputBox.value.toLowerCase()];
-                floorRow.innerHTML = `<div class='floorplanbutton'><p class='vp'>View Location</p></div>`;
+                floorRow.innerHTML = `<div class='floorplanbutton'><p class='vp'>View Floor Plan</p></div>`;
             } else {
                 res.style.display = "block";
                 profTable.style.display = 'none';
